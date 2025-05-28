@@ -1,0 +1,3 @@
+[submodule "references/LethalMenu"]
+	path = references/LethalMenu
+	url = https://github.com/IcyRelic/LethalMenu
