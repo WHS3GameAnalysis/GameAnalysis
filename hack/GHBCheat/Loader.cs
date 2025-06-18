@@ -1,4 +1,4 @@
-﻿//using LethalMenu.Handler;
+﻿//using GHBCheat.Handler;
 using System;
 using System.IO;
 using System.Linq;
@@ -33,14 +33,14 @@ namespace GHBCheat
             AppDomain.CurrentDomain.Load(rawAssembly);
         }
 
-        //public static void Unload()
-        //{
-        //    HackExtensions.ToggleFlags.Keys.ToList().ForEach(h => HackExtensions.ToggleFlags[h] = false);
-        //    ChamHandler.ChamsSetEnabled(false);
-        //    if ((bool)!LethalMenu.localPlayer?.playerActions.Movement.enabled) LethalMenu.localPlayer?.playerActions.Enable();
-        //    if (Cursor.visible && !LethalMenu.quickMenuManager.isMenuOpen) Cursor.visible = false;
-        //    LethalMenu.harmony.UnpatchAll("LethalMenu");
-        //    Object.Destroy(Load);
-        //}
+        public static void Unload()
+        {
+            HackExtensions.ToggleFlags.Keys.ToList().ForEach(h => HackExtensions.ToggleFlags[h] = false);
+            //ChamHandler.ChamsSetEnabled(false);
+            if ((bool)!GHBCheat.localPlayer?.playerActions.Movement.enabled) GHBCheat.localPlayer?.playerActions.Enable();
+            //if (Cursor.visible && !GHBCheat.quickMenuManager.isMenuOpen) Cursor.visible = false;
+            //GHBCheat.harmony.UnpatchAll("GHBCheat");
+            Object.Destroy(Load);
+        }
     }
 }
