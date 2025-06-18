@@ -1,5 +1,5 @@
-﻿//using GameNetcodeStuff;
-//using HarmonyLib;
+﻿using HarmonyLib;
+using GameNetcodeStuff;
 //using LethalMenu.Language;
 //using LethalMenu.Manager;
 //using LethalMenu.Menu.Core;

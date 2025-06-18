@@ -17,7 +17,7 @@ namespace GHBCheat
         public static void Init()
         {
             if (Load != null) return;
-            //LoadAssembly("GHBCheat.Resources.0Harmony.dll");
+            LoadAssembly("GHBCheat.Resources.0Harmony.dll");
             //ChamHandler.ChamsSetEnabled(true);
             Load = new GameObject();
             Load.AddComponent<GHBCheat>();
