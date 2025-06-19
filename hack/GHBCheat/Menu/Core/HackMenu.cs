@@ -43,8 +43,8 @@ namespace GHBCheat.Menu.Core
         public HackMenu()
         {
             instance = this;
-            menuTabs.Add(new SettingsTab());
-            menuTabs.Add(new GeneralTab());
+            //menuTabs.Add(new SettingsTab());
+            //menuTabs.Add(new GeneralTab());
             //menuTabs.Add(new SelfTab());
             //menuTabs.Add(new VisualsTab());
             //menuTabs.Add(new TrollTab());
@@ -128,7 +128,7 @@ namespace GHBCheat.Menu.Core
         {
             GUI.color = new Color(1f, 1f, 1f, 0.1f);
             GUIStyle watermark = new GUIStyle(GUI.skin.label) { fontSize = 20, fontStyle = FontStyle.Bold };
-            string text = "Developed By IcyRelic, and Dustin";
+            string text = "GHBCheat Testing";
 
             GUI.Label(new Rect(windowRect.width - watermark.CalcSize(new GUIContent(text)).x - 10, windowRect.height - watermark.CalcSize(new GUIContent(text)).y - 10, watermark.CalcSize(new GUIContent(text)).x, watermark.CalcSize(new GUIContent(text)).y), text, watermark);
 

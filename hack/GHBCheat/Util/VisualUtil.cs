@@ -91,7 +91,7 @@ namespace GHBCheat.Util
         }
 
     }
-    public class VisualUtil : Cheat
+    public class VisualUtil //: Cheat
     {
         public static GUIStyle StringStyle { get; set; } = new GUIStyle(GUI.skin.label);
 
@@ -177,39 +177,39 @@ namespace GHBCheat.Util
             DrawLine(pointA, pointB, color.GetColor(), width);
         }
 
-        public static void DrawBoxOutline(GameObject GameObject, Color color, float thickness)
-        {
-            Bounds bounds = GameObject.GetBounds();
-            Vector3[] corners = new Vector3[8];
-            corners[0] = new Vector3(bounds.min.x, bounds.max.y, bounds.min.z);
-            corners[1] = new Vector3(bounds.max.x, bounds.max.y, bounds.min.z);
-            corners[2] = new Vector3(bounds.max.x, bounds.max.y, bounds.max.z);
-            corners[3] = new Vector3(bounds.min.x, bounds.max.y, bounds.max.z);
-            corners[4] = new Vector3(bounds.min.x, bounds.min.y, bounds.min.z);
-            corners[5] = new Vector3(bounds.max.x, bounds.min.y, bounds.min.z);
-            corners[6] = new Vector3(bounds.max.x, bounds.min.y, bounds.max.z);
-            corners[7] = new Vector3(bounds.min.x, bounds.min.y, bounds.max.z);
-            if (WorldToScreen(corners[0], out var topL) && WorldToScreen(corners[1], out var topR) && WorldToScreen(corners[2], out var topRN) && WorldToScreen(corners[3], out var topLN) && WorldToScreen(corners[4], out var bottomLF) && WorldToScreen(corners[5], out var bottomRF) && WorldToScreen(corners[6], out var bottomRN) && WorldToScreen(corners[7], out var bottomLN))
-            {
-                DrawLine(topL, topR, color, thickness);
-                DrawLine(topR, topRN, color, thickness);
-                DrawLine(topRN, topLN, color, thickness);
-                DrawLine(topLN, topL, color, thickness);
-                DrawLine(bottomLF, bottomRF, color, thickness);
-                DrawLine(bottomRF, bottomRN, color, thickness);
-                DrawLine(bottomRN, bottomLN, color, thickness);
-                DrawLine(bottomLN, bottomLF, color, thickness);
-                DrawLine(topL, bottomLF, color, thickness);
-                DrawLine(topR, bottomRF, color, thickness);
-                DrawLine(topRN, bottomRN, color, thickness);
-                DrawLine(topLN, bottomLN, color, thickness);
-            }
-        }
+        //public static void DrawBoxOutline(GameObject GameObject, Color color, float thickness)
+        //{
+        //    Bounds bounds = GameObject.GetBounds();
+        //    Vector3[] corners = new Vector3[8];
+        //    corners[0] = new Vector3(bounds.min.x, bounds.max.y, bounds.min.z);
+        //    corners[1] = new Vector3(bounds.max.x, bounds.max.y, bounds.min.z);
+        //    corners[2] = new Vector3(bounds.max.x, bounds.max.y, bounds.max.z);
+        //    corners[3] = new Vector3(bounds.min.x, bounds.max.y, bounds.max.z);
+        //    corners[4] = new Vector3(bounds.min.x, bounds.min.y, bounds.min.z);
+        //    corners[5] = new Vector3(bounds.max.x, bounds.min.y, bounds.min.z);
+        //    corners[6] = new Vector3(bounds.max.x, bounds.min.y, bounds.max.z);
+        //    corners[7] = new Vector3(bounds.min.x, bounds.min.y, bounds.max.z);
+        //    if (WorldToScreen(corners[0], out var topL) && WorldToScreen(corners[1], out var topR) && WorldToScreen(corners[2], out var topRN) && WorldToScreen(corners[3], out var topLN) && WorldToScreen(corners[4], out var bottomLF) && WorldToScreen(corners[5], out var bottomRF) && WorldToScreen(corners[6], out var bottomRN) && WorldToScreen(corners[7], out var bottomLN))
+        //    {
+        //        DrawLine(topL, topR, color, thickness);
+        //        DrawLine(topR, topRN, color, thickness);
+        //        DrawLine(topRN, topLN, color, thickness);
+        //        DrawLine(topLN, topL, color, thickness);
+        //        DrawLine(bottomLF, bottomRF, color, thickness);
+        //        DrawLine(bottomRF, bottomRN, color, thickness);
+        //        DrawLine(bottomRN, bottomLN, color, thickness);
+        //        DrawLine(bottomLN, bottomLF, color, thickness);
+        //        DrawLine(topL, bottomLF, color, thickness);
+        //        DrawLine(topR, bottomRF, color, thickness);
+        //        DrawLine(topRN, bottomRN, color, thickness);
+        //        DrawLine(topLN, bottomLN, color, thickness);
+        //    }
+        //}
 
-        public static void DrawBoxOutline(GameObject GameObject, RGBAColor color, float thickness)
-        {
-            DrawBoxOutline(GameObject, color.GetColor(), thickness);
-        }
+        //public static void DrawBoxOutline(GameObject GameObject, RGBAColor color, float thickness)
+        //{
+        //    DrawBoxOutline(GameObject, color.GetColor(), thickness);
+        //}
 
         public static void DrawDot(Vector2 position, Color color, float radius)
         {

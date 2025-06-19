@@ -5,7 +5,7 @@ using GHBCheat.Util;
 using HarmonyLib;
 using GHBCheat.Language;
 //using GHBCheat.Manager;
-//using GHBCheat.Menu.Popup;
+using GHBCheat.Menu.Popup;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -172,12 +172,19 @@ namespace GHBCheat
             {
                 if (Event.current.type == EventType.Repaint)
                 {
-                    string GHBCheatTitle = $"Lethal Menu {Settings.version} By IcyRelic, and Dustin | Menu Toggle: {FirstSetupManagerWindow.GetMenuKeybindName()}";
+                    string GHBCheatTitle = $"GHBCheat {Settings.version} 게임 해체 분석기. | Menu Toggle: {FirstSetupManagerWindow.GetMenuKeybindName()}";
                     GHBCheatTitle += Settings.b_FPSCounter ? $" | FPS: {fps}" : "";
                     VisualUtil.DrawString(new Vector2(5f, 2f), GHBCheatTitle, Settings.c_primary, centered: false, bold: true, fontSize: 14);
                     if (MenuUtil.resizing)
                     {
-                        VisualUtil.DrawString(new Vector2(Screen.width / 2, 35f), Localization.Localize(["SettingsTab.ResizeTitle", "SettingsTab.ResizeConfirm", $"{HackMenu.Instance.windowRect.width}x{HackMenu.Instance.windowRect.height}"], true), Settings.c_playerESP, true, true, true, true, 22);
+                        VisualUtil.DrawString(
+                            new Vector2(Screen.width / 2, 35f),
+                            Localization.Localize(
+                                new string[] { "SettingsTab.ResizeTitle", "SettingsTab.ResizeConfirm", $"{HackMenu.Instance.windowRect.width}x{HackMenu.Instance.windowRect.height}" },
+                                true
+                            ),
+                            Settings.c_playerESP, true, true, true, true, 22
+                        );
                         MenuUtil.ResizeMenu();
                     }
                     if (Settings.DebugMode)
