@@ -8,6 +8,7 @@ namespace LethalHack.Cheats
     {
         private static TextMeshProUGUI HPText = null;
         private static GameObject text = null;
+        //public static PlayerControllerB localPlayer;
 
         public override void Trigger()
         {

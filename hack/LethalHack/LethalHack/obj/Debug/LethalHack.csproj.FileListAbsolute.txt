@@ -138,3 +138,12 @@ C:\Users\HOSEO\source\repos\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Co
 C:\Users\HOSEO\source\repos\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
 C:\Users\HOSEO\source\repos\LethalHack\LethalHack\obj\Debug\LethalHack.dll
 C:\Users\HOSEO\source\repos\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+C:\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
+C:\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.pdb
+C:\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\netstandard.dll
+C:\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\Newtonsoft.Json.dll
+C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.AssemblyReference.cache
+C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.CoreCompileInputs.cache
+C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
+C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
+C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb

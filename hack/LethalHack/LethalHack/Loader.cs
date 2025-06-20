@@ -17,7 +17,7 @@ namespace LethalHack
     public class hack : MonoBehaviour
     {
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
-        public static PlayerControllerB localPlayer; // 로컬 플레이어 객체를 저장할 변수입니다.
+        public static PlayerControllerB localPlayer;
         public void Update() // Unity에서 매 프레임마다 호출되는 메서드
         {
             Hack.Instance.Start(); // 매 프레임마다 핵 기능들이 실행됩니다.
