@@ -22,6 +22,8 @@ namespace LethalHack
             // 위와 마찬가지
             Hack.Instance.Stamina.isEnabled = GUI.Toggle(new Rect(10, 45, 180, 20), Hack.Instance.Stamina.isEnabled, "Infinite Stamina");
 
+            Hack.Instance.Hpdisp.isEnabled = GUI.Toggle(new Rect(10, 70, 180, 20), Hack.Instance.Hpdisp.isEnabled, "HPDisplay");
+
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
         }
     }
