@@ -1,4 +1,5 @@
 ﻿using LethalHack.Cheats;
+using LethalHack.Util;
 using System.Collections.Generic;
 
 namespace LethalHack
@@ -20,6 +21,7 @@ namespace LethalHack
         // Start 메서드에서 On/Off 여부에 따라 기능을 실행합니다.
         public void Start()
         {
+            MenuUtil.Update(); // 메뉴 유틸리티 업데이트
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();

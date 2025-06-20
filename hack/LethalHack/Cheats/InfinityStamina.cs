@@ -6,8 +6,6 @@ namespace LethalHack.Cheats
 {
     public class InfinityStamina : Cheat // Cheat 클래스 상속
     {
-        //public static PlayerControllerB localPlayer; // 플레이어 객체
-
         public override void Trigger() // 기능을 구현할 메서드
         {
             if (hack.localPlayer == null)
