@@ -2,6 +2,7 @@
 using HarmonyLib;
 using LethalHack.Cheats;
 using System.Collections.Generic;
+<<<<<<< Updated upstream
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,10 +14,13 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+=======
+using UnityEngine;
+>>>>>>> Stashed changes
 
 namespace LethalHack
 {
-    public abstract class Cheat // 세부 기능을 구현할 때 사용할 추상 클래스
+    public abstract class Cheat : MonoBehaviour // 세부 기능을 구현할 때 사용할 추상 클래스
     {
         public bool isEnabled = true; // On/Off
         public abstract void Trigger(); // Trigger 메서드로 기능 실행
@@ -28,12 +32,17 @@ namespace LethalHack
         // 기능의 인스턴스를 만들고,
         public GodMode God = new GodMode();
         public InfinityStamina Stamina = new InfinityStamina();
+<<<<<<< Updated upstream
         public HPDisplay Hpdisp = new HPDisplay();
         internal SuperJump SuperJump = new SuperJump();
 
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
         public static PlayerControllerB localPlayer;
         public static Harmony harmony; // Harmony 인스턴스
+=======
+        internal HPDisplay Hpdisp = new HPDisplay();
+        internal ESP Esp = new ESP();
+>>>>>>> Stashed changes
 
         // Start 메서드에서 On/Off 여부에 따라 기능을 실행합니다.
         public void Start()
@@ -76,8 +85,12 @@ namespace LethalHack
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
+<<<<<<< Updated upstream
             //if (SuperJump.isEnabled) SuperJump.Trigger();
             //if (!SuperJump.isEnabled) SuperJump.Trigger();
+=======
+            if (Esp.isEnabled) Esp.Trigger();
+>>>>>>> Stashed changes
         }
     }
 }

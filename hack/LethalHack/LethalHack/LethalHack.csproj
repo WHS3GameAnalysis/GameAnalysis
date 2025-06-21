@@ -437,6 +437,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cheats\ESP.cs" />
     <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\HPDisplay.cs" />
     <Compile Include="Cheats\InfinityStamina.cs" />
