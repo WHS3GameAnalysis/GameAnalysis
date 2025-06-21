@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LethalHack.Cheats
 {
-    internal class HPDisplay : Cheat // Cheat 클래스를 상속
+    public class HPDisplay : Cheat // Cheat 클래스를 상속
     {
         private static TextMeshProUGUI HPText = null;
         private static GameObject text = null;

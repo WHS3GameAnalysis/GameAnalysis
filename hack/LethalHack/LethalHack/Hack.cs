@@ -15,7 +15,8 @@ namespace LethalHack
         // 기능의 인스턴스를 만들고,
         public GodMode God = new GodMode();
         public InfinityStamina Stamina = new InfinityStamina();
-        internal HPDisplay Hpdisp = new HPDisplay();
+        public HPDisplay Hpdisp = new HPDisplay();
+        public SuperJump SuperJump = new SuperJump();
 
         // Start 메서드에서 On/Off 여부에 따라 기능을 실행합니다.
         public void Start()
@@ -23,6 +24,7 @@ namespace LethalHack
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
+            if (SuperJump.isEnabled) SuperJump.Trigger();
         }
     }
 }

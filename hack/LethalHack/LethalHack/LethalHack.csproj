@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Resources\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="AmazingAssets.TerrainToMesh">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\AmazingAssets.TerrainToMesh.dll</HintPath>
     </Reference>
@@ -437,6 +440,7 @@
     <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\HPDisplay.cs" />
     <Compile Include="Cheats\InfinityStamina.cs" />
+    <Compile Include="Cheats\SuperJump.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Hack.cs" />
     <Compile Include="Loader.cs" />
@@ -583,6 +587,7 @@
     <Content Include="obj\Debug\LethalHack.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\LethalHack.dll" />
     <Content Include="obj\Debug\LethalHack.pdb" />
+    <EmbeddedResource Include="Resources\0Harmony.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
