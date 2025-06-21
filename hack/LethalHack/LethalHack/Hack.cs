@@ -16,6 +16,7 @@ namespace LethalHack
         public GodMode God = new GodMode();
         public InfinityStamina Stamina = new InfinityStamina();
         internal HPDisplay Hpdisp = new HPDisplay();
+        public Teleport teleport = new Teleport();
 
         // Start 메서드에서 On/Off 여부에 따라 기능을 실행합니다.
         public void Start()

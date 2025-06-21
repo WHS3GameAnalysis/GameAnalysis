@@ -437,6 +437,7 @@
     <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\HPDisplay.cs" />
     <Compile Include="Cheats\InfinityStamina.cs" />
+    <Compile Include="Cheats\Teleport.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Hack.cs" />
     <Compile Include="Loader.cs" />
