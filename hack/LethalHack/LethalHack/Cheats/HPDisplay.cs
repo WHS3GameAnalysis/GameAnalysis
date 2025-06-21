@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LethalHack.Cheats
 {
-    internal class HPDisplay : Cheat // Cheat 클래스를 상속
+    public class HPDisplay : Cheat // Cheat 클래스를 상속
     {
         private static TextMeshProUGUI HPText = null;
         private static GameObject text = null;
@@ -48,7 +48,7 @@ namespace LethalHack.Cheats
             }
             if (HPText == null) return;
             // localPlayer가 null일 수 있으니 null 체크 추가
-            HPText.text = hack.localPlayer != null ? $"HP \n {hack.localPlayer.health}" : "HP \n N/A";
+            HPText.text = Hack.localPlayer != null ? $"HP \n {Hack.localPlayer.health}" : "HP \n N/A";
         }
     }
 }
