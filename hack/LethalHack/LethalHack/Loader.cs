@@ -1,9 +1,10 @@
 ﻿using GameNetcodeStuff;
-using UnityEngine;
+using HarmonyLib;
 using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using UnityEngine;
 
 namespace LethalHack
 {
@@ -15,7 +16,7 @@ namespace LethalHack
         {
             LoadAssembly("LethalHack.Resources.0Harmony.dll");
             Loader.load = new GameObject(); // 새로운 게임 오브젝트 생성
-            Loader.load.AddComponent<hack>(); // 게임 오브젝트에 hack 컴포넌트 추가
+            Loader.load.AddComponent<Hack>(); // 게임 오브젝트에 hack 컴포넌트 추가
             UnityEngine.Object.DontDestroyOnLoad(Loader.load); // 가비지 컬렉터 예외 처리(씬이 바뀌어도 파괴되지 않도록 설정)
         }
 
@@ -27,24 +28,12 @@ namespace LethalHack
             stream.Read(rawAssembly, 0, (int)stream.Length);
             AppDomain.CurrentDomain.Load(rawAssembly);
         }
-
+ 
     }
 
 
     // 게임 오브젝트에 붙일 hack 컴포넌트
     public class hack : MonoBehaviour
     {
-        Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
-        public static PlayerControllerB localPlayer;
-        public void Update() // Unity에서 매 프레임마다 호출되는 메서드
-        {
-            Hack.Instance.Start(); // 매 프레임마다 핵 기능들이 실행됩니다.
-        }
-
-        public void OnGUI() // Update 메서드 이후에 호출되는 메서드
-        {
-            GUI.Label(new Rect(10, 10, 400, 80), "Cheat Enabled"); // 왼쪽 상단 위에 표시할 문구
-            GUIManager.Render(); // GUI 렌더링
-        }
     }
 }

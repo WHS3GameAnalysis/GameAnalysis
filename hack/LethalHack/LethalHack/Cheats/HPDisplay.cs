@@ -48,7 +48,7 @@ namespace LethalHack.Cheats
             }
             if (HPText == null) return;
             // localPlayer가 null일 수 있으니 null 체크 추가
-            HPText.text = hack.localPlayer != null ? $"HP \n {hack.localPlayer.health}" : "HP \n N/A";
+            HPText.text = Hack.localPlayer != null ? $"HP \n {Hack.localPlayer.health}" : "HP \n N/A";
         }
     }
 }
