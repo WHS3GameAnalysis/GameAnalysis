@@ -10,13 +10,13 @@ namespace LethalHack.Cheats
 
         public override void Trigger() // 실제 기능을 구현한 메서드
         {
-            if (hack.localPlayer == null)
+            if (Hack.localPlayer == null)
             {
-                hack.localPlayer = GameNetworkManager.Instance.localPlayerController; // 플레이어 객체를 로컬 플레이어(자기 자신?)로 초기화
-                if (hack.localPlayer == null) return; // 초기화 안됐을 경우에 return
+                Hack.localPlayer = GameNetworkManager.Instance.localPlayerController; // 플레이어 객체를 로컬 플레이어(자기 자신?)로 초기화
+                if (Hack.localPlayer == null) return; // 초기화 안됐을 경우에 return
             }
 
-            hack.localPlayer.health = 100; // 체력 100으로 설정
+            Hack.localPlayer.health = 100; // 체력 100으로 설정
         }   
     }
 }
