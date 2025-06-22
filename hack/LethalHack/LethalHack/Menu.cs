@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LethalHack.Cheats;
+using UnityEngine;
 
 namespace LethalHack
 {
@@ -7,12 +8,14 @@ namespace LethalHack
     {
         private Rect windowRect = new Rect(20, 20, 200, 120); // GUI 창 위치, 크기 지정
         public bool showMenu = true; // 창 표시 여부
+        ESP esp = new ESP();
         
         public void Render() // 이 메서드는 Loader에서 호출되어서 GUI를 그리는 역할을 합니다.
         {
             if (!showMenu) return;
 
             windowRect = GUI.Window(1, windowRect, DrawMenu, "LethalHack"); // GUI 창 생성: ID = 1, 위치 = windowRect, 내용 = DrawMenu 함수
+            esp.Trigger();
         }
 
         private void DrawMenu(int windowID) // GUI 창 안에 들어갈 내용
