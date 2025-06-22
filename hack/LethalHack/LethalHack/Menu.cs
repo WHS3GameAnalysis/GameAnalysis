@@ -14,6 +14,7 @@ namespace LethalHack
 
             windowRect = GUI.Window(1, windowRect, DrawMenu, "LethalHack"); // GUI 창 생성: ID = 1, 위치 = windowRect, 내용 = DrawMenu 함수
             Hack.Instance.teleport.Render();
+            Hack.Instance.damageHack.Render();
         }
 
         private void DrawMenu(int windowID) // GUI 창 안에 들어갈 내용
