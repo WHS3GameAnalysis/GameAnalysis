@@ -8,7 +8,6 @@ namespace LethalHack.Cheats
     {
         private static TextMeshProUGUI HPText = null;
         private static GameObject text = null;
-        //public static PlayerControllerB localPlayer;
 
         public override void Trigger()
         {
@@ -17,7 +16,7 @@ namespace LethalHack.Cheats
                 Object.Destroy(text);
                 text = null;
                 HPText = null;
-                return; // return 이후 코드는 실행되지 않으므로, 아래 코드는 접근 불가였습니다.
+                return;
             }
 
             if (HPText == null)

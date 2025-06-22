@@ -30,10 +30,4 @@ namespace LethalHack
         }
  
     }
-
-
-    // 게임 오브젝트에 붙일 hack 컴포넌트
-    public class hack : MonoBehaviour
-    {
-    }
 }

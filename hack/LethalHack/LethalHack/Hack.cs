@@ -7,10 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 
@@ -25,6 +22,7 @@ namespace LethalHack
     public class Hack : MonoBehaviour // 기능을 실행하기 위해 사용되는 클래스
     {
         public static Hack Instance = new Hack(); // 싱글톤으로 외부에서도 참조 가능하게 만들었습니다.
+
         // 기능의 인스턴스를 만들고,
         public GodMode God = new GodMode();
         public InfinityStamina Stamina = new InfinityStamina();
@@ -46,7 +44,7 @@ namespace LethalHack
 
         private void HarmonyPatching()
         {
-            harmony = new Harmony("LethalMenu");
+            harmony = new Harmony("LethalHack");
             Harmony.DEBUG = false;
             foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
             {
@@ -64,13 +62,12 @@ namespace LethalHack
             }
         }
 
-
-
         public void OnGUI() // Update 메서드 이후에 호출되는 메서드
         {
             GUI.Label(new Rect(10, 10, 400, 80), "Cheat Enabled"); // 왼쪽 상단 위에 표시할 문구
             GUIManager.Render(); // GUI 렌더링
         }
+
         public void Update() // Unity에서 매 프레임마다 호출되는 메서드
         {
             if (God.isEnabled) God.Trigger();

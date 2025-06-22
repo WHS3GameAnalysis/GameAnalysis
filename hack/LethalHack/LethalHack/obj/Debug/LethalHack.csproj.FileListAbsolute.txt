@@ -153,8 +153,6 @@ D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\L
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.pdb
-D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\netstandard.dll
-D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\Newtonsoft.Json.dll
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\0Harmony.dll
 C:\Jihoon\WhiteHat\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
