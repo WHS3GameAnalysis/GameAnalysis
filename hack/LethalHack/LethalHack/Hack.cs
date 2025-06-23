@@ -21,7 +21,6 @@ namespace LethalHack
         public InfinityStamina Stamina = new InfinityStamina();
         public HPDisplay Hpdisp = new HPDisplay();
         internal SuperJump SuperJump = new SuperJump();
-        internal ESP esp = new ESP();
 
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
         public static PlayerControllerB localPlayer;
@@ -70,7 +69,6 @@ namespace LethalHack
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
             //if (SuperJump.isEnabled) SuperJump.Trigger();
             //if (!SuperJump.isEnabled) SuperJump.Trigger();
-            if (esp.isEnabled) esp.Trigger();
         }
     }
 }

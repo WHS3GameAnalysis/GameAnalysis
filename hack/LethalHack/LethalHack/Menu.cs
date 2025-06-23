@@ -8,14 +8,14 @@ namespace LethalHack
     {
         private Rect windowRect = new Rect(20, 20, 200, 400); // GUI 창 위치, 크기 지정
         public bool showMenu = true; // 창 표시 여부
-        ESP esp = new ESP();
+        ESP Esp = new ESP();
         
         public void Render() // 이 메서드는 Loader에서 호출되어서 GUI를 그리는 역할을 합니다.
         {
             if (!showMenu) return;
 
             windowRect = GUI.Window(1, windowRect, DrawMenu, "LethalHack"); // GUI 창 생성: ID = 1, 위치 = windowRect, 내용 = DrawMenu 함수
-            esp.Trigger();
+            if(Esp.isEnabled) Esp.Trigger();
         }
 
         private void DrawMenu(int windowID) // GUI 창 안에 들어갈 내용
@@ -29,7 +29,7 @@ namespace LethalHack
 
             Hack.Instance.SuperJump.isEnabled = GUI.Toggle(new Rect(10, 95, 180, 20), Hack.Instance.SuperJump.isEnabled, "Super Jump");
 
-            Hack.Instance.esp.isEnabled = GUI.Toggle(new Rect(10, 120, 180, 20), Hack.Instance.esp.isEnabled, "Enemy ESP");
+            Esp.isEnabled = GUI.Toggle(new Rect(10, 120, 180, 20), Esp.isEnabled, "Enemy ESP");
 
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
         }
