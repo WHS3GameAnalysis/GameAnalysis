@@ -6,7 +6,7 @@ namespace LethalHack
     // GUI를 띄우는 역할
     public class Menu : MonoBehaviour
     {
-        private Rect windowRect = new Rect(20, 20, 200, 120); // GUI 창 위치, 크기 지정
+        private Rect windowRect = new Rect(20, 20, 200, 400); // GUI 창 위치, 크기 지정
         public bool showMenu = true; // 창 표시 여부
         ESP esp = new ESP();
         
