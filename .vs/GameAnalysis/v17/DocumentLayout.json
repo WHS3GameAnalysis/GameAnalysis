@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\hack\\LethalHack\\LethalHack\\Hack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:hack\\LethalHack\\LethalHack\\Hack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\hack\\LethalHack\\LethalHack\\FastClimb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:hack\\LethalHack\\LethalHack\\FastClimb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hack.cs",
+              "DocumentMoniker": "C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\hack\\LethalHack\\LethalHack\\Hack.cs",
+              "RelativeDocumentMoniker": "hack\\LethalHack\\LethalHack\\Hack.cs",
+              "ToolTip": "C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\hack\\LethalHack\\LethalHack\\Hack.cs",
+              "RelativeToolTip": "hack\\LethalHack\\LethalHack\\Hack.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T07:47:58.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FastClimb.cs",
+              "DocumentMoniker": "C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\hack\\LethalHack\\LethalHack\\FastClimb.cs",
+              "RelativeDocumentMoniker": "hack\\LethalHack\\LethalHack\\FastClimb.cs",
+              "ToolTip": "C:\\Users\\jaeeu\\Desktop\\WH\\TeamProject\\WH_clone\\GameAnalysis\\hack\\LethalHack\\LethalHack\\FastClimb.cs",
+              "RelativeToolTip": "hack\\LethalHack\\LethalHack\\FastClimb.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T07:47:39.082Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

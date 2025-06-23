@@ -26,6 +26,8 @@ namespace LethalHack
 
             Hack.Instance.SuperJump.isEnabled = GUI.Toggle(new Rect(10, 95, 180, 20), Hack.Instance.SuperJump.isEnabled, "Super Jump");
 
+            Hack.Instance.FastClimb.isEnabled = GUI.Toggle(new Rect(10, 95, 180, 20), Hack.Instance.FastClimb.isEnabled, "FastClimb");
+
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
         }
     }
