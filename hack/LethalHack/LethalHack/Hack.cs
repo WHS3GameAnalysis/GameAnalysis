@@ -78,7 +78,7 @@ namespace LethalHack
             //if (SuperJump.isEnabled) SuperJump.Trigger();
             //if (!SuperJump.isEnabled) SuperJump.Trigger();
             if (FastClimb.isEnabled) FastClimb.Trigger();
-            if (Item.Item) Item.itemIsTrigger();
+            //if (Item.Item) Item.itemIsTrigger();
         }
     }
 }

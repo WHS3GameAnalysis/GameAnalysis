@@ -172,3 +172,4 @@ C:\Users\jaeeu\Desktop\WH\TeamProject\WH_clone\GameAnalysis\hack\LethalHack\Leth
 C:\Users\jaeeu\Desktop\WH\TeamProject\WH_clone\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\0Harmony.dll
 C:\Users\jaeeu\Desktop\WH\TeamProject\WH_clone\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\Newtonsoft.Json.dll
 C:\Users\jaeeu\Desktop\WH\TeamProject\WH_clone\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\Newtonsoft.Json.dll
