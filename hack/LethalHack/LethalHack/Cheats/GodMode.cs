@@ -8,7 +8,12 @@ namespace LethalHack.Cheats
     [HarmonyPatch]
     public class GodMode : Cheat // Cheat 클래스를 상속
     {
-        public static GodMode Instance = new GodMode(); // 싱글턴
+        public static GodMode Instance;
+
+        public GodMode()
+        {
+            Instance = this;
+        }
 
         public override void Trigger() // 실제 기능을 구현한 메서드
         {
