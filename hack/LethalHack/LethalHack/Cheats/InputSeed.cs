@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LethalHack.Cheats
 {
-    [HarmonyPatch(typeof(DungeonGenerator), "OuterGenerate")]
+    [HarmonyPatch(typeof(StartOfRound), "StartGame")]
     public class InputSeed : Cheat
     {
         public int selectedSeedIndex=0; //시드 인덱스 선택해서 적용합니다
@@ -34,16 +34,18 @@ namespace LethalHack.Cheats
         }
 
         [HarmonyPrefix]
-        public static bool OuterGeneratePrefix(DungeonGenerator __instance, ref int ___ChosenSeed)
+        public static bool StartGamePrefix(StartOfRound __instance)
         {
             if (Hack.Instance.Seed.isEnabled)
             {
                 // 인덱스 번호 시드 선택
                 int customSeed = seedListNumber[Hack.Instance.Seed.selectedSeedIndex];
 
-                // DungeonGenerator의 seed 관련 필드들 패치
-                __instance.Seed = customSeed;
-                __instance.ShouldRandomizeSeed = false; // 랜덤화 비활성화
+                // StartOfRound의 seed 관련 필드들 패치
+                __instance.randomMapSeed = customSeed;
+                //랜덤 시드 오버라이드
+                __instance.overrideRandomSeed = true;
+                __instance.overrideSeedNumber = customSeed;
 
                 Debug.Log($"[InputSeed] Custom seed applied: {customSeed}");
                 //커스텀 시드가 없으면 자체 생성하는 기능이 있었음
