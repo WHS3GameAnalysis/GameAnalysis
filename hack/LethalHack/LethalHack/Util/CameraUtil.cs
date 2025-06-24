@@ -27,7 +27,7 @@ namespace LethalHack.Util
             return (double)screen.z > 0.0;
         }
 
-        public float GetDistanceToPlayer(Vector3 position)
+        public static float GetDistanceToPlayer(Vector3 position)
         {
             return Hack.localPlayer.gameplayCamera != null ? (float)Math.Round((double)Vector3.Distance(Hack.localPlayer.gameplayCamera.transform.position, position)) : 0f;
         }

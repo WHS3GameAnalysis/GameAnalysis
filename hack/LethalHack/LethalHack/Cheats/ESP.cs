@@ -20,7 +20,10 @@ namespace LethalHack.Cheats
                 if (enemy.enemyType.name == "Doublewing" || enemy.enemyType.name == "DocileLocustBees") continue; // 잡몹은 처리 안하도록 수정
                 if (enemy.isEnemyDead) continue; // 적이 죽은 상태면 스킵
 
+                float distance = CameraUtil.GetDistanceToPlayer(enemy.transform.position);
+                CameraUtil.WorldToScreen(enemy.transform.position, out var screen);
                 VisualUtil.DrawBoxOutline(enemy.gameObject, Color.red, 2f);
+                VisualUtil.DrawDistanceString(screen, enemy.enemyType.name, distance);
             }
         }
 

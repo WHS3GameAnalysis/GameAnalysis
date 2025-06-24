@@ -4,11 +4,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static IngamePlayerSettings;
 
 namespace LethalHack.Util
 {
     public static class VisualUtil
     {
+        public static GUIStyle StringStyle { get; set; } = new GUIStyle(GUI.skin.label);
+        public static void DrawString(Vector2 position, string label, bool centered = true, bool alignMiddle = false, bool bold = false, bool forceOnScreen = false, int fontSize = -1)
+        {
+            var content = new GUIContent(label);
+
+            StringStyle.fontSize = 14;
+            StringStyle.fontStyle = bold ? FontStyle.Bold : FontStyle.Normal;
+
+            var size = StringStyle.CalcSize(content);
+            var upperLeft = centered ? position - size / 2f : position;
+            var style = new GUIStyle(GUI.skin.label);
+
+            if (alignMiddle) style.alignment = TextAnchor.MiddleCenter;
+            else style.alignment = TextAnchor.MiddleLeft;
+
+            if (bold) style.fontStyle = FontStyle.Bold;
+
+            if (fontSize > 0) style.fontSize = fontSize;
+
+            Rect pos = new Rect(upperLeft, size);
+
+            if (forceOnScreen)
+            {
+                if (pos.x < 0) pos.x = 10;
+                if (pos.y < 0) pos.y = 10;
+                if (pos.x + pos.width > Screen.width) pos.x = Screen.width - pos.width - 10;
+                if (pos.y + pos.height > Screen.height) pos.y = Screen.height - pos.height - 10;
+            }
+
+            GUI.Label(pos, content, style);
+        }
+
+        public static void DrawString(Vector2 position, string label, Color color, bool centered = true, bool alignMiddle = false, bool bold = false, bool forceOnScreen = false, int fontSize = -1)
+        {
+            Color color2 = GUI.color;
+            DrawString(position, label, centered, alignMiddle, bold, forceOnScreen, fontSize);
+            GUI.color = color2;
+        }
+
+        public static void DrawDistanceString(Vector2 position, string label, float distance, bool showDistance = true)
+        {
+            if (showDistance) label += "\n" + distance.ToString() + "m";
+            DrawString(position, label, Color.red, true, true);
+        }
+
         public static Bounds GetBounds(this GameObject gameObject)
         {
             Renderer renderer = gameObject.GetComponentInChildren<Renderer>();
