@@ -4,11 +4,10 @@ using UnityEngine;
 
 namespace LethalHack.Cheats
 {
-    internal class HPDisplay : Cheat // Cheat 클래스를 상속
+    public class HPDisplay : Cheat // Cheat 클래스를 상속
     {
         private static TextMeshProUGUI HPText = null;
         private static GameObject text = null;
-        //public static PlayerControllerB localPlayer;
 
         public override void Trigger()
         {
@@ -17,7 +16,7 @@ namespace LethalHack.Cheats
                 Object.Destroy(text);
                 text = null;
                 HPText = null;
-                return; // return 이후 코드는 실행되지 않으므로, 아래 코드는 접근 불가였습니다.
+                return;
             }
 
             if (HPText == null)
@@ -48,7 +47,7 @@ namespace LethalHack.Cheats
             }
             if (HPText == null) return;
             // localPlayer가 null일 수 있으니 null 체크 추가
-            HPText.text = hack.localPlayer != null ? $"HP \n {hack.localPlayer.health}" : "HP \n N/A";
+            HPText.text = Hack.localPlayer != null ? $"HP \n {Hack.localPlayer.health}" : "HP \n N/A";
         }
     }
 }
