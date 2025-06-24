@@ -2,21 +2,21 @@
 using LethalHack.Util;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-using static IngamePlayerSettings;
 
 namespace LethalHack.Cheats
 {
     [HarmonyPatch]
     public class ESP : Cheat
     {
+        public bool ItemESPisEnabled = true;
+        public bool EnemyESPisEnabled = true;
         public static List<EnemyAI> enemies = new List<EnemyAI>();
         public static List<GrabbableObject> items = new List<GrabbableObject>();
 
         public override void Trigger()
         {
-            EnemyESP();
-            ItemESP();
+            if (EnemyESPisEnabled) EnemyESP();
+            if (ItemESPisEnabled) ItemESP();
         }
 
         public void ItemESP()
@@ -27,14 +27,13 @@ namespace LethalHack.Cheats
 
                 float distance = CameraUtil.GetDistanceToPlayer(item.transform.position);
                 if (distance == 0f || distance > 5000 || !CameraUtil.WorldToScreen(item.transform.position, out var screen)) continue;
-                VisualUtil.DrawBoxOutline(item.gameObject, Color.red, 2f);
+                VisualUtil.DrawBoxOutline(item.gameObject, Color.blue, 2f);
                 VisualUtil.DrawDistanceString(screen, item.itemProperties.itemName, distance);
             }
         }
 
         public void EnemyESP()
         {
-            // ESP 구현
             foreach (var enemy in enemies)
             {
                 if (enemy == null || enemy.enemyType.name == "") continue;
