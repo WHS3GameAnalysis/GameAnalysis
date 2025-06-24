@@ -2,6 +2,7 @@ using GameNetcodeStuff;
 using HarmonyLib;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 namespace LethalHack.Cheats
 {
@@ -31,6 +32,39 @@ namespace LethalHack.Cheats
                     enemies.Add(enemy);
                 }
             }
+        }
+        
+        // Kill All 기능 - 임시 해결책 방식으로 구현
+        public static void KillAllEnemies()
+        {
+            if (HUDManager.Instance == null) return;
+            
+            if (enemies.Count == 0)
+            {
+                HUDManager.Instance.DisplayTip("LethalHack", "No enemies to kill!");
+                return;
+            }
+            
+            int killedCount = 0;
+            foreach (EnemyAI enemy in enemies)
+            {
+                if (enemy != null && !enemy.isEnemyDead)
+                {
+                    // 직접 Kill 로직 구현
+                    if (Hack.localPlayer.IsHost)
+                    {
+                        if (!enemy.enemyType.canDie) enemy.enemyType.canDie = true;
+                        enemy.KillEnemyServerRpc(true);
+                    }
+                    else 
+                    {
+                        RoundManager.Instance.DespawnEnemyServerRpc(enemy.GetComponent<NetworkObject>());
+                    }
+                    killedCount++;
+                }
+            }
+            
+            HUDManager.Instance.DisplayTip("LethalHack", $"Killed {killedCount} enemies!");
         }
         
         // 적 추가 메서드 (향후 ObjectManager 방식으로 개선 가능)
