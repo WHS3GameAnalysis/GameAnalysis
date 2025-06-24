@@ -442,6 +442,7 @@
     <Compile Include="Cheats\InfinityStamina.cs" />
     <Compile Include="Cheats\SuperJump.cs" />
     <Compile Include="Cheats\FastClimb.cs" />
+    <Compile Include="Cheats\NightVision.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Hack.cs" />
     <Compile Include="Loader.cs" />
