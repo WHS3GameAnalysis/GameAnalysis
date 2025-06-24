@@ -1,4 +1,5 @@
-﻿using GameNetcodeStuff;
+﻿using BepInEx; 
+using GameNetcodeStuff;
 using HarmonyLib;
 using System;
 using System.IO;
@@ -8,16 +9,23 @@ using UnityEngine;
 
 namespace LethalHack
 {
-    public class Loader
+    [BepInPlugin("com.yourname.lethalhack", "LethalHack", "1.0.0")] 
+    public class Loader : BaseUnityPlugin
     {
         private static GameObject load;
 
-        public static void Init() // 인젝션 할 때 가장 먼저 실행할 메서드
+        private void Start()
+        {
+            Init(); // 기존 방식 그대로 호출
+        }
+
+        public static void Init() // 기존 구조 유지
         {
             LoadAssembly("LethalHack.Resources.0Harmony.dll");
-            Loader.load = new GameObject(); // 새로운 게임 오브젝트 생성
-            Loader.load.AddComponent<Hack>(); // 게임 오브젝트에 hack 컴포넌트 추가
-            UnityEngine.Object.DontDestroyOnLoad(Loader.load); // 가비지 컬렉터 예외 처리(씬이 바뀌어도 파괴되지 않도록 설정)
+
+            load = new GameObject("LethalHackMain");
+            load.AddComponent<Hack>();
+            UnityEngine.Object.DontDestroyOnLoad(load);
         }
 
         public static void LoadAssembly(string name)
@@ -28,6 +36,5 @@ namespace LethalHack
             stream.Read(rawAssembly, 0, (int)stream.Length);
             AppDomain.CurrentDomain.Load(rawAssembly);
         }
- 
     }
 }
