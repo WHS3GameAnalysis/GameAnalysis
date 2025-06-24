@@ -163,3 +163,11 @@ C:\Jihoon\WhiteHat\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\Leth
 C:\Jihoon\WhiteHat\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
 C:\Jihoon\WhiteHat\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
 C:\Jihoon\WhiteHat\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.AssemblyReference.cache
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.CoreCompileInputs.cache
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.pdb
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\0Harmony.dll
+C:\Users\sean\Documents\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
