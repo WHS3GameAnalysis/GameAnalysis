@@ -179,3 +179,13 @@ C:\Users\gicha\Documents\GitHub\GameAnalysis-inputSeed\hack\LethalHack\LethalHac
 C:\Users\gicha\Documents\GitHub\GameAnalysis-inputSeed\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
 C:\Users\gicha\Documents\GitHub\GameAnalysis-inputSeed\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
 C:\Users\gicha\Documents\GitHub\GameAnalysis-inputSeed\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.pdb
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\0Harmony.dll
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\netstandard.dll
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.AssemblyReference.cache
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.CoreCompileInputs.cache
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
+C:\Users\gicha\Documents\GitHub\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
