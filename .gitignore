@@ -1,3 +1,4 @@
 /hack/LethalHack/.vs
 *.cache
 /hack/LethalHack/LethalHack/obj/Debug
+/hack/LethalHack/LethalHack/bin/Debug

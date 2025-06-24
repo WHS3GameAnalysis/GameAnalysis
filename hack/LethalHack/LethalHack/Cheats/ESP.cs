@@ -3,6 +3,7 @@ using LethalHack.Util;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static IngamePlayerSettings;
 
 namespace LethalHack.Cheats
 {
@@ -21,7 +22,7 @@ namespace LethalHack.Cheats
                 if (enemy.isEnemyDead) continue; // 적이 죽은 상태면 스킵
 
                 float distance = CameraUtil.GetDistanceToPlayer(enemy.transform.position);
-                CameraUtil.WorldToScreen(enemy.transform.position, out var screen);
+                if (distance == 0f || distance > 5000 || !CameraUtil.WorldToScreen(enemy.transform.position, out var screen)) continue;
                 VisualUtil.DrawBoxOutline(enemy.gameObject, Color.red, 2f);
                 VisualUtil.DrawDistanceString(screen, enemy.enemyType.name, distance);
             }

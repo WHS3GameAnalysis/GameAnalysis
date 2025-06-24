@@ -67,7 +67,7 @@ namespace LethalHack
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
-            //if (SuperJump.isEnabled) SuperJump.Trigger();
+            if (SuperJump.isEnabled) SuperJump.Trigger();
             //if (!SuperJump.isEnabled) SuperJump.Trigger();
         }
     }
