@@ -7,12 +7,32 @@ using static IngamePlayerSettings;
 
 namespace LethalHack.Cheats
 {
-    [HarmonyPatch(typeof(EnemyAI), "Start")]
+    [HarmonyPatch]
     public class ESP : Cheat
     {
         public static List<EnemyAI> enemies = new List<EnemyAI>();
+        public static List<GrabbableObject> items = new List<GrabbableObject>();
 
         public override void Trigger()
+        {
+            EnemyESP();
+            ItemESP();
+        }
+
+        public void ItemESP()
+        {
+            foreach (var item in items)
+            {
+                if (item == null) continue;
+
+                float distance = CameraUtil.GetDistanceToPlayer(item.transform.position);
+                if (distance == 0f || distance > 5000 || !CameraUtil.WorldToScreen(item.transform.position, out var screen)) continue;
+                VisualUtil.DrawBoxOutline(item.gameObject, Color.red, 2f);
+                VisualUtil.DrawDistanceString(screen, item.itemProperties.itemName, distance);
+            }
+        }
+
+        public void EnemyESP()
         {
             // ESP 구현
             foreach (var enemy in enemies)
@@ -29,9 +49,17 @@ namespace LethalHack.Cheats
         }
 
         [HarmonyPostfix]
+        [HarmonyPatch(typeof(EnemyAI), "Start")]
         public static void FindEnemies(EnemyAI __instance)
         {
             enemies.Add(__instance);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(GrabbableObject), "Start")]
+        public static void FindItems(GrabbableObject __instance)
+        {
+            items.Add(__instance);
         }
     }
 }
