@@ -29,8 +29,11 @@ namespace LethalHack
             Hack.Instance.Seed.isEnabled = GUI.Toggle(new Rect(10, 120, 180, 20), Hack.Instance.Seed.isEnabled, "Input Seed");
             if (Hack.Instance.Seed.isEnabled) //시드 선택 GUI
             {
-                GUI.Label(new Rect(30, 145, 180, 20), "Enter Seed Here : ");
-                GUI.TextField(new Rect(50, 165, 180, 20), LethalHack.Cheats.InputSeed.seedInputnumber);
+                GUI.Label(new Rect(30, 145, 180, 20), "Select Seed Type : ");
+                if(GUI.Button(new Rect(50, 165, 180, 20), LethalHack.Cheats.InputSeed.seedListName[Hack.Instance.Seed.selectedSeedIndex]))
+                {
+                    Hack.Instance.Seed.selectedSeedIndex = (Hack.Instance.Seed.selectedSeedIndex + 1) % LethalHack.Cheats.InputSeed.seedListNumber.Length;
+                }
             }
 
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
