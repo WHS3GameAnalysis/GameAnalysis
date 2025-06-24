@@ -32,5 +32,12 @@ namespace LethalHack.Cheats
         {
             return !Instance.isEnabled;
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(PlayerControllerB), nameof(PlayerControllerB.KillPlayer))]
+        public static bool NoKill()
+        {
+            return !Instance.isEnabled;
+        }
     }
 }
