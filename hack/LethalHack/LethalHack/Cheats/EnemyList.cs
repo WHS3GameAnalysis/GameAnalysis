@@ -24,10 +24,10 @@ namespace LethalHack.Cheats
             // 기존 리스트 클리어
             enemies.Clear();
             
-            // 새로운 적들을 리스트에 추가
+            // 새로운 적들을 리스트에 추가 (살아있는 적만)
             foreach (EnemyAI enemy in currentEnemies)
             {
-                if (enemy != null)
+                if (enemy != null && !enemy.isEnemyDead)
                 {
                     enemies.Add(enemy);
                 }
