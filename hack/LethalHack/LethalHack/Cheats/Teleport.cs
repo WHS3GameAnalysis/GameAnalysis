@@ -93,41 +93,13 @@ namespace LethalHack.Cheats
             }
             if (GUI.Button(new Rect(110, 30, 80, 30), "Load Pos"))
             {
-                //result = TeleportImpl.LoadPosition();
-                PlayerControllerB localPlayer = GameNetworkManager.Instance?.localPlayerController;
-
-                // 미니맵 카메라가 없으면 새로 생성
-                if (minimapCamera == null)
-                {
-                    GameObject cameraObj = new GameObject("MinimapCamera");
-                    minimapCamera = cameraObj.AddComponent<Camera>();
-                    
-                    // 카메라 설정
-                    minimapCamera.orthographic = true; // 탑다운 뷰를 위해 직교 투영 사용
-                    minimapCamera.orthographicSize = 20f; // 카메라 범위 설정
-                    minimapCamera.cullingMask = ~0;
-                    minimapCamera.clearFlags = CameraClearFlags.SolidColor;
-                    minimapCamera.backgroundColor = Color.black;
-                    minimapCamera.depth = 10; // 다른 카메라보다 높은 우선순위
-                }
-
-                // 카메라 위치를 플레이어 위치 기준으로 설정
-                minimapCamera.transform.position = new Vector3(localPlayer.transform.position.x, 50f, localPlayer.transform.position.z);
-                minimapCamera.transform.rotation = Quaternion.Euler(90f, 0f, 0f); // 아래를 향하도록 회전
-                
-                // 뷰포트를 화면 오른쪽 상단에 설정
-                minimapCamera.rect = new Rect(0.75f, 0.75f, 0.25f, 0.25f);
-                
-                // 카메라 활성화
-                minimapCamera.enabled = true;
-                
-                result = "미니맵 활성화됨";
+                result = TeleportImpl.LoadPosition();
             }
             var players = GameNetworkManager.Instance?.localPlayerController.playersManager.allPlayerScripts;
             int y = 70;
             foreach (var player in players)
             {
-                if (player && player.IsClient && player != GameNetworkManager.Instance.localPlayerController)
+                if (player && !player.isPlayerDead && player != GameNetworkManager.Instance.localPlayerController)
                 {
                     // 플레이어 이름과 위치를 표시하는 버튼 생성
                     if (GUI.Button(new Rect(10, y, 180, 30), $"{player.playerUsername} ({player.transform.position.x:F2}, {player.transform.position.y:F2}, {player.transform.position.z:F2})"))
@@ -140,6 +112,8 @@ namespace LethalHack.Cheats
 
             // 결과 메시지를 표시
             GUI.Label(new Rect(10, y, 180, 60), result);
+            var test = GameObject.FindGameObjectWithTag("MapCamera").GetComponent<Camera>();
+            GUI.Label(new Rect(10, y + 50, 180, 100), $"{test?.cullingMask.ToString()} {test?.orthographicSize.ToString()}\n{test?.backgroundColor.ToString()} {test?.depth.ToString()} {test?.clearFlags}");
 
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
         }

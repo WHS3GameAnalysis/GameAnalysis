@@ -27,7 +27,7 @@ namespace LethalHack.Cheats
             int y = 70;
             foreach (var player in players)
             {
-                if (player && player.IsClient && player != GameNetworkManager.Instance.localPlayerController)
+                if (player && !player.isPlayerDead && player != GameNetworkManager.Instance.localPlayerController)
                 {
                     // 플레이어 이름과 위치를 표시하는 버튼 생성
                     if (GUI.Button(new Rect(10, y, 180, 30), $"{player.playerUsername} : {player.health}HP"))

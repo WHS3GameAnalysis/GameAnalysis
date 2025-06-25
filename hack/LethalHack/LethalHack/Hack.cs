@@ -35,6 +35,7 @@ namespace LethalHack
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
         public static PlayerControllerB localPlayer;
         public static Harmony harmony; // Harmony 인스턴스
+        internal object minimapminimapCamera;
 
         // Start 메서드에서 On/Off 여부에 따라 기능을 실행합니다.
         public void Start()

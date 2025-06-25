@@ -5,7 +5,7 @@ namespace LethalHack
     // GUI를 띄우는 역할
     public class Menu : MonoBehaviour
     {
-        private Rect windowRect = new Rect(20, 20, 200, 120); // GUI 창 위치, 크기 지정
+        private Rect windowRect = new Rect(20, 20, 200, 200); // GUI 창 위치, 크기 지정
         public bool showMenu = true; // 창 표시 여부
         
         public void Render() // 이 메서드는 Loader에서 호출되어서 GUI를 그리는 역할을 합니다.
@@ -15,6 +15,7 @@ namespace LethalHack
             windowRect = GUI.Window(1, windowRect, DrawMenu, "LethalHack"); // GUI 창 생성: ID = 1, 위치 = windowRect, 내용 = DrawMenu 함수
             Hack.Instance.teleport.Render();
             Hack.Instance.damageHack.Render();
+            Hack.Instance.minimap.Render();
         }
 
         private void DrawMenu(int windowID) // GUI 창 안에 들어갈 내용
@@ -27,6 +28,8 @@ namespace LethalHack
             Hack.Instance.Hpdisp.isEnabled = GUI.Toggle(new Rect(10, 70, 180, 20), Hack.Instance.Hpdisp.isEnabled, "HPDisplay");
 
             Hack.Instance.SuperJump.isEnabled = GUI.Toggle(new Rect(10, 95, 180, 20), Hack.Instance.SuperJump.isEnabled, "Super Jump");
+
+            Hack.Instance.minimap.isEnabled = GUI.Toggle(new Rect(10, 120, 180, 20), Hack.Instance.minimap.isEnabled, "Minimap");
 
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
         }
