@@ -29,7 +29,9 @@ namespace LethalHack
 
             Hack.Instance.SuperJump.isEnabled = GUI.Toggle(new Rect(10, 95, 180, 20), Hack.Instance.SuperJump.isEnabled, "Super Jump");
 
-            Esp.isEnabled = GUI.Toggle(new Rect(10, 120, 180, 20), Esp.isEnabled, "Enemy ESP");
+            Esp.EnemyESPisEnabled= GUI.Toggle(new Rect(10, 120, 180, 20), Esp.EnemyESPisEnabled, "Enemy ESP");
+
+            Esp.ItemESPisEnabled = GUI.Toggle(new Rect(10, 145, 180, 20), Esp.ItemESPisEnabled, "Item ESP");
 
             GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
         }
