@@ -28,6 +28,12 @@ namespace LethalHack
         public InfinityStamina Stamina = new InfinityStamina();
         public HPDisplay Hpdisp = new HPDisplay();
         internal SuperJump SuperJump = new SuperJump();
+        public FastClimb FastClimbHack = new FastClimb();
+        public ESP ESPHack = new ESP();
+        public DamageHack DamageHack = new DamageHack();
+        public Teleport TeleportHack = new Teleport();
+        public Minimap MinimapHack = new Minimap();
+        public InputSeed InputSeedHack = new InputSeed();
         public EnemyList EnemyListHack = new EnemyList();
         public EnemySpawn EnemySpawnHack = new EnemySpawn();
         public NoVisor NoVisorHack = new NoVisor();
@@ -69,6 +75,9 @@ namespace LethalHack
         {
             GUI.Label(new Rect(10, 10, 400, 80), "Cheat Enabled"); // 왼쪽 상단 위에 표시할 문구
             GUIManager.Render(); // GUI 렌더링
+            
+            // ESP 렌더링 (GUI 렌더링은 OnGUI에서만 가능)
+            if (ESPHack.isEnabled) ESPHack.RenderESP();
         }
 
         public void Update() // Unity에서 매 프레임마다 호출되는 메서드
@@ -76,15 +85,17 @@ namespace LethalHack
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
-            //if (SuperJump.isEnabled) SuperJump.Trigger();
-            //if (!SuperJump.isEnabled) SuperJump.Trigger();
+            if (SuperJump.isEnabled) SuperJump.Trigger();
+            if (FastClimbHack.isEnabled) FastClimbHack.Trigger();
+            if (ESPHack.isEnabled) ESPHack.Trigger();
+            if (MinimapHack.isEnabled) MinimapHack.Trigger();
+            if (InputSeedHack.isEnabled) InputSeedHack.Trigger();
             
             // EnemyList 기능은 항상 실행되어야 함 (적 리스트 업데이트)
             EnemyListHack.Trigger();
             
             // EnemySpawn 기능은 항상 실행되어야 함 (적 타입 리스트 업데이트)
             EnemySpawnHack.Trigger();
-            
             
             if (NoVisorHack.isEnabled) NoVisorHack.Trigger();
         }

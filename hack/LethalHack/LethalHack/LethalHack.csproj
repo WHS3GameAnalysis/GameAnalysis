@@ -437,16 +437,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cheats\DamageHack.cs" />
+    <Compile Include="Cheats\EnemyList.cs" />
+    <Compile Include="Cheats\EnemySpawn.cs" />
+    <Compile Include="Cheats\ESP.cs" />
+    <Compile Include="Cheats\FastClimb.cs" />
     <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\HPDisplay.cs" />
     <Compile Include="Cheats\InfinityStamina.cs" />
+    <Compile Include="Cheats\InputSeed.cs" />
+    <Compile Include="Cheats\Minimap.cs" />
+    <Compile Include="Cheats\NoVisor.cs" />
     <Compile Include="Cheats\SuperJump.cs" />
+    <Compile Include="Cheats\Teleport.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Hack.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\cameraUtil.cs" />
+    <Compile Include="Util\EnemyTab.cs" />
+    <Compile Include="Util\ITab.cs" />
     <Compile Include="Util\MenuUtil.cs" />
+    <Compile Include="Util\PlayerTab.cs" />
+    <Compile Include="Util\SelfTab.cs" />
+    <Compile Include="Util\VisualTab.cs" />
+    <Compile Include="Util\VisualUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\AmazingAssets.TerrainToMesh.dll" />
@@ -598,6 +614,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Tab\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
