@@ -7,20 +7,22 @@ namespace LethalHack
     {
         public static bool isEnabled = true;
 
-        
+
 
         public static void Trigger()
         {
-            PlayerControllerB player = GameNetworkManager.Instance?.localPlayerController;
-            if (player == null) return;
+            //PlayerControllerB player = GameNetworkManager.Instance.localPlayerController;
+            //if (player == null) return;
 
-            // 나만 적용
-            player.nightVision.enabled = true;
-            player.nightVision.intensity = 80.0f; // 밝기
-            player.nightVision.range = 100.0f; // 범위
-            player.nightVision.color = Color.blue;
+            if (Hack.localPlayer == null) return;
+            
+            Hack.localPlayer.nightVision.enabled = true;
+            Hack.localPlayer.nightVision.intensity = 300.0f; // 밝기
+            Hack.localPlayer.nightVision.range = 300.0f; // 범위
+            Hack.localPlayer.nightVision.color = Color.blue;
         }
-
+        /* 
+        //버튼으로 추가
         public static void Enable()
         {
             isEnabled = true;
@@ -30,12 +32,11 @@ namespace LethalHack
         {
             isEnabled = false;
 
-            // 내 나이트비전 끄기
-            PlayerControllerB player = GameNetworkManager.Instance?.localPlayerController;
-            if (player != null)
+            
+            if (Hack.localPlayer != null)
             {
-                player.nightVision.enabled = false;
+                Hack.localPlayer.nightVision.enabled = false;
             }
-        }
+        }*/
     }
 }
