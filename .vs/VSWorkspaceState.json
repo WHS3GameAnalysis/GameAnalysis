@@ -1,5 +1,11 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\LethalHack.sln",
+  "ExpandedNodes": [
+    "",
+    "\\hack",
+    "\\hack\\LethalHack",
+    "\\hack\\LethalHack\\LethalHack",
+    "\\hack\\LethalHack\\LethalHack\\Cheats"
+  ],
+  "SelectedNode": "\\hack\\LethalHack\\LethalHack\\Cheats\\NightVision.cs",
   "PreviewInSolutionExplorer": false
 }
