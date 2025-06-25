@@ -24,4 +24,5 @@
 리썰 컴퍼니 실행하자마자 inject 하면 esp가 작동을 안해서 함선에 들어가서 inject 해야합니다.
 
 ## 안고친거
-토글불가 : Minimap/Novisor/NightVision
+1. 토글불가 : Minimap/Novisor/NightVision
+2. ESP 기능 Enemy/Item 객체 진입점 수정
