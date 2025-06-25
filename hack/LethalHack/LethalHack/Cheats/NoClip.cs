@@ -1,8 +1,6 @@
-﻿using GameNetcodeStuff;
-using System;
+﻿using GameAnalysis.LethalHack;
+using GameNetcodeStuff;
 using UnityEngine;
-using LethalHack;
-using GameAnalysis.LethalHack;
 
 namespace LethalHack
 {
@@ -10,7 +8,7 @@ namespace LethalHack
     {
         private KBInput movement;
 
-        public override void Trigger()
+        public override void Trigger() // ✅ 추상 메서드 구현 필수
         {
             if (Hack.localPlayer == null) return;
 
@@ -26,13 +24,15 @@ namespace LethalHack
                 }
 
                 controller.enabled = false;
+
+                // ✅ 지속적 위치 갱신
                 player.transform.position = movement.transform.position;
             }
             else
             {
                 if (movement != null)
                 {
-                    UnityEngine.Object.Destroy(movement);
+                    Object.Destroy(movement);
                     movement = null;
                 }
 
