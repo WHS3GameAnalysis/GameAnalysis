@@ -30,6 +30,7 @@ namespace LethalHack
         internal SuperJump SuperJump = new SuperJump();
         internal FastClimb FastClimb = new FastClimb();
         internal NightVision Helmetlight = new NightVision();
+        internal NoClip NoClip = new NoClip(); // ✅ NoClip 추가
         internal EnemyControll EnemyControll = new EnemyControll();
 
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
@@ -79,6 +80,8 @@ namespace LethalHack
             //if (SuperJump.isEnabled) SuperJump.Trigger();
             //if (!SuperJump.isEnabled) SuperJump.Trigger();
             if (FastClimb.isEnabled) FastClimb.Trigger();
+            if (NoClip.isEnabled) NoClip.Trigger();
+
             if (NightVision.isEnabled) NightVision.Trigger();
                        
 
