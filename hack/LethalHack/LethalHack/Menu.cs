@@ -57,11 +57,29 @@ namespace LethalHack
             {
                 float xPos = 10 + (i * (buttonWidth + spacing));
                 
+                // 현재 선택된 탭 하이라이트 처리
+                if (currentTab == i)
+                {
+                    // 선택된 탭: 민트색 배경
+                    GUI.backgroundColor = new Color(0.5f, 1f, 0.8f); // 민트색
+                    GUI.contentColor = Color.white; // 흰색 글자
+                }
+                else
+                {
+                    // 일반 탭: 기본 색상
+                    GUI.backgroundColor = Color.gray;
+                    GUI.contentColor = Color.black;
+                }
+                
                 if (GUI.Button(new Rect(xPos, 35, buttonWidth, buttonHeight), tabNames[i]))
                 {
                     currentTab = i;
                 }
             }
+            
+            // 색상 복원
+            GUI.backgroundColor = Color.gray;
+            GUI.contentColor = Color.white;
 
             // 현재 선택된 탭 그리기
             if (currentTab >= 0 && currentTab < tabs.Count)

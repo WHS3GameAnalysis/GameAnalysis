@@ -15,8 +15,8 @@ namespace LethalHack.Util
             Hack.Instance.Stamina.isEnabled = GUI.Toggle(new Rect(10, 130, 180, 20), Hack.Instance.Stamina.isEnabled, "Infinite Stamina");
             Hack.Instance.FastClimbHack.isEnabled = GUI.Toggle(new Rect(10, 155, 180, 20), Hack.Instance.FastClimbHack.isEnabled, "Fast Climb");
             
-            // 아직 구현되지 않은 기능들 (예정)
-            GUI.Label(new Rect(10, 180, 180, 20), "Noclip (예정)");
+            // NoClip 토글 추가
+            Hack.Instance.NoClip.isEnabled = GUI.Toggle(new Rect(10, 180, 180, 20), Hack.Instance.NoClip.isEnabled, "NoClip");
         }
 
         public void DrawWindows()

@@ -37,6 +37,7 @@ namespace LethalHack
         public EnemyList EnemyListHack = new EnemyList();
         public EnemySpawn EnemySpawnHack = new EnemySpawn();
         public NoVisor NoVisorHack = new NoVisor();
+        public NoClip NoClip = new NoClip();
 
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
         public static PlayerControllerB localPlayer;
