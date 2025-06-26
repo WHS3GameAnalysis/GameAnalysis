@@ -27,7 +27,7 @@ namespace LethalHack
         public GodMode God = new GodMode();
         public InfinityStamina Stamina = new InfinityStamina();
         internal HPDisplay Hpdisp = new HPDisplay();
-       
+        public Freecam freecam = new Freecam();
 
         public static PlayerControllerB localPlayer;
         public static Harmony harmony;
@@ -77,6 +77,7 @@ namespace LethalHack
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
+            if (freecam.isEnabled) freecam.Trigger();
             // if (SuperJump.isEnabled) SuperJump.Trigger();
 
         }
