@@ -351,6 +351,52 @@ namespace LethalHack
             }
         }
     }
+    internal class FlowerSnakeController : IController
+    {
+        // 기본 인터페이스 구현 - 최소한만
+        public void OnTakeControl(EnemyAI enemy) { }
+        public void OnReleaseControl(EnemyAI enemy) { }
+        public void OnDeath(EnemyAI enemy) { }
+        public void Update(EnemyAI enemy, bool isAIControlled) { }
+        public void OnSecondarySkillHold(EnemyAI enemy) { }
+        public void ReleaseSecondarySkill(EnemyAI enemy) { }
+        public void OnMovement(EnemyAI enemy, bool isMoving, bool isSprinting) { }
+        public bool IsAbleToMove(EnemyAI enemy) => true;
+        public bool IsAbleToRotate(EnemyAI enemy) => true;
+        public bool SyncAnimationSpeedEnabled(EnemyAI enemy) => true;
+        public float SprintMultiplier(EnemyAI enemy) => ControllerDefaults.DefaultSprintMultiplier;
+
+        // 주요 기능들
+        public void UsePrimarySkill(EnemyAI enemy)
+        {
+            FlowerSnakeEnemy snake = enemy as FlowerSnakeEnemy;
+            if (snake == null) return;
+
+            // 간단한 점프
+            snake.transform.position += snake.transform.forward * 2f;
+            Debug.Log("FlowerSnake: 점프!");
+        }
+
+        public void UseSecondarySkill(EnemyAI enemy)
+        {
+            FlowerSnakeEnemy snake = enemy as FlowerSnakeEnemy;
+            if (snake == null) return;
+
+            // 간단한 날기
+            snake.transform.position += Vector3.up * 1f;
+            Debug.Log("FlowerSnake: 날기!");
+        }
+
+        public bool CanUseEntranceDoors(EnemyAI enemy) => true;
+        public string GetPrimarySkillName(EnemyAI enemy) => "점프";
+        public string GetSecondarySkillName(EnemyAI enemy) => "날기";
+        public float InteractRange(EnemyAI enemy) => 5f;
+    }
+    internal static class ControllerDefaults
+    {
+        public const float DefaultSprintMultiplier = 2.8f;
+        public const float DefaultInteractRange = 2.5f;
+    }
 
     internal interface IController
     {
