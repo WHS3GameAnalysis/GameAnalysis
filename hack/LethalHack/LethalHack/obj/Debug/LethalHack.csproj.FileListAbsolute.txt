@@ -147,6 +147,7 @@ C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.CoreCompi
 C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
 C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
 C:\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+<<<<<<< Updated upstream
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.pdb
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\netstandard.dll
@@ -156,3 +157,15 @@ D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\L
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.CopyComplete
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+=======
+
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.dll
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\LethalHack.pdb
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\0Harmony.dll
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.csproj.Up2Date
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.dll
+C:\Users\User\Desktop\WHS_Project\GameAnalysis\hack\LethalHack\LethalHack\obj\Debug\LethalHack.pdb
+>>>>>>> Stashed changes

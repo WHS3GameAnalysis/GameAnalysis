@@ -3,12 +3,13 @@ using System.Collections.Generic;
 
 namespace LethalHack
 {
-    public abstract class Cheat // 세부 기능을 구현할 때 사용할 추상 클래스
+    public abstract class Cheat
     {
-        public bool isEnabled = true; // On/Off
-        public abstract void Trigger(); // Trigger 메서드로 기능 실행
+        public bool isEnabled = false;
+        public abstract void Trigger();
     }
 
+<<<<<<< Updated upstream
     public class Hack // 기능을 실행하기 위해 사용되는 클래스
     {
         public static Hack Instance = new Hack(); // 싱글톤으로 외부에서도 참조 가능하게 만들었습니다.
@@ -16,13 +17,76 @@ namespace LethalHack
         public GodMode God = new GodMode();
         public InfinityStamina Stamina = new InfinityStamina();
         internal HPDisplay Hpdisp = new HPDisplay();
+=======
+    public class Hack : MonoBehaviour
+    {
+        public static Hack Instance;
+        public static PlayerControllerB localPlayer;
+        // Cheat 기능들 선언
+        public GodMode God = new GodMode();
+        public InfinityStamina Stamina = new InfinityStamina();
+        internal HPDisplay Hpdisp = new HPDisplay();
+        internal SuperJump SuperJump = new SuperJump();
+        public Teleport teleport = new Teleport();
+        public DamageHack damageHack = new DamageHack();
+        public Minimap minimap = new Minimap();
+        public Freecam freecam = new Freecam();
+        public static Harmony harmony;
 
-        // Start 메서드에서 On/Off 여부에 따라 기능을 실행합니다.
+>>>>>>> Stashed changes
+
+        Menu GUIManager = new Menu();
+
         public void Start()
+        {
+<<<<<<< Updated upstream
+            if (God.isEnabled) God.Trigger();
+            if (Stamina.isEnabled) Stamina.Trigger();
+            if (Hpdisp.isEnabled) Hpdisp.Trigger();
+=======
+            Instance = this;
+            localPlayer = GameNetworkManager.Instance.localPlayerController;
+            if (localPlayer == null) return;
+            HarmonyPatching();
+        }
+
+        private void HarmonyPatching()
+        {
+            harmony = new Harmony("LethalHack");
+            Harmony.DEBUG = false;
+
+            foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                if (type.IsDefined(typeof(HarmonyPatch), false))
+                {
+                    try
+                    {
+                        new PatchClassProcessor(harmony, type).Patch();
+                    }
+                    catch
+                    {
+                        Debug.LogWarning($"Skipping patch in {type.FullName}");
+                    }
+                }
+            }
+        }
+
+        public void OnGUI()
+        {
+            GUI.Label(new Rect(10, 10, 400, 80), "Cheat Enabled");
+            GUIManager.Render();
+        }
+
+
+        public void Update()
         {
             if (God.isEnabled) God.Trigger();
             if (Stamina.isEnabled) Stamina.Trigger();
             if (Hpdisp.isEnabled) Hpdisp.Trigger();
+            if(freecam.isEnabled) freecam.Trigger();
+            // if (SuperJump.isEnabled) SuperJump.Trigger();
+
+>>>>>>> Stashed changes
         }
     }
 }

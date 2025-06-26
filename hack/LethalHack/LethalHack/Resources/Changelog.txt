@@ -1,0 +1,369 @@
+v1.4.7
+- Added Slide Taunt - Lets you slide while emoting
+- Added Explode Jetpack - Explodes the jetpack held by the player
+- Added Explode All Jetpacks - Explodes all jetpacks on the ground
+- Added Explode Jetpacks On Grab - When picked up it explodes
+- Added Harmony FailSafe - Makes the menu work even if some harmony patches fail
+- Fixed Masked Player not getting collected - Only enemy that didn't call the base start method
+- Fixed Unlimited Presents - The method we patched was changed causing a harmony error
+- Fixed Fix All Valves - He moved the fix method to a new class named SteamValveFixInteraction
+
+v1.4.6
+- Added Host kicked warning to anti kick - Shows what lobbies hosts kicked you!
+- Added Lethal Menu User Warning to Display Lethal Menu Users - Shows if the host is using Lethal Menu User in the lobby
+- Added Enemy Vent ESP 
+- Added Enemy Vent Chams 
+- Added Vain Shroud ESP - I know these were removed but its incase they get added back
+- Added Vain Shroud Chams 
+- Added Cruiser ESP
+- Added Cruiser Chams 
+- Added Item Dropship ESP
+- Added Item Dropship Chams 
+- Added Audio to Free cam
+- Added Audio to Spectate player
+- Added Box ESP - Draws boxes around the object
+- Added Mineshaft colors - They were forgotten by icy >:C
+- Added Toggle Mineshaft Elevator - Brings elevator the opposite way
+- Added Toggle Vehicle Magnet - Toggles the vehicle magnet on and off
+- Added Toggle Vehicle Ignition - Toggles the vehicle engine on and off
+- Added Object Queue Delay - Delay it takes to add to the lists
+- Added Toggle All Chams 
+- Added Spam Shoot All Shotguns - Spam shoots all the shotguns regardless if its in an inventory or ground
+- Added Shot All Shotguns - Shoots all shotguns regardless if its in an inventory or ground
+- Added Minigun Shotgun - Lets you shoot the shotgun like a mini gun! (HOLD LMB)
+- Added Grab Nutcrackers Shotgun - Lets you grab the nutcrackers shotgun out of his hands!
+- Added Display Credits - Displays terminal credits
+- Added Message Spam - Will spam whatever message you have selected
+- Added Is Outside to enemy tab - Shows if the enemy is outside or not
+- Added Item Amount to Item Manager - Lets you spawn more then 1 item at once
+- Added Explode Cruiser - Explodes the cruiser
+- Added Open Settings - Opens the Lethal Menu config
+- Fixed null ESP and Chams errors
+- Fixed Demi god / heal - I was calling a client rpc instead of a server rpc
+- Fixed Cursor bug - Cursor got disabled when exiting the escape menu with Lethal Menu open
+- Fixed First Setup Manager bug - It didn't update the text to the key you pressed
+- Fixed No Fog - It wasn't revert able 
+- Fixed Players List - It should now show late company players
+- Fixed FPS Problem - Thanks to Akira for pointing me to the issue :D
+- Fixed Kill All and Stun All notifications - It was calling the notification more than once
+- Fixed Self Tab Error - It would error if any entrances positions were null
+- Fixed Wrong config name - ITS SMALL BUT IT ANNOYED ME 
+- Fixed Loot Before Game Starts - It now can revert and uses no loops
+- Fixed Kill enemy - You can now kill unkillable enemies as client :D
+- Fixed Kill All Enemies and Stun All Enemies - It alerted you a ton instead of once
+- Fixed Self Tab Error - The menu would glitch out if entrancepoint transform was null
+- Fixed Loot Manager - The teleporting was buggy so I switched to use GetItemFloorPosition
+- Fixed Moon Manager - Instead of excluding broken moons it checks if its null so it will always work in future game updates
+- Changed Managers - You can now open them all when outside the game instead of closing them on leave
+- Changed Unlock Door - Added terminal objects to raycast and it now works for any camera like freecam
+- Changed Open All Doors - It sets the power to the door to true if its off
+- Changed Close All Doors - It sets the power to the door to true if its off
+- Changed Unlock Door to Unlock Objects - Its not just used for doors and works for turrets, big doors, locked doors, and mines it was just confusing
+- Removed line of sight - Too many issues 
+ 
+v1.4.5
+- Added Chams Disable w/ Line of Sight
+- Added Mineshaft Elevator to ESP and Chams
+- Added Dress Girl Controller - You can control the dress girl and chase people!
+- Added Clay Surgeon Controller - You can control the Clay Surgeon and cut people up!
+- Added Cave Dweller Controller - You can control the Cave Dweller and jump on peoples!!
+- Added Anti Ghost Girl - Ghost girl can't haunt you
+- Added Welcome Message - Welcome message when you join a lobby
+- Added Enemy Control Anti Scan - Prevents you from scanning when controlling a enemy
+- Added Eggs Always Explode - Makes eggs always explode!
+- Added No Ship Door Close (Host Only) - Makes the ship door stay closed when at 0%
+- Added Force Meteor Shower (Host Only) - Forces a meteor shower 
+- Added Clear Meteor Shower (Host Only) - Clears a meteor shower
+- Added Double Wing Controller - Added controls and abilities for it 
+- Added Docile Locust Bees Controller - Added controls for it but it has no abilities 
+- Added Enemy Death Notifications - Notifes you when a enemy dies
+- Added Notification to Kill Enemy - Notifies you when a enemy is killed or can't be killed
+- Added Notification to Stun Enemy -  Notifies you when a enemy is stunned or can't be stunned
+- Added Bush Wolf to enemy spawner - You can spawn the Bush Wolf in the enemy tab enemy spawner
+- Added Bush Wolf Enemy Insta Kill - Added Bush Wolf Enemy to Insta Kill
+- Added Cave Dweller Insta Kill - Added Cave Dweller to Insta Kill
+- Added Edit Deadline (Host Only) - Lets you change the deadline!
+- Added Open Drop Ship On Land - Opens drop ship as soon as it lands!
+- Added Loot Any Item Belt Bag - Lets you put any items in the belt bag
+- Added Loot Through Walls Belt Bag - Lets you loot through walls with the belt bag
+- Added Click Kill - Middle Click to kill enemies when click kill is enabled
+- Added HP Display - Shows your hp in your the corner of the Player HUD
+- Added No TZP Effects - No negative effects from TZP
+- Added Unlimited TZP - Use TZP forever
+- Added Audio Listener for enemy controllers - You can hear the audio around the enemy
+- Added Demi God - Sets players health to 100 when its not for people you enable it for
+- Added Anti Kick (BUGGY) - Its only enabled after being kicked from the lobby might cause your name to be nameless and profile to be the Lethal Company logo
+- Added Sell Quota - Sells as much as quota needs if there is enough items
+- Added Stun - You can stun a single enemy like you can kill it
+- Added Toggle Deposit Desk Door Sound - Spam opens the door making the door opening sound
+- Added Spawn Hoarding Bug Infestation - Spawns a ton of Hoarding Bugs
+- Fixed Turret Chams Error - When you left the moon it would cause a error
+- Fixed Enemy Controller - Enemy control gets disabled when the enemy dies or gets destroyed
+- Fixed Teleport Enemy To Player - It was using EnemyAI[] instead of EnemyAI
+- Fixed Chams Error - Fixed a chams error with turrets when you left mid game
+- Fixed God Mode Error - Added null checks to all god mode patches
+- Fixed Toggle Terminal Sound Error - Fixed error when you leave with Toggle Terminal Sound hack on 
+- Fixed Open All Doors - Forgot to add it to executors :C and improved its code!
+- Fixed Close All Doors - Forgot to add it to executors :C and improved its code!
+- Fixed Unlock all doors - Improved the code and fixed my mistake
+- Fixed Sand Worm Controller - Added a cooldown while it resets
+- Fixed Puffer Controller - Able to do abilities while players aren't nearby
+- Fixed Hoarder Bug Controller - Fixed picking up items being inconsistent
+- Fixed Baboon Bird Controller - Fixed picking up items being inconsistent
+- Fixed RadMechAI chams - Its now applied to the body not the particles from the stepping
+- Fixed Item ESP - Items in the belt bag don't show up on the esp anymore
+- Fixed ESP Distance - It only accepted ints not floats so config would fail to load
+- Changed Body ESP - Made body esp its own toggle instead of being inside the item 
+- Changed HP Display to Player HP Display - To cause less confusion
+- Changed Teleport All Enemies - Changed the method it used!
+- Changed Grab Items Before Game - Redid it so its reverts if it gets disabled and renamed it to Loot Before Game Starts
+- Changed Unload - It attempts to remove all enabled hacks and make everything normal
+- Changed Unlock Door - Improved the code 
+- Changed Enemy Spawn List - Goes by the alphabet now (A - Z)
+- Changed Enemy List - Goes by the alphabet now (A - Z)
+- Changed Use Default Chams - Now its on by default
+- Changed Heal - It doesn't make sound when you heal them now
+- Changed Kill - It does the player hp instead of 1000
+- Changed moved Fix Valves, Sell Everything, Teleport All Items, Teleport One Item from troll tab to self tab
+- Changed Display Lethal Menu Users - It only sends the display message if you have it turned on instead of doing it regardless
+- Removed Force Bleed - Too many bugs
+- Removed Flicker Lights - Client side only
+
+v1.4.4 
+- Added PJ Plushie Spammer - Spams PJ Plushies at a variable speed
+- Added Click Teleport - Teleport to where you click
+- Added Peer 2 Peer Communication - Adds [LethalMenu {version}] before their names in players tab (1.4.4+) 
+- Added New Enemies To Cham Toggles 
+- Added Grab Items Before Game - You can pick up items
+- Added Toggle All For Displays - Added a toggle to enable and disable all display options
+- Added Toggle Terminal Sound - Spam the terminal sound
+- Added FPS Counter - Displays your FPS
+- Added Toggle Menu Tip - Adds a Toggle Menu: (Menu Key) to control tips
+- Added Vehicle Godmode - Cruiser doesn't take damage
+- Added Color Customization to info display
+- Added Hack Highlight - Hacks are highlighted
+- Added Hack Highlight Customization - Set the color of the highlighted hacks 
+- Added Transmitt - You can send messages as the signal transmitter
+- Added Message Prefixes - [System], [Server], [Broadcast] - You can send messages in chat as these prefixes like [Prefix] {message}
+- Added Message as other players 
+- Added Suit Manager - View all suits with buy all and wear on buy
+- Added Unlock All Suits - Unlocks all suits
+- Added Wear On Buy to suit manager - Buys the suit and wears 
+- Added Eggs Never Explode - Easter Eggs never explode when you throw them
+- Added Force Bleed - Force others players to bleed 
+- Added Unlimited Zap Gun - You can shock forever
+- Added Reset Ship (Host Only) - Resets everything about the ship
+- Added BushWolf, RadMech, and Cave Dweller to lure
+- Added Copy Lobby ID - Copy a lobby id (Its just the hosts steam id)
+- Added Join Lobby - Join using the lobby id
+- Added Color Customization To Info Display - It changes based on your c_primary color
+- Added Open All Big Doors - Opens all big doors
+- Added Close All Big Doors - Closes all big doors
+- Fixed Themes - They now save in settings and load properly 
+- Fixed Never Lose Scrap - I forgot to add the check for the hack being enabled but its fixed now
+- Fixed First Setup Manager - The buttons were overlapping themselves from a style
+- Fixed Spike Roof Trap Chams - They had to be converted to game objects -- Thanks IcyRelic
+- Fixed No Fog - Experimentation used a volume fog and its now included 
+- Fixed Player ESP Error 
+- Fixed Unlimited Presents - It doesn't make it impossible to drop the present now
+- Fixed SpawnScrap Error - Added a check for spawnEnemiesAndScrap
+- Fixed Kill all enemy (Host Only) - By fixing Enemy killing it fixed this aswell
+- Fixed Enemy killing (Host Only) - Zeekers added a candie bool which can only be changed on host
+- Fixed Teleport all enemies 
+- Changed Player Info - Added more info about the items in their inventory
+- Changed ThemeUtil - It is now just called Theme, way less messy, and better theme loading
+- Changed Shop Lifter - It has much better code and now makes crusier free -- Thanks IcyRelic
+- Changed Item ESP - Made it less messy
+- Changed Info Display - Added a method to make it less messy
+- Changed Item Manager - Made it bigger because the search translation was being cut off
+- Removed Drop All Player Items - I can't fix the syncing issue
+
+v1.4.3
+- Added Super Knife - Instant kill with knife
+- Added No Quicksand - No falling into quicksand 
+- Added No Camera Shake - No camera shake from Giants or Radmechs
+- Added Teleport With Items - Teleport with items on inverse or teleporter
+- Added Drop All Items - Drop all items the local player has
+- Added Berserk All Turrets - Berserk all turrets like you hit them
+- Added Unlock All Doors - Unlock all doors on the map
+- Added Open Ship Door Space - Open the door while in space
+- Added Drop All Players Items - Drop all items all players have
+- Added Show Offensive Lobby Names - Show offensive lobby names that get removed
+- Added Disconnect - Instantly disconnect  
+- Added Bridge Never Falls - Bridges on maps like Vow and Adamance never fall 
+- Added Force Small Bridge Fall - Force Small Bridge on Adamance to fall
+- Added Unlimited Oxygen - Unlimited Oxygen in water
+- Added Spawn Spike Roof Trap - Spawn Spike Roof Traps 
+- Added Enable Shop Items - See and teleport items from the ship in the Item Manager
+- Added Weather Manager - Change the Weather of a moon
+- Added HP Display - See the Health of other players on ESP
+- Added GiftBox Item ESP - See the item inside a GiftBox
+- Added GiftBox Iem value ESP - See the value of the item in a GiftBox
+- Added Unlimited Presents - Open GiftBoxes forever 
+- Added Extra Slots - Change how many slots you have (LOBBY REJOIN REQUIRED)
+- Added Spike Roof Trap ESP - See Spike Roof Traps on ESP
+- Added Spike Roof Trap Chams - See Spike Roof Traps on Chams
+- Added Dot Crosshair - New Dot Crosshair 
+- Added Vote Ship Leave Early - Vote for the ship to leave early instantly
+- Added RadMech to Godmode - RadMech can't kill you by picking you up
+- Added Translations to Info Display - Info Display is now translated for other languages
+- Added Display Ship Object Count - Display how many items are on the ship
+- Added Display Ship Object Value - Display the value of all the items on the ship
+- Added Hear All Alive People - Hear all people who are alive
+- Added Hear All Dead People - Hear all people who died
+- Added Display Object Count - Display how many items on the map excluding ship items 
+- Added Display Object Value - Display the value of the items on the map excluding ship items
+- Added Display Deadline - Display how many days you have left before quota
+- Added Notifications for Managers - Added notifications when you do actions in the managers
+- Added New Unlockables - New Unlockables for v50 are in the Unlockable Manager now
+- Fixed Loader so you can't inject LethalMenu twice - You can't bug LethalMenu by injecting it twice 
+- Fixed Error from leaving with LethalMenu open - Error you can't see but existed in the console
+- Fixed Cursor getting stuck when leaving with LethalMenu open - You couldn't move the mouse with LethalMenu closed on the main menu 
+- Fixed Managers becoming small after leaving - It didn't check if they were in a game
+- Fixed Build everywhere - You can now build anywhere it was broken after a update
+- Fixed Baboon Bird Controller - You can pick up items again
+- Fixed Translations - Translated everything except General tab
+- Fixed Server Tab Scrolling - You couldn't scroll all the way down in the Server Tab
+- Fixed Moon Manager - Now works for v50
+- Fixed Never Lose Scrap - Now works for v50 
+- Removed Display Ship Object Scan - Changed it into Display Ship Object Count and Display Ship Object Value
+- Removed Display Object Scan - Changed it into Display Object Count and Display Object Value
+- Removed Display Deadline from Display Quota - Made Display Deadline its own option instead of being in Display Quota
+- Removed Default Ship Items - Default ship items don't count in Display Object Count, Display Object Value, Display Ship Object Count, or Display Ship Object Value
+- Removed Hear Everyone - Changed it into Hear All Dead People and Hear All Alive People
+
+v1.4.2
+- EnemyControl 2.0 - Control enemies with more options
+- Fixed some bugs with EnemyControl
+
+v1.4.1
+- Added Shoplifter - All shop items are free
+- Fixed ServerTab Manager translations not working
+- Added Hear Everyone - Hear everyone on the map even if they're dead
+- Added Eject Everyone (Host Only) - Eject everyone off the ship 
+- Added Never Lose Scrap - Keep scrap when everyone dies and ship leaves
+- Added No Visor
+- Added No Field Of Depth 
+- Added No Flash - No flash from flashbangs
+- Fixed Many things not being translated
+- Changed Teleport one item and made it random
+- Added Skins
+- Added Theme manager in settings tab
+
+v1.4.0
+- Added LANGUAGE SUPPORT! (English, German, Chinese, Russian, Polish, and more!)
+- Added NEW GUI size customizations (Resize, Font Size, and more!)
+- Added First Launch setup screen
+- Added Missing breaker esp color to settings
+- Added Search feature to the item manager
+- Added Search feature to keybind list
+- Added feature where cursor will be shown/hidden when you toggle the menu
+- Added feature with LethalMenu will communicate its existance to other users of LethalMenu
+- Changed Centipede lure to now drop/chase player. Kill will now auto cling to player
+- Fixed Kill Nearby Enemies
+- Fixed EnemyFilter not working on esp/chams
+- Removed Basic GUISize
+
+v1.3.2
+- Added Place All Scrap on Company Desk
+- Added Ability to sell more than 12 items at a time
+- Added Enemy Tab in place of Enemy Manager
+- Moved all enemy related hacks to the Enemy Tab
+- Removed Enemy Manager
+- Fixed FPS Issues with NoClip
+
+v1.3.1
+- Added Strong Hands (Carry any item with 1 hand) 
+- Added Invisibility
+- Added Spawn Landmine (Host Only)
+- Added Spawn Turret (Host Only)
+- Added Spawn Random Landmines/Turrets  (Spawns a random number of mines/turrets in the factory, Host Only)
+- Added Ability to force HoarderBugs to steal all items
+- Fixed ESP/Chams causing crashes/instability with frames
+- Fixed Issue with strong hands not allowing you to pick up items
+- Fixed Issue where NoCooldown would make the shovel rapid fire constantly
+
+v1.3.0
+- Added CHAMS w/ settings
+- Added Super Shovel (Damage x1000)
+- Added Support for 8 character hex codes for colors with alpha
+- Added Create Mimics From Masks (Must pickup mask first)
+- Added Lure Enemies to Player
+- Added Lure All Enemies to Player
+- Added Control Enemy (Use SpeedHack for movement Speed)
+- Added Instant Interact
+- Added No Cooldowns
+- Added KeyBind for Kill Nearby Enemies
+- Added Mouse Binds (Left, Right, Middle, Forward, Backward)
+- Added ESP Enemy Filter Settings
+- Added a host requirement label if not host for spawning enemies in the Enemy Manager
+- Fixed No Carry Weight
+- Removed SpawnRandomValueable (Use Item Manager)
+- Major code changes to UI and hack executors to make it neat and tidy
+
+v1.2.1
+- Added Kill Nearby Enemies w/ Setting
+- Added Scrap Loot Tiers w/ Settings and toggle
+- Added Light to FreeCam (uses night vision settings)
+- Fixed issue that may have caused issues with ESP and other hacks that use game objects
+
+v1.2.0
+- Added Spectate other players
+- Added Mini Spectate Cameras
+- Added Free Cameras
+- Added Enemy Manager (Kill/Despawn/Spawn Enemies)
+- Added Unloackables Manager
+- Added Night Vision Settings
+- Added Toggle cursor key bind
+- Added Toggle for Factory Lights (Host Only)
+- Added Flicker Lights (Host Only)
+- Added Breaker Box ESP 
+- Added Kill Everyone (Including yourself)
+- Added Kill Everyone (Except yourself)
+- Added Unlimited Shotgun Ammo
+- Added Ghost Mode (Credit @Ugleh for the idea/code)
+- Added option to enable/disable the rendering of player models while spectating/minicam
+- Added Togglable Cheats to config. Values will be saved and loaded
+- Changed Players Tab to not be as cluttered
+- Changed ESP to now display while dead and Spectating
+- Changed Key Binds to no longer work while in pause menu, in chat, or using the terminal
+- Renamed Doors Through Walls to Interact Through Walls since its more than doors. (valves, terminal, ladder, ect)
+- Fixed Night Vision making everything super dark while inside (Credit @Ugleh for pointing this out)
+- Fixed Toggle Ship Horn not working
+- Fixed Not being able to interact when Mouth Dog attempts to kill you while in god mode
+- Fixed issue where you could not teleport to players anymore
+- Removed Spawn All Suits Button (Use Unlockables Manager)
+
+v1.1.0
+- Added Settings Tab
+- Added Gui Size to settings
+- Added config file
+- Added key bind settings
+- Added Crosshair Visuals
+- Added Breadcrumbs
+- Added Death Notification Tooltips
+- Added No Fog
+- Added No Clip
+- Added Numerous Settings
+- Added ESP Distance Setting
+- Added Toggle All ESP to ESP Menu
+- Added Locked Doors to ESP
+- Added Build Anywhere
+- Added No Carrying Weight
+- Overhaled code to be more efficient and support config files and key binds
+- Fixed ESP Labels showing off center of objects
+- Fixed Loot/Doors Through Walls (Note, you cannot pick up loot while only doors through walls is on and vice versa)
+- Fixed Teleport All Items to be instant and not travel back and forth between positions.
+
+v1.0.1
+- Added changelog to general tab
+- Added Force Company Monster Tentacle Attack
+- Added Movement Speed Hack
+- Added Strike players with lightening (must be host, and stormy)    
+- Changed Dead bodies to show player names and cause of death on ESP
+- Changed players tab to show if the player is dead and their cause of death
+- Changed the xp, quota, and credits textboxes to be bigger
+- Changed the speed modifier sliders to only show 1 decimal place in the label
+- Fixed God mode now prevents snare flea from attaching to you
+- Fixed unlimited stamina bug while unlimited battery is on
+- Fixed Dead enemies no longer show on ESP

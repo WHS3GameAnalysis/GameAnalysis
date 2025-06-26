@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using LethalHack.Manager;
 namespace LethalHack.Util
 {
     /// <summary>
@@ -10,7 +10,7 @@ namespace LethalHack.Util
     {
         public static void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Tab)) // Tab 키로 토글
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Tab)) // Tab 키로 토글
             {
                 if (Cursor.lockState == CursorLockMode.Locked)
                 {
