@@ -9,13 +9,11 @@ namespace LethalHack.Cheats
 {
     public class Freecam : Cheat
     {
-        public static PlayerControllerB localPlayer = null;
         public static Camera camera = null;
         private static Light light = null;
         public static MouseInput mouse = null;
         public static KBInput movement = null;
         public static AudioListener audioListener = null;
-
 
         public static bool isActive = false;
 
@@ -28,8 +26,6 @@ namespace LethalHack.Cheats
                 Hack.localPlayer = GameNetworkManager.Instance.localPlayerController;
                 if (Hack.localPlayer == null) return;
             }
-            if (localPlayer == null)
-                localPlayer = Hack.localPlayer;
 
             try
             {
@@ -39,10 +35,10 @@ namespace LethalHack.Cheats
                     return;
                 }
 
-                if (localPlayer != null)
+                if (Hack.localPlayer != null)
                 {
-                    localPlayer.enabled = false;
-                    localPlayer.isFreeCamera = true;
+                    Hack.localPlayer.enabled = false;
+                    Hack.localPlayer.isFreeCamera = true;
                 }
 
                 CreateIfNull();
@@ -112,10 +108,10 @@ namespace LethalHack.Cheats
                     CameraManager.ActiveCamera.enabled = true;
                 }
 
-                if (localPlayer != null)
+                if (Hack.localPlayer != null)
                 {
-                    localPlayer.enabled = true;
-                    localPlayer.isFreeCamera = false;
+                    Hack.localPlayer.enabled = true;
+                    Hack.localPlayer.isFreeCamera = false;
                 }
             }
 

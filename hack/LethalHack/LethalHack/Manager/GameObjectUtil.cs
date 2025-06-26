@@ -7,7 +7,6 @@ namespace LethalHack.Manager
 {
     internal class GameObjectUtil
     {
-        public static PlayerControllerB localPlayer;
         public static Camera CreateCamera(string name, Transform pos, bool copyPlayerTexture = true)
         {
             PlayerControllerB localPlayer = GameNetworkManager.Instance.localPlayerController;
@@ -40,7 +39,7 @@ namespace LethalHack.Manager
         public static Light CreateLight()
         {
             //create and return a copy of LethalMenu.localPlayer.nightVision
-            Light light = Object.Instantiate(localPlayer.nightVision);
+            Light light = Object.Instantiate(Hack.localPlayer.nightVision);
 
             light.enabled = true;
             light.intensity = 3000f;

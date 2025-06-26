@@ -5,7 +5,7 @@ namespace LethalHack.Manager
 {
     public class CameraManager
     {
-        public static PlayerControllerB localPlayer;
+        
         private static Camera _camera = null;
         public static Camera ActiveCamera
         {
@@ -23,13 +23,13 @@ namespace LethalHack.Manager
         
         public static Camera GetBaseCamera()
         {
-            if (localPlayer == null || localPlayer.gameplayCamera == null) return Camera.main;
-            return localPlayer.isPlayerDead ? StartOfRound.Instance.spectateCamera : localPlayer.gameplayCamera ?? Camera.main;
+            if (Hack.localPlayer == null || Hack.localPlayer.gameplayCamera == null) return Camera.main;
+            return Hack.localPlayer.isPlayerDead ? StartOfRound.Instance.spectateCamera : Hack.localPlayer.gameplayCamera ?? Camera.main;
         }
 
         public static bool UsingBaseCamera()
         {
-            return _camera.GetInstanceID() == localPlayer?.gameplayCamera.GetInstanceID() || _camera.GetInstanceID() == StartOfRound.Instance.spectateCamera.GetInstanceID();
+            return _camera.GetInstanceID() == Hack.localPlayer?.gameplayCamera.GetInstanceID() || _camera.GetInstanceID() == StartOfRound.Instance.spectateCamera.GetInstanceID();
         }     
     }
 }

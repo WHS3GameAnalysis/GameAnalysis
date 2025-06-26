@@ -7,7 +7,7 @@ namespace LethalHack.Input
 {
     internal class AIMovement : MonoBehaviour
     {
-        public PlayerControllerB localPlayer;
+        
         // Movement constants
         private const float WalkingSpeed = 0.5f; // Walking speed when left control is held
         private const float SprintDuration = 0.0f; // Duration sprint key must be held for sprinting (adjust as needed)
@@ -36,8 +36,8 @@ namespace LethalHack.Input
         }
 
         internal void Init()
-        {
-            PlayerControllerB playerB = localPlayer as PlayerControllerB;
+        {   
+            PlayerControllerB playerB = Hack.localPlayer as PlayerControllerB;
             if (playerB == null) return;
 
             gameObject.layer = playerB.gameObject.layer;

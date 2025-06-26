@@ -30,8 +30,8 @@ namespace LethalHack
                 if (!Freecam.isActive)
                 {
                     Freecam.Reset();
-                    Freecam.localPlayer = Hack.localPlayer;
                     Freecam.isActive = true;
+                    Hack.Instance.freecam.isEnabled = true;
                 }
                 else
                 {
