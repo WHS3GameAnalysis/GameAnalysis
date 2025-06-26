@@ -23,6 +23,11 @@ namespace LethalHack.Cheats
 
         public override void Trigger()
         {
+            if (Hack.localPlayer == null)
+            {
+                Hack.localPlayer = GameNetworkManager.Instance.localPlayerController;
+                if (Hack.localPlayer == null) return;
+            }
             if (localPlayer == null)
                 localPlayer = Hack.localPlayer;
 

@@ -3,57 +3,47 @@ using LethalHack.Cheats;
 
 namespace LethalHack
 {
-    // GUI를 띄우는 역할
     public class Menu : MonoBehaviour
     {
-        private Rect windowRect = new Rect(20, 20, 220, 240);
+        private Rect windowRect = new Rect(20, 20, 220, 200); // 크기 약간 확대
         public bool showMenu = true;
-
-        // 현재 Freecam 상태를 저장
-        private bool isFreecamEnabled = false;
 
         public void Render()
         {
             if (!showMenu) return;
 
-<<<<<<< Updated upstream
-            windowRect = GUI.Window(1, windowRect, DrawMenu, "LethalHack"); // GUI 창 생성: ID = 1, 위치 = windowRect, 내용 = DrawMenu 함수
-=======
             windowRect = GUI.Window(1, windowRect, DrawMenu, "LethalHack");
->>>>>>> Stashed changes
         }
 
         private void DrawMenu(int windowID)
         {
-            string buttonLabel = isFreecamEnabled ? "Disable Freecam" : "Enable Freecam";
+          
+            // 기존 기능 토글
+            Hack.Instance.God.isEnabled = GUI.Toggle(new Rect(10, 20, 180, 20), Hack.Instance.God.isEnabled, "God Mode");
+            Hack.Instance.Stamina.isEnabled = GUI.Toggle(new Rect(10, 45, 180, 20), Hack.Instance.Stamina.isEnabled, "Infinite Stamina");
+           // Hack.Instance.Hpdisp.isEnabled = GUI.Toggle(new Rect(10, 70, 180, 20), Hack.Instance.Hpdisp.isEnabled, "HPDisplay");
 
-            if (GUI.Button(new Rect(10, 20, 180, 25), buttonLabel))
+            // Freecam 버튼
+            string buttonLabel = Freecam.isActive ? "Disable Freecam" : "Enable Freecam";
+            if (GUI.Button(new Rect(10, 100, 180, 25), buttonLabel))
             {
-                isFreecamEnabled = !isFreecamEnabled;
-
-<<<<<<< Updated upstream
-            GUI.DragWindow(); // GUI 창을 마우스로 드래그할 수 있게 해줌
-=======
-                if (isFreecamEnabled)
+                if (!Freecam.isActive)
                 {
-                    Freecam.Reset(); // ✅ 클래스 이름으로 정적 메서드 호출
+                    Freecam.Reset();
                     Freecam.localPlayer = Hack.localPlayer;
                     Freecam.isActive = true;
                 }
                 else
                 {
                     Freecam.isActive = false;
-                    Freecam.Stop(); // ✅ 클래스 이름으로 정적 메서드 호출
+                    Freecam.Stop();
                 }
             }
 
-            GUI.Label(new Rect(10, 55, 200, 20), "Freecam: " + (isFreecamEnabled ? "ON" : "OFF"));
-            GUI.Label(new Rect(10, 75, 200, 20), "WASD+QE: 이동");
-            GUI.Label(new Rect(10, 95, 200, 20), "Shift: 빠르게 / ESC: 종료");
+            // 상태 안내
+            GUI.Label(new Rect(10, 135, 200, 20), "Freecam: " + (Freecam.isActive ? "ON" : "OFF"));
 
-            GUI.DragWindow();
->>>>>>> Stashed changes
+            GUI.DragWindow(); // 드래그는 반드시 마지막에!
         }
     }
 }
-

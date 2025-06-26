@@ -1,17 +1,12 @@
-<<<<<<< Updated upstream
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-=======
-﻿<Project Sdk="Microsoft.NET.Sdk">
->>>>>>> Stashed changes
+
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>LethalHack</RootNamespace>
     <AssemblyName>LethalHack</AssemblyName>
     <Configurations>Debug;Release</Configurations>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -29,13 +24,10 @@
     <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-=======
     <EmbeddedResource Include="Resources\0Harmony.dll"/>
     <Reference Include="0Harmony">
       <HintPath>Resources\0Harmony.dll</HintPath>
     </Reference>
->>>>>>> Stashed changes
     <Reference Include="AmazingAssets.TerrainToMesh">
       <HintPath>Resources\Essential\AmazingAssets.TerrainToMesh.dll</HintPath>
     </Reference>
@@ -430,169 +422,4 @@
       <HintPath>Resources\Essential\UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
-<<<<<<< Updated upstream
-  <ItemGroup>
-    <Compile Include="Cheats\GodMode.cs" />
-    <Compile Include="Cheats\HPDisplay.cs" />
-    <Compile Include="Cheats\InfinityStamina.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="Hack.cs" />
-    <Compile Include="Loader.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\MenuUtil.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\AmazingAssets.TerrainToMesh.dll" />
-    <Content Include="bin\Debug\Assembly-CSharp-firstpass.dll" />
-    <Content Include="bin\Debug\Assembly-CSharp.dll" />
-    <Content Include="bin\Debug\ClientNetworkTransform.dll" />
-    <Content Include="bin\Debug\com.olegknyazev.softmask.dll" />
-    <Content Include="bin\Debug\DissonanceVoip.dll" />
-    <Content Include="bin\Debug\EasyTextEffects.dll" />
-    <Content Include="bin\Debug\Facepunch Transport for Netcode for GameObjects.dll" />
-    <Content Include="bin\Debug\Facepunch.Steamworks.Win64.dll" />
-    <Content Include="bin\Debug\LethalHack.dll" />
-    <Content Include="bin\Debug\LethalHack.pdb" />
-    <Content Include="bin\Debug\Mono.Security.dll" />
-    <Content Include="bin\Debug\netstandard.dll" />
-    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
-    <Content Include="bin\Debug\Unity.AI.Navigation.dll" />
-    <Content Include="bin\Debug\Unity.Animation.Rigging.dll" />
-    <Content Include="bin\Debug\Unity.Animation.Rigging.DocCodeExamples.dll" />
-    <Content Include="bin\Debug\Unity.Burst.dll" />
-    <Content Include="bin\Debug\Unity.Burst.Unsafe.dll" />
-    <Content Include="bin\Debug\Unity.Collections.dll" />
-    <Content Include="bin\Debug\Unity.Collections.LowLevel.ILSupport.dll" />
-    <Content Include="bin\Debug\Unity.InputSystem.dll" />
-    <Content Include="bin\Debug\Unity.InputSystem.ForUI.dll" />
-    <Content Include="bin\Debug\Unity.Jobs.dll" />
-    <Content Include="bin\Debug\Unity.Mathematics.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.Common.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.MetricTypes.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetStats.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetStatsMonitor.Component.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetStatsReporting.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" />
-    <Content Include="bin\Debug\Unity.Multiplayer.Tools.NetworkSolutionInterface.dll" />
-    <Content Include="bin\Debug\Unity.Netcode.Components.dll" />
-    <Content Include="bin\Debug\Unity.Netcode.Runtime.dll" />
-    <Content Include="bin\Debug\Unity.Networking.Transport.dll" />
-    <Content Include="bin\Debug\Unity.ProBuilder.Csg.dll" />
-    <Content Include="bin\Debug\Unity.ProBuilder.dll" />
-    <Content Include="bin\Debug\Unity.ProBuilder.KdTree.dll" />
-    <Content Include="bin\Debug\Unity.ProBuilder.Poly2Tri.dll" />
-    <Content Include="bin\Debug\Unity.ProBuilder.Stl.dll" />
-    <Content Include="bin\Debug\Unity.Profiling.Core.dll" />
-    <Content Include="bin\Debug\Unity.RenderPipelines.Core.Runtime.dll" />
-    <Content Include="bin\Debug\Unity.RenderPipelines.Core.ShaderLibrary.dll" />
-    <Content Include="bin\Debug\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" />
-    <Content Include="bin\Debug\Unity.RenderPipelines.HighDefinition.Runtime.dll" />
-    <Content Include="bin\Debug\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" />
-    <Content Include="bin\Debug\Unity.Services.Authentication.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Analytics.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Configuration.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Device.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Environments.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Environments.Internal.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Internal.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Networking.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Registration.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Scheduler.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Telemetry.dll" />
-    <Content Include="bin\Debug\Unity.Services.Core.Threading.dll" />
-    <Content Include="bin\Debug\Unity.Services.QoS.dll" />
-    <Content Include="bin\Debug\Unity.Services.Relay.dll" />
-    <Content Include="bin\Debug\Unity.TextMeshPro.dll" />
-    <Content Include="bin\Debug\Unity.Timeline.dll" />
-    <Content Include="bin\Debug\Unity.VisualEffectGraph.Runtime.dll" />
-    <Content Include="bin\Debug\UnityEngine.AccessibilityModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.AIModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.AndroidJNIModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.AnimationModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ARModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.AssetBundleModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.AudioModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ClothModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ClusterInputModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ClusterRendererModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ContentLoadModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.CoreModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.CrashReportingModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.DirectorModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.dll" />
-    <Content Include="bin\Debug\UnityEngine.DSPGraphModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.GameCenterModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.GIModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.GridModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.HotReloadModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ImageConversionModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.IMGUIModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.InputLegacyModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.InputModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.JSONSerializeModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.LocalizationModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.NVIDIAModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ParticleSystemModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.PerformanceReportingModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.Physics2DModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.PhysicsModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ProfilerModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.PropertiesModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.ScreenCaptureModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.SharedInternalsModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.SpriteMaskModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.SpriteShapeModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.StreamingModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.SubstanceModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.SubsystemsModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TerrainModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TerrainPhysicsModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TextCoreFontEngineModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TextCoreTextEngineModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TextRenderingModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TilemapModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.TLSModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UI.dll" />
-    <Content Include="bin\Debug\UnityEngine.UIElementsModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UIModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UmbraModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityAnalyticsCommonModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityAnalyticsModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityConnectModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityCurlModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityTestProtocolModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityWebRequestAudioModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityWebRequestModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityWebRequestTextureModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.VehiclesModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.VFXModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.VideoModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.VirtualTexturingModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.VRModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.WindModule.dll" />
-    <Content Include="bin\Debug\UnityEngine.XRModule.dll" />
-    <Content Include="obj\Debug\LethalHack.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\LethalHack.dll" />
-    <Content Include="obj\Debug\LethalHack.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\LethalHack.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\LethalHack.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\LethalHack.csproj.Up2Date" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-=======
->>>>>>> Stashed changes
 </Project>
