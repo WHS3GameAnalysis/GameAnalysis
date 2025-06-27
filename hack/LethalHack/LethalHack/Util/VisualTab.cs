@@ -19,6 +19,9 @@ namespace LethalHack.Util
             
             // Minimap 토글
             Hack.Instance.MinimapHack.isEnabled = GUI.Toggle(new Rect(10, 180, 180, 20), Hack.Instance.MinimapHack.isEnabled, "Minimap");
+            
+            // NightVision 토글
+            Hack.Instance.NightVisionHack.isEnabled = GUI.Toggle(new Rect(10, 205, 180, 20), Hack.Instance.NightVisionHack.isEnabled, "NightVision");
         }
 
         public void DrawWindows()
