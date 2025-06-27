@@ -25,7 +25,8 @@ namespace LethalHack
         private static Vector3 originalCameraPosition; // 원래 카메라 위치 저장
         private static Quaternion originalCameraRotation; // 원래 카메라 회전 저장
         private static Vector3 cameraOffset = new Vector3(0, 2f, -3f); // 카메라 오프셋 설정 (몬스터 뒤쪽 위치)
-        
+        private static bool ControlEnabled = false;
+
 
         // 문법 오류 수정
         private static Dictionary<Type, IController> EnemyControllers = new Dictionary<Type, IController>()
@@ -37,11 +38,29 @@ namespace LethalHack
         public override void Trigger()
         {
             if (!isEnabled) return;
-            // 적 제어 로직
-            HandleEnemyControl();
-            UpdateCooldowns();
-            UpdateCameraPosition(); // 추가
+            // n키 누르면 반응하도록 추가
+            
+            if (Keyboard.current != null && Keyboard.current.nKey.wasPressedThisFrame)
+            {
+                ToggleControl();
+                return;
+            }
+            if (ControlEnabled)
+            {
+                HandleEnemyControl();
+                UpdateCooldowns();
+                UpdateCameraPosition();//추가
+            }
 
+        }
+        public static void ToggleControl()
+        {
+            ControlEnabled = !ControlEnabled;
+
+            if (!ControlEnabled)
+            {
+                StopControllingEnemy();
+            }
         }
 
         private void HandleEnemyControl()
@@ -53,7 +72,7 @@ namespace LethalHack
             else
             {                
                 FindAndControlEnemy(); // 새로운 적을 찾아서 제어 시작
-            }
+            }            
         }
         public class EnemyCameraFollow : MonoBehaviour // 추가 ===================================================
         {
@@ -178,6 +197,7 @@ namespace LethalHack
             if (enemy == null || enemy.isEnemyDead)
             {
                 StopControllingEnemy();
+                ControlEnabled = false;
                 return;
             }
 
@@ -187,7 +207,7 @@ namespace LethalHack
                 enemy.transform.position = ControllerInstance.transform.position;
                 enemy.transform.rotation = ControllerInstance.transform.rotation;
             }
-            UpdateCameraPosition(); // 추가 ===
+            //UpdateCameraPosition(); // 추가 ===
         }
         static void UpdateCameraPosition() // 추가=======================================================================
         {
@@ -206,11 +226,12 @@ namespace LethalHack
             }
         } // ===========================================================================================
 
-        public static void StopControllingEnemy()
+        public static void StopControllingEnemy() // 여기 작동 안 함. 원상 복구 부분 필요
         {
             Controlling = false;
             IsAIControlled = false;
             enemy = null;
+            ControlEnabled = false;
 
             if (ControllerInstance != null)
             {
@@ -219,9 +240,31 @@ namespace LethalHack
                 movement = null;
                 mouse = null;
                 audioListener = null;
+                
             }
+            
+            if (mainCamera != null) // 추가 ==================================================
+            {
+                mainCamera.transform.position = originalCameraPosition;
+                mainCamera.transform.rotation = originalCameraRotation;
+                var followScript = mainCamera.GetComponent<EnemyCameraFollow>();
+                if (followScript != null)
+                {
+                    UnityEngine.Object.Destroy(followScript);
+                }
+            }
+            if (Hack.localPlayer != null)
+            {
+                var controller = Hack.localPlayer.GetComponent<CharacterController>();
+                if (controller != null)
+                    controller.enabled = true;
 
-            Debug.Log("Stopped controlling enemy");
+                Hack.localPlayer.gameObject.SetActive(true);
+
+                var input = Hack.localPlayer.GetComponent<PlayerInput>();
+                if (input != null)
+                    input.enabled = true;
+            } // 추가  ========================================================================end            
         }
 
         private void UpdateCooldowns()
@@ -245,7 +288,7 @@ namespace LethalHack
             if (enemy != null && ControllerInstance != null)
             {
                 ControllerInstance.transform.position = position;
-                UpdateCameraPosition(); // 추가 ====
+                UpdateCameraPosition(); // 추가 ===
 
             }
         }
@@ -297,6 +340,12 @@ namespace LethalHack
         private void HandleInput()
         {
             if (keyboard == null) return;
+            /*   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            if (keyboard.nKey.wasPressedThisFrame)  // 추가 ==================== n누르면 다시 돌아 오기 
+            {
+                EnemyControll.StopControllingEnemy();
+                return; // 나머지 입력 처리 건너뛰기
+            }*/
 
             // 이동 입력 처리
             Vector2 moveInput = Vector2.zero;
