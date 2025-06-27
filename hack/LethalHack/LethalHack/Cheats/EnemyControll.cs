@@ -137,7 +137,7 @@ namespace LethalHack
                 enemy.transform.rotation = ControllerInstance.transform.rotation;
             }
         }
-        private void UpdateCameraPosition() // 추가=======================================================================
+        static void UpdateCameraPosition() // 추가=======================================================================
         {
             if (mainCamera != null && enemy != null)
             {
@@ -193,6 +193,8 @@ namespace LethalHack
             if (enemy != null && ControllerInstance != null)
             {
                 ControllerInstance.transform.position = position;
+                UpdateCameraPosition();
+
             }
         }
         // 카메라 오프셋 설정 메서드 추가 =====================================
