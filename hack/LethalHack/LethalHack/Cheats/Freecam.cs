@@ -48,7 +48,7 @@ namespace LethalHack.Cheats
                     light.intensity = 3000f;
                     light.range = 10000f;
                 }
-
+                GameUtil.RenderPlayerModels();
                 if (camera != null && movement != null && mouse != null)
                 {
                     camera.transform.SetPositionAndRotation(movement.transform.position, mouse.transform.rotation);
