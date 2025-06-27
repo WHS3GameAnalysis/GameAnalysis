@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 namespace LethalHack
 {
     internal class EnemyControll : Cheat
@@ -24,6 +25,7 @@ namespace LethalHack
         private static Vector3 originalCameraPosition; // 원래 카메라 위치 저장
         private static Quaternion originalCameraRotation; // 원래 카메라 회전 저장
         private static Vector3 cameraOffset = new Vector3(0, 2f, -3f); // 카메라 오프셋 설정 (몬스터 뒤쪽 위치)
+        
 
         // 문법 오류 수정
         private static Dictionary<Type, IController> EnemyControllers = new Dictionary<Type, IController>()
@@ -53,6 +55,31 @@ namespace LethalHack
                 FindAndControlEnemy(); // 새로운 적을 찾아서 제어 시작
             }
         }
+        public class EnemyCameraFollow : MonoBehaviour // 추가 ===================================================
+        {
+            private Transform target;
+            private Vector3 offset;
+            private float followSpeed = 5f;
+
+            public void SetTarget(Transform targetTransform, Vector3 offsetValue)
+            {
+                target = targetTransform;
+                offset = offsetValue;
+            }
+
+            void LateUpdate()
+            {
+                if (target == null) return;
+
+                Vector3 desiredPosition = target.position + target.TransformDirection(offset);
+                transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * followSpeed);
+
+                Vector3 lookDirection = target.position - transform.position;
+                lookDirection.y += 1f;
+                transform.rotation = Quaternion.LookRotation(lookDirection);
+            }
+        }// ============================================================================end
+
 
         private void FindAndControlEnemy()
         {
@@ -88,6 +115,7 @@ namespace LethalHack
             IsAIControlled = true;
 
             // 메인 카메라 찾기 추가 ==========================================================
+            /*
             if (mainCamera == null)
             {
                 mainCamera = Camera.main;
@@ -95,7 +123,30 @@ namespace LethalHack
                 {
                     mainCamera = UnityEngine.Object.FindObjectOfType<Camera>();
                 }
+            }*/
+            if (mainCamera == null)
+            {
+                mainCamera = Camera.main;
+
+                // fallback: Camera.main이 없을 경우, 플레이어 자식에서 찾기
+                if (mainCamera == null && Hack.localPlayer != null)
+                {
+                    mainCamera = Hack.localPlayer.GetComponentInChildren<Camera>();
+                }
+
+                // 그래도 못 찾으면 모든 카메라 중 하나 가져오기
+                if (mainCamera == null)
+                {
+                    mainCamera = UnityEngine.Object.FindObjectOfType<Camera>();
+                }
             }
+
+            EnemyCameraFollow follower = mainCamera.GetComponent<EnemyCameraFollow>();// -----------추가의추가
+            if (follower == null)
+            {
+                follower = mainCamera.gameObject.AddComponent<EnemyCameraFollow>();
+            }
+            follower.SetTarget(enemy.transform, cameraOffset);
 
             // 원래 카메라 위치 저장
             if (mainCamera != null)
@@ -136,6 +187,7 @@ namespace LethalHack
                 enemy.transform.position = ControllerInstance.transform.position;
                 enemy.transform.rotation = ControllerInstance.transform.rotation;
             }
+            UpdateCameraPosition(); // 추가 ===
         }
         static void UpdateCameraPosition() // 추가=======================================================================
         {
@@ -193,7 +245,7 @@ namespace LethalHack
             if (enemy != null && ControllerInstance != null)
             {
                 ControllerInstance.transform.position = position;
-                UpdateCameraPosition();
+                UpdateCameraPosition(); // 추가 ====
 
             }
         }
