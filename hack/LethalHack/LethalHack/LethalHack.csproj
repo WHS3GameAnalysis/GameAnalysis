@@ -445,6 +445,7 @@
     <Compile Include="Cheats\FastClimb.cs" />
     <Compile Include="Cheats\NightVision.cs" />
     <Compile Include="Cheats\EnemyControll.cs" />
+    <Compile Include="Cheats\EnemySpawn.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Hack.cs" />
     <Compile Include="Loader.cs" />

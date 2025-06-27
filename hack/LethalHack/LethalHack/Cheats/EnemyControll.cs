@@ -20,7 +20,12 @@ namespace LethalHack
         private float DoorCooldownRemaining = 0.0f;
         private float TeleportCooldownRemaining = 0.0f;
 
-        // 문법 오류 수정: = 추가
+        private static Camera mainCamera = null; // 메인 카메라 참조 추가
+        private static Vector3 originalCameraPosition; // 원래 카메라 위치 저장
+        private static Quaternion originalCameraRotation; // 원래 카메라 회전 저장
+        private static Vector3 cameraOffset = new Vector3(0, 2f, -3f); // 카메라 오프셋 설정 (몬스터 뒤쪽 위치)
+
+        // 문법 오류 수정
         private static Dictionary<Type, IController> EnemyControllers = new Dictionary<Type, IController>()
         {
             //{ typeof(BaboonBirdAI), new BaboonBirdController() }, 
@@ -30,31 +35,26 @@ namespace LethalHack
         public override void Trigger()
         {
             if (!isEnabled) return;
-
             // 적 제어 로직
             HandleEnemyControl();
-
-            // 쿨다운 업데이트
             UpdateCooldowns();
         }
 
         private void HandleEnemyControl()
         {
             if (Controlling && enemy != null)
-            {
-                // 현재 제어 중인 적이 있으면 업데이트
-                UpdateEnemyControl();
+            {                
+                UpdateEnemyControl(); // 현재 제어 중인 적이 있으면 업데이트
             }
             else
-            {
-                // 새로운 적을 찾아서 제어 시작
-                FindAndControlEnemy();
+            {                
+                FindAndControlEnemy(); // 새로운 적을 찾아서 제어 시작
             }
         }
 
         private void FindAndControlEnemy()
         {
-            // 근처의 적 찾기
+            // 근처의 적 찾기 ----------------------------------------------------------------------------------
             EnemyAI[] enemies = UnityEngine.Object.FindObjectsOfType<EnemyAI>();
             EnemyAI closestEnemy = null;
             float closestDistance = float.MaxValue;
@@ -85,7 +85,24 @@ namespace LethalHack
             Controlling = true;
             IsAIControlled = true;
 
-            // 컨트롤러 인스턴스 생성
+            // 메인 카메라 찾기 추가 ==========================================================
+            if (mainCamera == null)
+            {
+                mainCamera = Camera.main;
+                if (mainCamera == null)
+                {
+                    mainCamera = UnityEngine.Object.FindObjectOfType<Camera>();
+                }
+            }
+
+            // 원래 카메라 위치 저장
+            if (mainCamera != null)
+            {
+                originalCameraPosition = mainCamera.transform.position;
+                originalCameraRotation = mainCamera.transform.rotation;
+            } // ===============================================================================
+
+            // 컨트롤러 인스턴스 생성 ------------------------------------------------------------------------------------
             if (ControllerInstance == null)
             {
                 ControllerInstance = new GameObject("EnemyController");
@@ -146,13 +163,13 @@ namespace LethalHack
                 TeleportCooldownRemaining -= Time.deltaTime;
         }
 
-        // 문 상호작용
+        // 문 상호작용 - 구현 못 함
         public static void InteractWithDoor()
         {
             // 문 상호작용 로직 구현
         }
 
-        // 텔레포트
+        // 텔레포트 - 이게 안되나? ---------------------------------------------------------------------------------------
         public static void TeleportToPosition(Vector3 position)
         {
             if (enemy != null && ControllerInstance != null)
@@ -197,7 +214,7 @@ namespace LethalHack
         {
             HandleInput();
             HandleMovement();
-            HandleNoClip();
+            //HandleNoClip();
         }
 
         private void HandleInput()
@@ -235,7 +252,7 @@ namespace LethalHack
 
             if (keyboard != null)
             {
-                // 카메라 기준 이동 방향 계산
+                // 카메라 기준 이동 방향 계산 -------------------------------------------------여기 뭔가 이상함
                 Transform cameraTransform = Camera.main?.transform ?? transform;
                 Vector3 forward = cameraTransform.forward;
                 Vector3 right = cameraTransform.right;
@@ -286,7 +303,7 @@ namespace LethalHack
                 characterController.Move(moveDirection * currentSpeed * Time.deltaTime);
             }
         }
-
+        /*
         private void HandleNoClip()
         {
             // NoClip 토글
@@ -318,10 +335,10 @@ namespace LethalHack
                     characterController.enabled = !EnemyControll.NoClipEnabled;
                 }
             }
-        }
+        }*/
     }
 
-    // MouseInput 클래스
+    // MouseInput 클래스 -----------------------------------------------------------------------------
     internal class MouseInput : MonoBehaviour
     {
         private Mouse mouse;
@@ -353,7 +370,7 @@ namespace LethalHack
     }
     internal class FlowerSnakeController : IController
     {
-        // 기본 인터페이스 구현 - 최소한만
+        // 기본 인터페이스 구현 - 최소한만 
         public void OnTakeControl(EnemyAI enemy) { }
         public void OnReleaseControl(EnemyAI enemy) { }
         public void OnDeath(EnemyAI enemy) { }
@@ -374,7 +391,6 @@ namespace LethalHack
 
             // 간단한 점프
             snake.transform.position += snake.transform.forward * 2f;
-            Debug.Log("FlowerSnake: 점프!");
         }
 
         public void UseSecondarySkill(EnemyAI enemy)
@@ -384,15 +400,15 @@ namespace LethalHack
 
             // 간단한 날기
             snake.transform.position += Vector3.up * 1f;
-            Debug.Log("FlowerSnake: 날기!");
         }
+                    
 
         public bool CanUseEntranceDoors(EnemyAI enemy) => true;
         public string GetPrimarySkillName(EnemyAI enemy) => "점프";
         public string GetSecondarySkillName(EnemyAI enemy) => "날기";
         public float InteractRange(EnemyAI enemy) => 5f;
     }
-    internal static class ControllerDefaults
+    internal static class ControllerDefaults // 오류 나서 둘만 빼뒀음. 
     {
         public const float DefaultSprintMultiplier = 2.8f;
         public const float DefaultInteractRange = 2.5f;

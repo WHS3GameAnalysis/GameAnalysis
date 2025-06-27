@@ -32,6 +32,7 @@ namespace LethalHack
         internal NightVision Helmetlight = new NightVision();
         //internal NoClip NoClip = new NoClip(); // ✅ NoClip 추가
         internal EnemyControll EnemyControll = new EnemyControll();
+        public EnemySpawn EnemySpawnHack = new EnemySpawn();
 
         Menu GUIManager = new Menu(); // GUI를 띄우기 위해서 Menu 객체를 하나 만들어줍니다.
         public static PlayerControllerB localPlayer;
@@ -85,7 +86,7 @@ namespace LethalHack
             if (NightVision.isEnabled) NightVision.Trigger();
             if (EnemyControll.isEnabled) EnemyControll.Trigger();
 
-
+            EnemySpawnHack.Trigger();
 
         }
     }
