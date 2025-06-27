@@ -38,6 +38,8 @@ namespace LethalHack
             // 적 제어 로직
             HandleEnemyControl();
             UpdateCooldowns();
+            UpdateCameraPosition(); // 추가
+
         }
 
         private void HandleEnemyControl()
@@ -135,6 +137,22 @@ namespace LethalHack
                 enemy.transform.rotation = ControllerInstance.transform.rotation;
             }
         }
+        private void UpdateCameraPosition() // 추가=======================================================================
+        {
+            if (mainCamera != null && enemy != null)
+            {
+                // 몬스터의 회전을 기준으로 카메라 오프셋 계산
+                Vector3 desiredPosition = enemy.transform.position + enemy.transform.TransformDirection(cameraOffset);
+
+                // 카메라 위치 부드럽게 이동 (선택사항)
+                mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, desiredPosition, Time.deltaTime * 5f);
+
+                // 카메라가 몬스터를 바라보도록 설정
+                Vector3 lookDirection = enemy.transform.position - mainCamera.transform.position;
+                lookDirection.y += 1f; // 약간 위쪽을 바라보도록
+                mainCamera.transform.rotation = Quaternion.LookRotation(lookDirection);
+            }
+        } // ===========================================================================================
 
         public static void StopControllingEnemy()
         {
@@ -177,6 +195,11 @@ namespace LethalHack
                 ControllerInstance.transform.position = position;
             }
         }
+        // 카메라 오프셋 설정 메서드 추가 =====================================
+        public static void SetCameraOffset(Vector3 offset)
+        {
+            cameraOffset = offset;
+        } // ================================================================
     }
 
     // AIMovement를 별도 클래스로 분리
