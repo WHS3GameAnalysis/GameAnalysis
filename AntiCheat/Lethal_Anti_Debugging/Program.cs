@@ -25,6 +25,7 @@ class Program
             new OutputDebugStringCheck(),
             new AppDomainAssemblyCheck(), // Assuming you have an AppDomainCheck class
             new MonoPortScanCheck(), // Assuming you have a MonoPortScanCheck class
+            new MonoDebuggerAttachCheck(), // Assuming you have a MonoDebuggerAttachCheck class
             // You can add more checks here if needed
         };
 

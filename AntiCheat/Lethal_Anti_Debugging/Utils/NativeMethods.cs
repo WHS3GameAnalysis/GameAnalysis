@@ -17,6 +17,7 @@ namespace Lethal_Anti_Debugging.Utils
         [DllImport("kernel32.dll", SetLastError = true)]
         public static extern uint GetLastError();
 
-
+        [DllImport("UnityPlayer.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern bool mono_is_debugger_attached();
     }
 }
