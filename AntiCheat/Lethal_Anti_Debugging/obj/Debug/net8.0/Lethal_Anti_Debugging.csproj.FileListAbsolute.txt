@@ -1,0 +1,14 @@
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.exe
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.deps.json
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.runtimeconfig.json
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.dll
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.pdb
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.AssemblyInfoInputs.cache
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.AssemblyInfo.cs
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.csproj.CoreCompileInputs.cache
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.dll
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\refint\Lethal_Anti_Debugging.dll
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.pdb
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.genruntimeconfig.cache
+C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\ref\Lethal_Anti_Debugging.dll
