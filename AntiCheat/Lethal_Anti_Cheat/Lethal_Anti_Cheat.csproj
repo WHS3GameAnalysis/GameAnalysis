@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Lethal_Anti_Cheat</RootNamespace>
+    <AssemblyName>Lethal_Anti_Cheat</AssemblyName>
+    <Deterministic>true</Deterministic>
+	<LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+
+</Project>

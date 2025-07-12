@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lethal_Anti_Debugging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+489be195be3cacaba8f38749bf38445becdab41f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lethal_Anti_Debugging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lethal_Anti_Debugging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

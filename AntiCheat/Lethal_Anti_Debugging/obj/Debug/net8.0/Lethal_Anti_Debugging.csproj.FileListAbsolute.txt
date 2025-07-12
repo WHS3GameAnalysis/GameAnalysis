@@ -12,3 +12,18 @@ C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\refint\Lethal_Ant
 C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.pdb
 C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.genruntimeconfig.cache
 C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net8.0\ref\Lethal_Anti_Debugging.dll
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.GeneratedMSBuildEditorConfig.editorconfig
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.AssemblyInfoInputs.cache
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.AssemblyInfo.cs
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.csproj.CoreCompileInputs.cache
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.sourcelink.json
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.dll
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\refint\Lethal_Anti_Debugging.dll
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.pdb
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.exe
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.deps.json
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.runtimeconfig.json
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.dll
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.pdb
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.genruntimeconfig.cache
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\ref\Lethal_Anti_Debugging.dll
