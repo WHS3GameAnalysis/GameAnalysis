@@ -1,1 +1,16 @@
 /hack/LethalHack/.vs
+
+.vs/
+
+*.ipch
+
+#  Visual Studio 관련 무시 목록
+# 프로젝트 빌드 시 생성되는 파일들 (exe, dll 등)
+*.obj
+*.exe
+*.dll
+*.pdb
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
