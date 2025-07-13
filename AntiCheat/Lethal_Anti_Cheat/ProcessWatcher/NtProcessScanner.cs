@@ -43,7 +43,8 @@ namespace Lethal_Anti_Cheat.ProcessWatcher
 
         public static void RunOnce()
         {
-            Console.WriteLine("\n[NtProcessScanner] NT API Process Scan");
+            //Console.WriteLine("\n[NtProcessScanner] NT API Process Scan");
+            PipeLogger.Log(message: "\n[NtProcessScanner] NT API Process Scan");
 
             int bufferSize = 0x10000;
             IntPtr buffer = Marshal.AllocHGlobal(bufferSize);
@@ -81,7 +82,8 @@ namespace Lethal_Anti_Cheat.ProcessWatcher
                     {
                         if (lower.Contains(target))
                         {
-                            Console.WriteLine($"  - Detected Process : {processName} (PID: {pid})");
+                            //Console.WriteLine($"  - Detected Process : {processName} (PID: {pid})");
+                            PipeLogger.Log(message: $" - Detected Process : {processName} (PID: {pid})");
                         }
                     }
                 }

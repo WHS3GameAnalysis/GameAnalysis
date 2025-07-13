@@ -15,8 +15,9 @@ namespace Lethal_Anti_Cheat.Util
             {
                 while (true)
                 {
-                    Console.Clear();
-                    Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Lethal Anti-Cheat Scan Cycle");
+                    //Console.Clear();
+                    //Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Lethal Anti-Cheat Scan Cycle");
+                    PipeLogger.Log(message: $"\n[{DateTime.Now:HH:mm:ss}] Lethal Anti-Cheat Scan Cycle");
 
                     DebugDetector.DebugDetector.RunOnce();
                     ProcessWatcher.ProcessWatcher.RunOnce();
