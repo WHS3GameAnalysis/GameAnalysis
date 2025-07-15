@@ -1,1 +1,5 @@
 /hack/LethalHack/.vs
+*.cache
+*.pdb
+*.Up2Date
+*.vsidx

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anticheat", "Anticheat\Anticheat.csproj", "{5D728C79-1E0E-45B8-9C84-E0200C77B5A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D728C79-1E0E-45B8-9C84-E0200C77B5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D728C79-1E0E-45B8-9C84-E0200C77B5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D728C79-1E0E-45B8-9C84-E0200C77B5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D728C79-1E0E-45B8-9C84-E0200C77B5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22CB5350-3637-470F-8231-DB2E303A896E}
+	EndGlobalSection
+EndGlobal
