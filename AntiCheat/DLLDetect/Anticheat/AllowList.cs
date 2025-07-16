@@ -4,6 +4,7 @@ namespace Anticheat
 {
     public static class AllowList
     {
+        /* 리썰 컴퍼니를 실행하고 안티치트를 인젝션 하였을 때 로드되는 모듈을 기준으로 moduleList를 작성하였습니다. */
         public static List<string> moduleList = new List<string>
         {
             "Lethal Company.exe",

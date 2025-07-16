@@ -36,7 +36,7 @@ namespace Anticheat
 
         }
     }
-
+    /* 콘솔창을 띄우기 위한 클래스 */
     public static class ConsoleBootstrap
     {
         [DllImport("kernel32.dll", SetLastError = true)]
