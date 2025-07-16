@@ -3,3 +3,8 @@
 *.pdb
 *.Up2Date
 *.vsidx
+*.db
+*.db-shm
+*.db-wal
+/AntiCheat/DLLDetect/.vs
+AntiCheat/DLLDetect/Anticheat/.vs/Anticheat.csproj.dtbcache.json

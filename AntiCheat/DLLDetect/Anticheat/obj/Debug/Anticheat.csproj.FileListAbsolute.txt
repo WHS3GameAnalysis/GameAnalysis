@@ -1,0 +1,7 @@
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\bin\Debug\Anticheat.dll
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\bin\Debug\Anticheat.pdb
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.csproj.AssemblyReference.cache
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.csproj.CoreCompileInputs.cache
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.csproj.Up2Date
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.dll
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.pdb
