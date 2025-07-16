@@ -1,169 +1,83 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.IO.Pipes;
-using System.Linq;
+﻿//using System;
+
+//namespace LethalAntiCheatLauncher
+//{
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.Title = "Lethal Anti-Cheat Client";
+//            Console.Clear();
+//            Console.WriteLine("[AntiCheat] Client started. Waiting for game process...\n");
+
+//            PipeListener.Start();
+//            InjectorManager.InjectWhenGameStarts();
+
+//            // 유지 (콘솔 자동 새로고침)
+//            ConsoleRefresher.Start();
+
+//            while (true)
+//                Thread.Sleep(1000);
+//        }
+//    }
+//}
+using System;
 using System.Threading;
-using SharpMonoInjector;
+using LethalAntiCheatLauncher.Integrity;
 
 namespace LethalAntiCheatLauncher
 {
     internal class Program
     {
-        private const string TargetProcessName = "Lethal Company";
-        private const string DllName = "Lethal_Anti_Cheat.dll";
-        private const string Namespace = "Lethal_Anti_Cheat";
-        private const string ClassName = "Loader";
-        private const string MethodName = "Init";
-        private const string PipeName = "AntiCheatPipe";
-
-        private static object _lock = new();
-        private static bool _injectionComplete = false;
-
         static void Main(string[] args)
         {
             Console.Title = "Lethal Anti-Cheat Client";
             Console.Clear();
-            Console.WriteLine("[AntiCheat] Client started. Waiting for game process...\n");
+            Console.WriteLine("[AntiCheat] Client started. Running integrity check...\n");
 
-            InjectDllWhenGameStarts();
-            StartConsoleClearLoop();
-            ListenForLogs();
-
-            while (true)
+            // 1. 무결성 검사
+            var checker = new IntegrityChecker();
+            var result = checker.CheckIntegrity((cur, total, name, msg) =>
             {
+                Console.WriteLine($"[{cur}/{total}] {name} - {msg}");
+            });
+
+            Console.WriteLine();
+            Console.ForegroundColor = result.IsValid ? ConsoleColor.Green : ConsoleColor.Red;
+            Console.WriteLine(result.Message);
+            Console.ResetColor();
+            Console.WriteLine();
+
+            if (!result.IsValid)
+            {
+                Console.WriteLine("[AntiCheat] 게임 실행이 차단되었습니다.");
+                return;
+            }
+
+            Console.WriteLine("[AntiCheat] 게임 실행 중...\n");
+
+            // 2. 게임 실행
+            if (!checker.LaunchGame())
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("[AntiCheat] 게임 실행 실패. 관리자 권한 또는 경로 문제일 수 있습니다.");
+                Console.ResetColor();
+                return;
+            }
+
+            // 3. 통신 파이프 리스너 시작
+            PipeListener.Start();
+
+            // 4. 게임 실행 이후 인젝션 수행
+            InjectorManager.InjectWhenGameStarts();
+
+            // 5. 콘솔 주기적 상태 출력
+            ConsoleRefresher.Start();
+
+            // 6. 무한 루프 대기
+            while (true)
                 Thread.Sleep(1000);
-            }
-        }
-
-        static void InjectDllWhenGameStarts()
-        {
-            while (true)
-            {
-                try
-                {
-                    var proc = Process.GetProcessesByName(TargetProcessName).FirstOrDefault();
-
-                    if (proc != null)
-                    {
-                        lock (_lock)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.WriteLine($"[*] Game process detected: {proc.ProcessName} (PID: {proc.Id})");
-                            Console.ResetColor();
-                        }
-
-                        string dllPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, DllName);
-                        if (!File.Exists(dllPath))
-                        {
-                            lock (_lock)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine($"[Error] DLL not found: {dllPath}");
-                                Console.ResetColor();
-                            }
-                            return;
-                        }
-
-                        try
-                        {
-                            var injector = new Injector(proc.Id);
-                            injector.Inject(
-                                File.ReadAllBytes(dllPath),
-                                Namespace,
-                                ClassName,
-                                MethodName
-                            );
-
-                            lock (_lock)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("[✓] Injection successful. Anti-cheat initialized.");
-                                Console.ResetColor();
-                            }
-
-                            _injectionComplete = true;
-                            break;
-                        }
-                        catch (InjectorException ex)
-                        {
-                            lock (_lock)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine($"[Error] Injection failed: {ex.Message}");
-                                Console.ResetColor();
-                            }
-                        }
-                    }
-
-                    Thread.Sleep(1000);
-                }
-                catch (Exception ex)
-                {
-                    lock (_lock)
-                    {
-                        Console.WriteLine($"[Error] {ex.Message}");
-                    }
-                    Thread.Sleep(1000);
-                }
-            }
-        }
-
-        static void ListenForLogs()
-        {
-            new Thread(() =>
-            {
-                while (true)
-                {
-                    try
-                    {
-                        using var server = new NamedPipeServerStream(PipeName, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
-                        server.WaitForConnection();
-
-                        using var reader = new StreamReader(server);
-                        string line;
-
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            lock (_lock)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Yellow;
-                                Console.WriteLine($"[DLL] {line}");
-                                Console.ResetColor();
-                            }
-                        }
-                    }
-                    catch
-                    {
-                        Thread.Sleep(10);
-                    }
-                }
-            })
-            {
-                IsBackground = true
-            }.Start();
-        }
-
-        static void StartConsoleClearLoop()
-        {
-            new Thread(() =>
-            {
-                while (true)
-                {
-                    Thread.Sleep(5000);
-                    if (_injectionComplete)
-                    {
-                        lock (_lock)
-                        {
-                            Console.Clear();
-                            Console.WriteLine($"[AntiCheat] Console refreshed at {DateTime.Now:HH:mm:ss}");
-                        }
-                    }
-                }
-            })
-            {
-                IsBackground = true
-            }.Start();
         }
     }
 }
+

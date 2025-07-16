@@ -30,7 +30,7 @@ namespace Lethal_Anti_Cheat.DebugDetector
                 try
                 {
                     bool debugged = check.IsDebugged(current);
-                    //Console.WriteLine($"  - {check.MethodName}: Debugged? {debugged}");
+                    Console.WriteLine($"  - {check.MethodName}: Debugged? {debugged}");
                     PipeLogger.Log(message: $" - {check.MethodName}: Debugged? {debugged}");
                 }
                 catch (Exception ex)

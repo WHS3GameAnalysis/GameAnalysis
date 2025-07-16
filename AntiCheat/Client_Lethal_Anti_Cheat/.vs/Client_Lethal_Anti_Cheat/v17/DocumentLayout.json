@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\util\\injectormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:util\\injectormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\ui\\consolerefresher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:ui\\consolerefresher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\integrity\\integritychecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:integrity\\integritychecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\client_lethal_anti_cheat.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:client_lethal_anti_cheat.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\client_lethal_anti_cheat.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:client_lethal_anti_cheat.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\app.manifest||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:app.manifest||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\client_lethal_anti_cheat\\util\\pipelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{514932B2-98D3-40A7-B5B1-912F2F6A006F}|Client_Lethal_Anti_Cheat.csproj|solutionrelative:util\\pipelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,50 +39,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "app.manifest",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\app.manifest",
-              "RelativeDocumentMoniker": "app.manifest",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\app.manifest",
-              "RelativeToolTip": "app.manifest",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
-              "WhenOpened": "2025-07-13T09:34:49.302Z",
+              "Title": "IntegrityChecker.cs",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Integrity\\IntegrityChecker.cs",
+              "RelativeDocumentMoniker": "Integrity\\IntegrityChecker.cs",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Integrity\\IntegrityChecker.cs",
+              "RelativeToolTip": "Integrity\\IntegrityChecker.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA7wBcAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T11:46:12.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Client_Lethal_Anti_Cheat",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Client_Lethal_Anti_Cheat.csproj",
-              "RelativeDocumentMoniker": "Client_Lethal_Anti_Cheat.csproj",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Client_Lethal_Anti_Cheat.csproj",
-              "RelativeToolTip": "Client_Lethal_Anti_Cheat.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-13T09:34:10.243Z",
+              "Title": "app.manifest",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\app.manifest",
+              "RelativeDocumentMoniker": "app.manifest",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\app.manifest",
+              "RelativeToolTip": "app.manifest",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
+              "WhenOpened": "2025-07-16T07:00:38.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Client_Lethal_Anti_Cheat",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Client_Lethal_Anti_Cheat.csproj",
-              "RelativeDocumentMoniker": "Client_Lethal_Anti_Cheat.csproj",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Client_Lethal_Anti_Cheat.csproj",
-              "RelativeToolTip": "Client_Lethal_Anti_Cheat.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-13T07:54:19.097Z",
+              "Title": "ConsoleRefresher.cs",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\UI\\ConsoleRefresher.cs",
+              "RelativeDocumentMoniker": "UI\\ConsoleRefresher.cs",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\UI\\ConsoleRefresher.cs",
+              "RelativeToolTip": "UI\\ConsoleRefresher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:04:37.373Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InjectorManager.cs",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Util\\InjectorManager.cs",
+              "RelativeDocumentMoniker": "Util\\InjectorManager.cs",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Util\\InjectorManager.cs",
+              "RelativeToolTip": "Util\\InjectorManager.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAcwEoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:04:01.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PipeListener.cs",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Util\\PipeListener.cs",
+              "RelativeDocumentMoniker": "Util\\PipeListener.cs",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Util\\PipeListener.cs",
+              "RelativeToolTip": "Util\\PipeListener.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:03:24.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAwH0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwDsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T07:49:33.648Z",
               "EditorCaption": ""

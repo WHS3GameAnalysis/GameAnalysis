@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.IO.Pipes.AccessControl" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="SharpMonoInjector">
       <HintPath>Resources\SharpMonoInjector.dll</HintPath>
     </Reference>
