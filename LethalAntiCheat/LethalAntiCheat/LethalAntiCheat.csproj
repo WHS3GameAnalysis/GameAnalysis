@@ -437,6 +437,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntiCheats\InfinityStamina.cs" />
     <Compile Include="AntiManager.cs" />
     <Compile Include="AntiCheats\GrabObject.cs" />
     <Compile Include="AntiCheats\GodMode.cs" />
@@ -447,8 +448,9 @@
     <Compile Include="Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Libs\" />
+    <EmbeddedResource Include="Libs\0Harmony.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
