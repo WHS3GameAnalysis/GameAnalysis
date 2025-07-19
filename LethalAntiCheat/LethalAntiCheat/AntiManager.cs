@@ -21,8 +21,9 @@ namespace LethalAntiCheat
         public static AntiManager Instance = new AntiManager();
         public static Harmony harmony;
         public static PlayerControllerB localPlayer;
-        
-        
+        private bool isInitialized = false;
+
+
         //public GodMode God = new GodMode();
         //public InfinityStamina Stamina = new InfinityStamina();
         //public HPDisplay Hpdisp = new HPDisplay();
@@ -39,18 +40,32 @@ namespace LethalAntiCheat
 
         public void Start()
         {
+            Instance = this;
             if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
                 return;
             }
-
-            Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
 
+        public void Update()
+        {
+            if (isInitialized) return;
+
+            if (StartOfRound.Instance != null && StartOfRound.Instance.localPlayerController != null)
+            {
+                localPlayer = StartOfRound.Instance.localPlayerController;
+                Initialize();
+                isInitialized = true;
+            }
+        }
+
+        private void Initialize()
+        {
             if (localPlayer.IsHost)
             {
-                Debug.Log("[Start] 호스트 감지, 하모니패치 실행");
+                Debug.Log("[Initialize] 호스트 감지, 하모니패치 실행");
                 Core.MessageUtils.ShowMessage("[LethalAntiCheat] LethalAntiCheat Loading...");
                 Core.MessageUtils.ShowHostOnlyMessage("[LethalAntiCheat] Host Detected");
                 HarmonyPatching();
@@ -58,7 +73,7 @@ namespace LethalAntiCheat
             else
             {
                 Core.MessageUtils.ShowMessage("[LethalAntiCheat] Host Undetected, Shutting down...");
-                Debug.Log("[Start] 호스트 미감지, gameObject Destroy");
+                Debug.Log("[Initialize] 호스트 미감지, gameObject Destroy");
                 Destroy(gameObject);
             }
         }
