@@ -12,17 +12,18 @@ namespace Anticheat
 
         public static void Start()
         {
-            timer = new Timer(60000); // 1분마다 검사
-            timer.Elapsed += CheckForPatches;
+            timer = new Timer(30000); // 검사 주기
+            timer.Elapsed += CheckPatches;
             timer.AutoReset = true;
             timer.Enabled = true;
-            CheckForPatches(null, null); // 즉시 첫 검사
+            CheckPatches(null, null); // 즉시 첫 검사
         }
 
-        private static void CheckForPatches(object sender, ElapsedEventArgs e)
+        private static void CheckPatches(object sender, ElapsedEventArgs e)
         {
             try
             {
+                // 현재 실행 중인 모든 코드 어셈블리 중에서 Assembly-CSharp를 찾음.
                 var assembly = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.GetName().Name == "Assembly-CSharp");
                 if (assembly == null) return;
 
@@ -33,9 +34,9 @@ namespace Anticheat
                         if (method.IsAbstract || method.ContainsGenericParameters) continue;
 
                         var patchInfo = Harmony.GetPatchInfo(method);
-                        if (patchInfo == null) continue;
+                        if (patchInfo == null) continue; // patchInfo가 null이라면, 해당 메서드는 패치되지 않은 메서드이다.
 
-                        // 이 메서드에 패치를 적용한 모든 소유자 ID를 가져옵니다.
+                        // 이 메서드에 패치를 적용한 모든 소유자 ID를 가져옴.
                         var owners = patchInfo.Owners;
                         if (!owners.Any()) continue;
 
