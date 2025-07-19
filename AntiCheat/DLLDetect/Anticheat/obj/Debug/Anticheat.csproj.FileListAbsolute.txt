@@ -145,3 +145,6 @@ C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.csproj.CoreCom
 C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.csproj.Up2Date
 C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.dll
 C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\obj\Debug\Anticheat.pdb
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\bin\Debug\0Harmony.dll
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\bin\Debug\0Harmony.pdb
+C:\GameAnalysis\AntiCheat\DLLDetect\Anticheat\bin\Debug\0Harmony.xml

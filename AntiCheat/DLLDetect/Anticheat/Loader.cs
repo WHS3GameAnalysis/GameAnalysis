@@ -24,6 +24,7 @@ namespace Anticheat
             ConsoleBootstrap.InitConsole();
             Console.WriteLine("Scanning...");
             CheckDLL.Start();
+            PatchDetector.Start(); // Harmony 패치 감지 시작
         }
 
         public void Update()
