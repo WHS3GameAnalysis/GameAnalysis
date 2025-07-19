@@ -34,6 +34,10 @@
     <Reference Include="0Harmony">
       <HintPath>Resources\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="AmazingAssets.TerrainToMesh, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\references\LethalMenu\LethalMenu\Resources\BaseGame\AmazingAssets.TerrainToMesh.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\..\Games\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -45,6 +49,10 @@
     <Reference Include="Facepunch.Steamworks.Win64, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\..\Games\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\netstandard.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -62,6 +70,9 @@
     <Reference Include="Unity.Netcode.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Unity.SourceGenerators">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\6000.1.11f1\Editor\Data\Tools\Compilation\Unity.SourceGenerators\Unity.SourceGenerators.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="UnityEditor, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -84,6 +95,10 @@
     <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\references\LethalMenu\LethalMenu\Resources\BaseGame\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cheat.cs" />

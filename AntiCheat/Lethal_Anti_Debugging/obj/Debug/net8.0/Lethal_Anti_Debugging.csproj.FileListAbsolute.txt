@@ -27,3 +27,18 @@ D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.pdb
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.genruntimeconfig.cache
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\ref\Lethal_Anti_Debugging.dll
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.exe
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.deps.json
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.runtimeconfig.json
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.dll
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\bin\Debug\net8.0\Lethal_Anti_Debugging.pdb
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.AssemblyInfoInputs.cache
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.AssemblyInfo.cs
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.csproj.CoreCompileInputs.cache
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.sourcelink.json
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.dll
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\refint\Lethal_Anti_Debugging.dll
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.pdb
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\Lethal_Anti_Debugging.genruntimeconfig.cache
+C:\Users\jaeeu\Desktop\WH\TeamProject\WH_5try\GameAnalysis\AntiCheat\Lethal_Anti_Debugging\obj\Debug\net8.0\ref\Lethal_Anti_Debugging.dll

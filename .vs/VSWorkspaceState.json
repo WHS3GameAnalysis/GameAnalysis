@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AntiCheat",
+    "\\AntiCheat\\Client_Lethal_Anti_Cheat",
+    "\\AntiCheat\\Client_Lethal_Anti_Cheat\\.vs\\Client_Lethal_Anti_Cheat\\CopilotIndices",
+    "\\AntiCheat\\Client_Lethal_Anti_Cheat\\bin\\Release",
+    "\\AntiCheat\\Client_Lethal_Anti_Cheat\\obj\\Debug",
+    "\\AntiCheat\\Client_Lethal_Anti_Cheat\\obj\\Release",
+    "\\AntiCheat\\Lethal_Anti_Cheat_ActionBasis",
+    "\\AntiCheat\\Lethal_Anti_Cheat_ActionBasis\\DebugDetector",
+    "\\AntiCheat\\Lethal_Anti_Debugging\\DebugDetector"
+  ],
+  "SelectedNode": "\\AntiCheat\\Lethal_Anti_Cheat_ActionBasis\\DebugDetector\\ActionBasis.cs",
+  "PreviewInSolutionExplorer": false
+}

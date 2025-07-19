@@ -1,0 +1,24 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Lethal_Anti_Cheat/1.0.0": {
+        "runtime": {
+          "Lethal_Anti_Cheat.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lethal_Anti_Cheat/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
