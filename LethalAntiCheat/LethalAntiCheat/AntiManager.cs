@@ -51,10 +51,13 @@ namespace LethalAntiCheat
             if (localPlayer.IsHost)
             {
                 Debug.Log("[Start] 호스트 감지, 하모니패치 실행");
+                Core.MessageUtils.ShowMessage("[LethalAntiCheat] LethalAntiCheat Loading...");
+                Core.MessageUtils.ShowHostOnlyMessage("[LethalAntiCheat] Host Detected");
                 HarmonyPatching();
             }
             else
             {
+                Core.MessageUtils.ShowMessage("[LethalAntiCheat] Host Undetected, Shutting down...");
                 Debug.Log("[Start] 호스트 미감지, gameObject Destroy");
                 Destroy(gameObject);
             }
@@ -86,6 +89,7 @@ namespace LethalAntiCheat
                 }
             }
             Debug.Log("[harmonyPatching] 하모니 패치 완료");
+            Core.MessageUtils.ShowMessage("[LethalAntiCheat] LethalAntiCheat Ready");
         }
 
         //핵 탐지 클래스를 개별로 추가해서 어셈블리 목록 줘야할 시 사용. 현재는 전체 어셈블리 구조를 가져와서 패치함. (HarmonyPatching)
@@ -107,6 +111,9 @@ namespace LethalAntiCheat
             }
 
             NetworkManager.Singleton.DisconnectClient(player.playerClientId);
+
+            Core.MessageUtils.ShowMessage($"[LethalAntiCheat] Kicking player {player.playerUsername} for: {reason}");
+            Core.MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] Kicking player {player.playerUsername} for: {reason}");
         }
 
         //public void Update()
