@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Text;
 using System.Timers;
 
 namespace Anticheat
@@ -15,7 +18,7 @@ namespace Anticheat
             timer.AutoReset = true;
             timer.Start();
         }
-        /* 프로세스 내에 로드된 모듈의 목록을 가져오는 함수 */
+
         private static void CheckModules(object sender, ElapsedEventArgs e)
         {
             try
@@ -24,20 +27,93 @@ namespace Anticheat
 
                 foreach (ProcessModule module in currentProcess.Modules)
                 {
-                    // AllowList에 포함되지 않은 모듈일 경우에만 출력
-                    if (!AllowList.moduleList.Contains(module.ModuleName))
+                    string moduleName = module.ModuleName;
+
+                    if (!AllowList.moduleList.Contains(moduleName))
                     {
-                        // 콘솔창에 출력
-                        Console.WriteLine("\n[!] Detected Module :");
-                        Console.WriteLine("- " + module.ModuleName);
-                    }      
+                        Console.WriteLine("\n[!] Detected Unknown Module:");
+                        Console.WriteLine(" - " + moduleName);
+
+                        try
+                        {
+                            string[] sections = PEParser.GetSectionNames(module.FileName);
+                            Console.WriteLine("  [+] Sections:");
+                            foreach (var section in sections)
+                            {
+                                Console.WriteLine("   - " + section);
+                            }
+
+                            if (PEParser.HasSuspiciousSections(sections))
+                            {
+                                Console.WriteLine("  [!] Suspicious packed sections detected!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("  [X] Failed to parse PE: " + ex.Message);
+                        }
+                    }
                 }
             }
-
             catch (Exception ex)
             {
-                Console.WriteLine("[X] Error: " + ex.Message);
+                Console.WriteLine("[X] Error while checking modules: " + ex.Message);
             }
+        }
+    }
+
+    public static class PEParser
+    {
+        private static readonly string[] SuspiciousSectionNames = {
+            ".aspack", ".upx", ".themida", "UPX0", "UPX1", "UPX2"
+        };
+
+        public static string[] GetSectionNames(string dllPath)
+        {
+            using (var stream = new FileStream(dllPath, FileMode.Open, FileAccess.Read))
+            using (var reader = new BinaryReader(stream))
+            {
+                stream.Seek(0x3C, SeekOrigin.Begin);
+                int peHeaderOffset = reader.ReadInt32();
+
+                stream.Seek(peHeaderOffset, SeekOrigin.Begin);
+                uint signature = reader.ReadUInt32();
+                if (signature != 0x00004550)
+                    throw new InvalidDataException("Invalid PE signature");
+
+                stream.Seek(2, SeekOrigin.Current);
+                short numberOfSections = reader.ReadInt16();
+
+                stream.Seek(12, SeekOrigin.Current);
+                short sizeOfOptionalHeader = reader.ReadInt16();
+                stream.Seek(2, SeekOrigin.Current);
+                stream.Seek(sizeOfOptionalHeader, SeekOrigin.Current);
+
+                var sections = new string[numberOfSections];
+                for (int i = 0; i < numberOfSections; i++)
+                {
+                    byte[] nameBytes = reader.ReadBytes(8);
+                    string name = Encoding.ASCII.GetString(nameBytes).TrimEnd('\0');
+                    sections[i] = name;
+
+                    stream.Seek(32, SeekOrigin.Current);
+                }
+
+                return sections;
+            }
+        }
+
+        public static bool HasSuspiciousSections(string[] sections)
+        {
+            foreach (var section in sections)
+            {
+                foreach (var suspicious in SuspiciousSectionNames)
+                {
+                    if (section.Equals(suspicious, StringComparison.OrdinalIgnoreCase))
+                        return true;
+                }
+            }
+            return false;
         }
     }
 }
