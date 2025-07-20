@@ -6,6 +6,8 @@
     <AssemblyName>Lethal_Anti_Cheat</AssemblyName>
     <Deterministic>true</Deterministic>
 	<LangVersion>10.0</LangVersion>
+
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
 </Project>
