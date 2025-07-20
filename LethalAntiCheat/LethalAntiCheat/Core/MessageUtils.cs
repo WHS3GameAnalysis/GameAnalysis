@@ -14,10 +14,10 @@ namespace LethalAntiCheat.Core
         public static void ShowMessage(string message)
         {
             // Prevent message spam.
-            if (lastMessage == message) return;
-            lastMessage = message;
+            //if (lastMessage == message) return;
+            //lastMessage = message;
 
-            string formattedMessage = "<color=red>[AntiCheat] " + message + "</color>";
+            string formattedMessage = "<color=red>[LethalAntiCheat] " + message + "</color>";
 
             if (HUDManager.Instance != null)
             {

@@ -9,7 +9,7 @@ namespace LethalAntiCheat.AntiCheats
 {
     internal static class Teleporter
     {
-        //원격으로 텔레포트하는 경우(발판 위에 있지 않고 텔레포트)
+        //원격으로 텔레포트하는 경우(발판 위에 있지 않고 텔레포트, 버튼 안스고 텔레포트 등.)
         public static bool IsPlayerNearObject(PlayerControllerB player, Transform targetObject, float maxDistance, string cheatName)
         {
             if (player == null || targetObject == null) return false;
@@ -17,19 +17,18 @@ namespace LethalAntiCheat.AntiCheats
             float distance = Vector3.Distance(player.transform.position, targetObject.position);
             if (distance > maxDistance)
             {
-                MessageUtils.ShowMessage($"[DEBUG] Kicking {player.playerUsername} for remote {cheatName} usage. Distance: {distance:F2}m");
-                AntiManager.Instance.KickPlayer(player, $"Remote {cheatName} Usage");
+                AntiManager.Instance.KickPlayer(player, $"Remote {cheatName} Teleport Usage");
                 return false;
             }
             return true;
         }
     }
 
-    // Patch 1: Handles the standard ship teleporter button press.
+    // 버튼 조작 가능한 거리 안에서 텔레포트 했는지(버튼을 누를 수 있는 사람이 텔레포트 했는가?)
     [HarmonyPatch(typeof(ShipTeleporter), "__rpc_handler_389447712")]
-    public static class ShipTeleporterButton_Patch
+    public static class ShipTeleporterButton
     {
-        private const float MAX_INTERACTION_DISTANCE = 7f; // Max distance to press the teleporter button.
+        private const float MAX_INTERACTION_DISTANCE = 9f; //최대 거리 7, 허용치 9.
 
         [HarmonyPrefix]
         public static bool Prefix(NetworkBehaviour __instance, __RpcParams rpcParams)
@@ -39,52 +38,49 @@ namespace LethalAntiCheat.AntiCheats
             var teleporter = __instance as ShipTeleporter;
             if (teleporter == null) return false;
 
-            // 1. Check for remote usage (the user's excellent point).
+            // 원격으로 사용한 경우
             if (!Teleporter.IsPlayerNearObject(player, teleporter.buttonTrigger.transform, MAX_INTERACTION_DISTANCE, "Teleporter"))
             {
-                return false; // Block if too far.
+                return false; 
             }
 
-            // 2. Check for cooldown bypass.
+            // 쿨타임 없이 사용하는 경우
             if (Time.time < Traverse.Create(teleporter).Field("cooldownTime").GetValue<float>())
             {
-                MessageUtils.ShowMessage($"[DEBUG] Kicking {player.playerUsername} for bypassing teleporter cooldown.");
-                AntiManager.Instance.KickPlayer(player, "Teleporter Cooldown Bypass");
-                return false; // Block if on cooldown.
+                AntiManager.Instance.KickPlayer(player, "Teleport before Cooldown");
+                return false;
             }
 
-            return true; // Allow if both checks pass.
+            return true; //둘 다 아니면 통과
         }
     }
 
-    // Patch 2: Handles the inverse teleporter.
+    //역방향 텔레포트 경우
     [HarmonyPatch(typeof(ShipTeleporter), "__rpc_handler_3033548568")]
-    public static class InverseTeleporter_Patch
+    public static class InverseTeleporter
     {
-        private const float MAX_PAD_DISTANCE = 8f; // Max distance a player can be from the inverse teleporter pad.
+        private const float MAX_PAD_DISTANCE = 10f; //텔레포트 장판 위가 아닌데 텔레포트 하는 경우 탐지. 최대 8, 허용치 10
 
         [HarmonyPrefix]
         public static bool Prefix(NetworkBehaviour __instance, __RpcParams rpcParams)
         {
             if (!AntiCheatUtils.CheckAndGetUser(rpcParams.Server.Receive.SenderClientId, out var player)) { return false; }
             
-            // The check is simple: the player must be near the teleporter pad to use it.
             return Teleporter.IsPlayerNearObject(player, __instance.transform, MAX_PAD_DISTANCE, "Inverse Teleporter");
         }
     }
 
-    // Patch 3: Handles players entering or exiting the main facility entrance.
+    // 시설 입구->시설 안으로 텔레포트 하는데 거리가 되는지.
     [HarmonyPatch(typeof(EntranceTeleport), "__rpc_handler_4279190381")]
     public static class EntranceTeleport_Patch
     {
-        private const float MAX_DOOR_DISTANCE = 12f; // Max distance a player can be from the entrance door.
+        private const float MAX_DOOR_DISTANCE = 14f; // 문 입구랑 최대 거리. 최대 12, 허용 14.
 
         [HarmonyPrefix]
         public static bool Prefix(NetworkBehaviour __instance, __RpcParams rpcParams)
         {
             if (!AntiCheatUtils.CheckAndGetUser(rpcParams.Server.Receive.SenderClientId, out var player)) { return false; }
 
-            // The check is simple: the player must be near the entrance door to use it.
             return Teleporter.IsPlayerNearObject(player, __instance.transform, MAX_DOOR_DISTANCE, "Entrance");
         }
     }

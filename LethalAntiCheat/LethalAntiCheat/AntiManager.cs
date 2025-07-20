@@ -5,6 +5,8 @@ using UnityEngine;
 using Unity.Netcode;
 using System.Reflection;
 using System;
+using LethalAntiCheat.Core;
+using Steamworks;
 
 namespace LethalAntiCheat
 {
@@ -23,7 +25,6 @@ namespace LethalAntiCheat
         public static PlayerControllerB localPlayer;
         private bool isInitialized = false;
 
-
         //public GodMode God = new GodMode();
         //public InfinityStamina Stamina = new InfinityStamina();
         //public HPDisplay Hpdisp = new HPDisplay();
@@ -37,6 +38,7 @@ namespace LethalAntiCheat
         //public EnemyList EnemyListHack = new EnemyList();
         //public EnemySpawn EnemySpawnHack = new EnemySpawn();
         //public NoVisor NoVisorHack = new NoVisor();
+
 
         public void Start()
         {
@@ -86,7 +88,10 @@ namespace LethalAntiCheat
 
         private void HarmonyPatching()
         {
+            Core.MessageUtils.ShowMessage("[DEBUG] HarmonyPatching Started!");
             harmony = new Harmony("LethalAntiCheat");
+            //harmony.Patch(AccessTools.Method(typeof(NetworkManager), "Awake"),
+            //              prefix: new HarmonyMethod(typeof(AntiCheatUtils), nameof(NetworkManagerAwakePrefix)));
 
             //ApplyCorePatches(harmony);
             foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())

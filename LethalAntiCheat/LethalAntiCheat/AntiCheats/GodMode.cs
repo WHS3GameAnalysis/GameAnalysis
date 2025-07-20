@@ -1,52 +1,49 @@
 using GameNetcodeStuff;
 using HarmonyLib;
-using System.Collections.Generic;
-using UnityEngine;
+using LethalAntiCheat.Core;
+using Unity.Netcode;
 
 namespace LethalAntiCheat.AntiCheats
 {
-    [HarmonyPatch(typeof(PlayerControllerB))]
-    public class GodMode
+    internal static class GodMode
     {
-        private static readonly Dictionary<ulong, int> DamagedPlayerHealth = new Dictionary<ulong, int>();
-
-        [HarmonyPatch("DamagePlayer")]
-        [HarmonyPrefix]
-        public static void Prefix(PlayerControllerB __instance, int damageNumber)
+        public static void CheckForGodMode(PlayerControllerB victim)
         {
-            // 검사할 필요 없는 경우
-            if (damageNumber <= 0 || __instance.isPlayerDead || __instance.isInHangarShipRoom)
+            // 이미 죽엉ㅆ는 경우 넘긴다.
+            if (victim == null || victim.isPlayerDead)
             {
                 return;
             }
 
-            // 데미지를 입기 직전의 체력을 기록.
-            ulong steamId = __instance.playerSteamId;
-            if (steamId != 0)
+            // 피해를 입었으나 100 이상이면 핵 사용자로 간주.
+            if (victim.health >= 100)
             {
-                DamagedPlayerHealth[steamId] = __instance.health;
+                AntiManager.Instance.KickPlayer(victim, "God Mode");
             }
         }
+    }
 
-        [HarmonyPatch("Update")]
+    // 다른 플레이어에게 데미지를 입은 경우
+    //DamagePlayerFromOtherClientServerRpc.
+    [HarmonyPatch(typeof(PlayerControllerB), "__rpc_handler_638895557")]
+    public static class GodMode_PlayerDamage
+    {
         [HarmonyPostfix]
-        public static void Postfix(PlayerControllerB __instance)
+        public static void Postfix(NetworkBehaviour __instance)
         {
-            // 필요하지 않은 경우 종료.(호스트가 작동하는 경우가 아니거나, 체력 닳은 리스트에 저장하지 않은 경우)
-            ulong steamId = __instance.playerSteamId;
-            if (!__instance.IsHost || !DamagedPlayerHealth.ContainsKey(steamId))
-            {
-                return;
-            }
+            GodMode.CheckForGodMode(__instance as PlayerControllerB);
+        }
+    }
 
-            int previousHealth = DamagedPlayerHealth[steamId];
-            DamagedPlayerHealth.Remove(steamId); // 검사 후 목록에서 제거
-
-            //체력이 100 초과하거나 데미지를 입었음에도 이전보다 체력이 많은 경우
-            if (__instance.health > previousHealth && previousHealth < 100)
-            {
-                AntiManager.Instance.KickPlayer(__instance, "God Mode");
-            }
+    // 다른 무언가로부터 데미지를 입은 경우
+    //DamagePlayerServerRpc.
+    [HarmonyPatch(typeof(PlayerControllerB), "__rpc_handler_1084949295")]
+    public static class GodMode_SelfDamage
+    {
+        [HarmonyPostfix]
+        public static void Postfix(NetworkBehaviour __instance)
+        {
+            GodMode.CheckForGodMode(__instance as PlayerControllerB);
         }
     }
 }
