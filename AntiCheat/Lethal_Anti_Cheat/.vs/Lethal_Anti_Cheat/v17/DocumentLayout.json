@@ -3,19 +3,8 @@
   "WorkspaceRootPath": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\lethal_anti_cheat.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:lethal_anti_cheat.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\obj\\Debug\\net472\\Lethal_Anti_Cheat.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net472\\Lethal_Anti_Cheat.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\obj\\Debug\\netstandard2.1\\Lethal_Anti_Cheat.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\netstandard2.1\\Lethal_Anti_Cheat.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.201\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\debugdetector\\monoportscancheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:debugdetector\\monoportscancheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\util\\unifiedscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,20 +15,16 @@
       "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\util\\pipelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:util\\pipelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\processwatcher\\ntprocessscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:processwatcher\\ntprocessscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\debugdetector\\debugdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:debugdetector\\debugdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\util\\consolemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:util\\consolemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\processwatcher\\processwathcer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:processwatcher\\processwathcer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|d:\\brand now job\\jbu\\2025\\whitehat\\project\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\lethal_anti_cheat.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:lethal_anti_cheat.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Lethal_Anti_Cheat.csproj",
               "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Lethal_Anti_Cheat.csproj",
               "RelativeDocumentMoniker": "Lethal_Anti_Cheat.csproj",
@@ -67,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Loader.cs",
               "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Loader.cs",
               "RelativeDocumentMoniker": "Loader.cs",
@@ -76,104 +61,59 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T08:12:44.066Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\obj\\Debug\\net472\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net472\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\obj\\Debug\\net472\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "RelativeToolTip": "obj\\Debug\\net472\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ProcessWathcer.cs",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\ProcessWatcher\\ProcessWathcer.cs",
+              "RelativeDocumentMoniker": "ProcessWatcher\\ProcessWathcer.cs",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\ProcessWatcher\\ProcessWathcer.cs",
+              "RelativeToolTip": "ProcessWatcher\\ProcessWathcer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA+wCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T13:20:11.102Z",
+              "WhenOpened": "2025-07-19T18:05:48.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Microsoft.PackageDependencyResolution.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAcwAkBAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-07-16T13:19:16.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\obj\\Debug\\netstandard2.1\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\netstandard2.1\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\obj\\Debug\\netstandard2.1\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "RelativeToolTip": "obj\\Debug\\netstandard2.1\\Lethal_Anti_Cheat.AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:32:25.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PipeLogger.cs",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\PipeLogger.cs",
-              "RelativeDocumentMoniker": "Util\\PipeLogger.cs",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\PipeLogger.cs",
-              "RelativeToolTip": "Util\\PipeLogger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T09:10:34.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NtProcessScanner.cs",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\ProcessWatcher\\NtProcessScanner.cs",
-              "RelativeDocumentMoniker": "ProcessWatcher\\NtProcessScanner.cs",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\ProcessWatcher\\NtProcessScanner.cs",
-              "RelativeToolTip": "ProcessWatcher\\NtProcessScanner.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAnwC4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T09:09:07.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "DebugDetector.cs",
               "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\DebugDetector\\DebugDetector.cs",
               "RelativeDocumentMoniker": "DebugDetector\\DebugDetector.cs",
               "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\DebugDetector\\DebugDetector.cs",
               "RelativeToolTip": "DebugDetector\\DebugDetector.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvyAAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T09:08:47.03Z"
+              "WhenOpened": "2025-07-19T17:16:03.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ConsoleManager.cs",
-              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\ConsoleManager.cs",
-              "RelativeDocumentMoniker": "Util\\ConsoleManager.cs",
-              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\ConsoleManager.cs",
-              "RelativeToolTip": "Util\\ConsoleManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAbAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MonoPortScanCheck.cs",
+              "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\DebugDetector\\MonoPortScanCheck.cs",
+              "RelativeDocumentMoniker": "DebugDetector\\MonoPortScanCheck.cs",
+              "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\DebugDetector\\MonoPortScanCheck.cs",
+              "RelativeToolTip": "DebugDetector\\MonoPortScanCheck.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAUwGMAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T08:55:45.957Z"
+              "WhenOpened": "2025-07-19T17:15:57.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "UnifiedScanner.cs",
               "DocumentMoniker": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\UnifiedScanner.cs",
               "RelativeDocumentMoniker": "Util\\UnifiedScanner.cs",
               "ToolTip": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\UnifiedScanner.cs",
               "RelativeToolTip": "Util\\UnifiedScanner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T08:44:17.454Z",
+              "WhenOpened": "2025-07-19T17:15:36.668Z",
               "EditorCaption": ""
             }
           ]

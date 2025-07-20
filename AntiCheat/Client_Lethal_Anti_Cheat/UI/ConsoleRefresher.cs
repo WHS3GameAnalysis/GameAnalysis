@@ -15,7 +15,7 @@ namespace LethalAntiCheatLauncher
                     {
                         lock (typeof(Console))
                         {
-                            //Console.Clear();
+                            Console.Clear();
                             Console.WriteLine($"[AntiCheat] Console refreshed at {DateTime.Now:T}");
                         }
                     }

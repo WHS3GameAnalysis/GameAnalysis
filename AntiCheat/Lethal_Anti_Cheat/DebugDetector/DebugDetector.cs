@@ -13,9 +13,9 @@ namespace Lethal_Anti_Cheat.DebugDetector
         {
             _checks = new List<IDebugCheck>
             {
-                new MonoPortScanCheck(),
-                new RemoteDebuggerCheck(),
-                new MonoDebuggerAttachCheck()
+                new MonoPortScanCheck(), // mono debugger port scan check
+                new RemoteDebuggerCheck(), // check for remote debugger presence
+                new MonoDebuggerAttachCheck() // check if Mono debugger is attached
             };
         }
 
@@ -30,7 +30,7 @@ namespace Lethal_Anti_Cheat.DebugDetector
                 try
                 {
                     bool debugged = check.IsDebugged(current);
-                    Console.WriteLine($"  - {check.MethodName}: Debugged? {debugged}");
+                    //Console.WriteLine($"  - {check.MethodName}: Debugged? {debugged}");
                     PipeLogger.Log(message: $" - {check.MethodName}: Debugged? {debugged}");
                 }
                 catch (Exception ex)

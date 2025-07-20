@@ -15,13 +15,25 @@ namespace Lethal_Anti_Cheat.Util
             {
                 while (true)
                 {
-                    //Console.Clear();
-                    Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Lethal Anti-Cheat Scan Cycle");
-                    PipeLogger.Log(message: $"\n[{DateTime.Now:HH:mm:ss}] Lethal Anti-Cheat Scan Cycle");
+                    try
+                    {
+                        PipeLogger.Log($"[ScanCycle] 시작 {DateTime.Now:HH:mm:ss}");
 
-                    DebugDetector.DebugDetector.RunOnce();
-                    ProcessWatcher.ProcessWatcher.RunOnce();
-                    NtProcessScanner.RunOnce();
+                        try { DebugDetector.DebugDetector.RunOnce(); }
+                        catch (Exception ex) { PipeLogger.Log($"[ERROR] DebugDetector: {ex.Message}"); }
+
+                        try { ProcessWatcher.ProcessWatcher.RunOnce(); }
+                        catch (Exception ex) { PipeLogger.Log($"[ERROR] ProcessWatcher: {ex.Message}"); }
+
+                        try { NtProcessScanner.RunOnce(); }
+                        catch (Exception ex) { PipeLogger.Log($"[ERROR] NtProcessScanner: {ex.Message}"); }
+
+                        PipeLogger.Log($"[ScanCycle] 완료 {DateTime.Now:HH:mm:ss}");
+                    }
+                    catch (Exception ex)
+                    {
+                        PipeLogger.Log($"[FATAL] UnifiedScanner 루프 오류: {ex.Message}");
+                    }
 
                     Thread.Sleep(intervalMs);
                 }

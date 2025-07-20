@@ -9,7 +9,7 @@ namespace Lethal_Anti_Cheat
     {
         public static void Init()
         {
-            ConsoleManager.Initialize();
+            //ConsoleManager.Initialize();
             //Console.Clear();
             //Console.WriteLine("[AntiCheat] Module Init 완료.");
 

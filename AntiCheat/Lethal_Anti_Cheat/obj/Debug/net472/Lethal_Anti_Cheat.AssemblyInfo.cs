@@ -11,13 +11,6 @@
 using System;
 using System.Reflection;
 
-//[assembly: System.Reflection.AssemblyCompanyAttribute("Lethal_Anti_Cheat")]
-//[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-//[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-//[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+833049e158e9df3244315ec1639a6a6747b12d16")]
-//[assembly: System.Reflection.AssemblyProductAttribute("Lethal_Anti_Cheat")]
-//[assembly: System.Reflection.AssemblyTitleAttribute("Lethal_Anti_Cheat")]
-//[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.
 

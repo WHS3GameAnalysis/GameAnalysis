@@ -59,7 +59,7 @@ namespace LethalAntiCheatLauncher
                             lock (_lock)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("[✓] Injection successful. Anti-cheat initialized.");
+                                Console.WriteLine("[!] Injection successful. Anti-cheat initialized.");
                                 Console.ResetColor();
                             }
 
