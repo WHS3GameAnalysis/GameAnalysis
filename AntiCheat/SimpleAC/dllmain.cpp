@@ -52,12 +52,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     case DLL_PROCESS_ATTACH:
         g_hInstance = hModule;
         
-        // 콘솔 할당 (디버깅용)
-        AllocConsole();
-        freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
-        freopen_s((FILE**)stderr, "CONOUT$", "w", stderr);
-        freopen_s((FILE**)stdin, "CONIN$", "r", stdin);
-        
+        // Logger 파이프 초기화
+        Logger::InitializePipe();
         Logger::Log(L"[SimpleAC] DLL Loaded");
         
         // 종료 이벤트 생성
@@ -119,6 +115,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         
         Logger::Log(L"[SimpleAC] All threads terminated successfully");
         Logger::Log(L"[SimpleAC] DLL Unloaded Successfully");
+        
+        // Logger 파이프 정리
+        Logger::CleanupPipe();
         
         // 콘솔 해제
         FreeConsole();

@@ -24,6 +24,7 @@
 using System;
 using System.Threading;
 using LethalAntiCheatLauncher.Integrity;
+using LethalAntiCheatLauncher.Util;
 
 namespace LethalAntiCheatLauncher
 {
@@ -68,13 +69,26 @@ namespace LethalAntiCheatLauncher
             // 3. 통신 파이프 리스너 시작
             PipeListener.Start();
 
-            // 4. 게임 실행 이후 인젝션 수행
+            // 4. SimpleAC DLL 로드
+            SimpleACManager.LoadSimpleAC();
+
+            // 5. 게임 실행 이후 인젝션 수행
             InjectorManager.InjectWhenGameStarts();
 
-            // 5. 콘솔 주기적 상태 출력
+            // 6. 콘솔 주기적 상태 출력
             ConsoleRefresher.Start();
 
-            // 6. 무한 루프 대기
+            // 7. 종료 신호 대기 설정
+            Console.CancelKeyPress += (sender, e) =>
+            {
+                e.Cancel = true;
+                Console.WriteLine("\n[AntiCheat] 종료 중...");
+                SimpleACManager.UnloadSimpleAC();
+                Environment.Exit(0);
+            };
+
+            // 8. 무한 루프 대기
+            Console.WriteLine("프로그램을 종료하려면 Ctrl+C를 누르세요.\n");
             while (true)
                 Thread.Sleep(1000);
         }

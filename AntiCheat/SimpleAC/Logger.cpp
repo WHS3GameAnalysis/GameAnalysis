@@ -2,6 +2,67 @@
 
 // static 멤버 정의
 std::mutex Logger::s_logMutex;
+HANDLE Logger::s_pipeHandle = INVALID_HANDLE_VALUE;
+bool Logger::s_pipeInitialized = false;
+
+void Logger::InitializePipe()
+{
+    std::lock_guard<std::mutex> lock(s_logMutex);
+    
+    if (s_pipeInitialized)
+        return;
+    
+    // 파이프 클라이언트로 연결
+    s_pipeHandle = CreateFileW(
+        L"\\\\.\\pipe\\AntiCheatPipe",
+        GENERIC_WRITE,
+        0,
+        nullptr,
+        OPEN_EXISTING,
+        0,
+        nullptr
+    );
+    
+    if (s_pipeHandle != INVALID_HANDLE_VALUE)
+    {
+        s_pipeInitialized = true;
+        OutputDebugStringW(L"[Logger] Pipe connection established\n");
+    }
+    else
+    {
+        OutputDebugStringW(L"[Logger] Failed to connect to pipe\n");
+    }
+}
+
+void Logger::CleanupPipe()
+{
+    std::lock_guard<std::mutex> lock(s_logMutex);
+    
+    if (s_pipeHandle != INVALID_HANDLE_VALUE)
+    {
+        CloseHandle(s_pipeHandle);
+        s_pipeHandle = INVALID_HANDLE_VALUE;
+    }
+    s_pipeInitialized = false;
+}
+
+void Logger::SendToPipe(const std::wstring& message)
+{
+    if (!s_pipeInitialized || s_pipeHandle == INVALID_HANDLE_VALUE)
+        return;
+    
+    // UTF-8로 변환
+    int size_needed = WideCharToMultiByte(CP_UTF8, 0, message.c_str(), -1, nullptr, 0, nullptr, nullptr);
+    if (size_needed <= 0)
+        return;
+    
+    std::string utf8_message(size_needed - 1, 0);
+    WideCharToMultiByte(CP_UTF8, 0, message.c_str(), -1, &utf8_message[0], size_needed - 1, nullptr, nullptr);
+    utf8_message += "\n";
+    
+    DWORD bytesWritten;
+    WriteFile(s_pipeHandle, utf8_message.c_str(), static_cast<DWORD>(utf8_message.length()), &bytesWritten, nullptr);
+}
 
 void Logger::Log(const std::wstring& message)
 {
@@ -12,6 +73,9 @@ void Logger::Log(const std::wstring& message)
     
     // 디버거 출력
     OutputDebugStringW((formattedMessage + L"\n").c_str());
+    
+    // 파이프로 전송
+    SendToPipe(formattedMessage);
 }
 
 void Logger::Log(const std::string& message)
@@ -55,6 +119,9 @@ void Logger::LogError(const std::wstring& message)
     
     // 디버거 출력
     OutputDebugStringW((formattedMessage + L"\n").c_str());
+    
+    // 파이프로 전송
+    SendToPipe(formattedMessage);
 }
 
 void Logger::LogError(const std::string& message)
@@ -72,6 +139,9 @@ void Logger::LogWarning(const std::wstring& message)
     
     // 디버거 출력
     OutputDebugStringW((formattedMessage + L"\n").c_str());
+    
+    // 파이프로 전송
+    SendToPipe(formattedMessage);
 }
 
 void Logger::LogWarning(const std::string& message)

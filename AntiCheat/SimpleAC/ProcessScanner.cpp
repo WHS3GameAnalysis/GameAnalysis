@@ -179,7 +179,7 @@ bool ProcessScanner::ScanProcess(const ProcessInfo& processInfo)
     {
         // 프로세스 메모리 스캔 (핸들을 전달)
         result = ScanProcessMemory(processHandle, processInfo);
-        Logger::LogF(L"[ProcessScanner] Process scan completed: %s", processInfo.processName.c_str());
+        //Logger::LogF(L"[ProcessScanner] Process scan completed: %s", processInfo.processName.c_str());
     }
     catch (...)
     {
