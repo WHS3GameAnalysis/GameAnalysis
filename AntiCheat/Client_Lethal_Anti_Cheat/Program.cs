@@ -83,6 +83,7 @@ namespace LethalAntiCheatLauncher
             {
                 e.Cancel = true;
                 Console.WriteLine("\n[AntiCheat] 종료 중...");
+                Thread.Sleep(1000);
                 SimpleACManager.UnloadSimpleAC();
                 Environment.Exit(0);
             };

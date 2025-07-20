@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Client_Lethal_Anti_Cheat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b558346f15df31b18fa9993dd890e3b51b52ef98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fdeace72c810b08201001bca0e816c2c3c2ae69")]
 [assembly: System.Reflection.AssemblyProductAttribute("Client_Lethal_Anti_Cheat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Client_Lethal_Anti_Cheat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

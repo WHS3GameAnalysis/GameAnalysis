@@ -17,6 +17,7 @@
 // YARA 라이브러리 포함
 #include <yara.h>
 
+
 // 프로세스 정보 구조체 (멀티스레드 안전)
 struct ProcessInfo
 {
