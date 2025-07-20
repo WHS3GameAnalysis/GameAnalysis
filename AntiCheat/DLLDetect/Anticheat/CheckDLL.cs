@@ -65,8 +65,19 @@ namespace Anticheat
     public static class PEParser
     {
         private static readonly string[] SuspiciousSectionNames = {
-            ".aspack", ".upx", ".themida", "UPX0", "UPX1", "UPX2"
-        };
+                ".aspack", ".upx", "UPX0", "UPX1", "UPX2",
+                ".themida",
+                ".vmp0", ".vmp1", ".vmp2", ".vmprotect", "VMProtect",
+                ".enigma1", ".enigma2", ".edata",
+                ".pec", ".pec1", ".pec2",
+                ".mpress1", ".mpress2",
+                ".nsp0", ".nsp1",
+                ".exedata", ".writable",
+                ".obsidium", ".obs1", ".obs2",
+                ".dotfuscator", ".xfg", ".xyz",
+                ".confuser", ".cfr", ".cfx"
+            };
+
 
         public static string[] GetSectionNames(string dllPath)
         {
