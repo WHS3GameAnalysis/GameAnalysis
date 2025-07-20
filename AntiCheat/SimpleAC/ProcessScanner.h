@@ -1,11 +1,18 @@
 #pragma once
 
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
 #include <Windows.h>
 #include <TlHelp32.h>
 #include <Psapi.h>
 #include <string>
 #include <vector>
 #include <memory>
+#include <set>
+#include <future>
+#include <algorithm>
+#include <functional>
 
 // YARA 라이브러리 포함
 #include <yara.h>
@@ -46,6 +53,9 @@ private:
     bool m_initialized;
     std::wstring m_rulesPath;
     
+    // 스캔한 프로세스 추적
+    std::set<DWORD> m_scannedProcesses;
+    
     // 프로세스 열거
     std::vector<ProcessInfo> EnumerateProcesses();
     
@@ -54,6 +64,9 @@ private:
     
     // 전체 프로세스 메모리 스캔
     bool ScanProcessMemory(HANDLE processHandle, const ProcessInfo& processInfo);
+    
+    // 단일 메모리 영역 스캔 (병렬 처리용)
+    bool ScanMemoryRegion(HANDLE processHandle, const MEMORY_BASIC_INFORMATION& region, const ProcessInfo& processInfo);
     
     // YARA 규칙 로드
     bool LoadYaraRules();

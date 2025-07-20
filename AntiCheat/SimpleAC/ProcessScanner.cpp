@@ -82,43 +82,78 @@ void ProcessScanner::ScanAllProcesses()
         return;
     }
     
-    Logger::Log(L"[ProcessScanner] Starting sequential process scan...");
+    Logger::Log(L"[ProcessScanner] Starting priority process scan...");
     
     int scannedCount = 0;
+    int newProcessCount = 0;
+    int existingProcessCount = 0;
     
-    HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-    if (hSnapshot == INVALID_HANDLE_VALUE)
+    // 현재 실행 중인 모든 프로세스 열거
+    std::vector<ProcessInfo> allProcesses = EnumerateProcesses();
+    std::vector<ProcessInfo> newProcesses;
+    std::vector<ProcessInfo> existingProcesses;
+    
+    // 새로운 프로세스와 기존 프로세스 분리
+    for (const auto& processInfo : allProcesses)
     {
-        Logger::LogError(L"[ProcessScanner] Failed to create process snapshot");
-        return;
-    }
-    
-    PROCESSENTRY32W pe32;
-    pe32.dwSize = sizeof(PROCESSENTRY32W);
-    
-    if (Process32FirstW(hSnapshot, &pe32))
-    {
-        do
+        // 시스템 프로세스들 제외
+        if (processInfo.processId == 0 || processInfo.processId == 4)
+            continue;
+            
+        if (m_scannedProcesses.find(processInfo.processId) == m_scannedProcesses.end())
         {
-            // 시스템 프로세스들 제외
-            if (pe32.th32ProcessID == 0 || pe32.th32ProcessID == 4)
-                continue;
-                
-            ProcessInfo processInfo;
-            if (GetProcessInfo(pe32.th32ProcessID, processInfo))
-            {
-                if (ScanProcess(processInfo))
-                {
-                    scannedCount++;
-                }
-            }
-        } while (Process32NextW(hSnapshot, &pe32));
+            newProcesses.push_back(processInfo);
+        }
+        else
+        {
+            existingProcesses.push_back(processInfo);
+        }
     }
     
-    CloseHandle(hSnapshot);
+    // 1. 새로운 프로세스 우선 스캔
+    for (const auto& processInfo : newProcesses)
+    {
+        if (ScanProcess(processInfo))
+        {
+            scannedCount++;
+            newProcessCount++;
+        }
+        // 스캔 완료된 프로세스 추가
+        m_scannedProcesses.insert(processInfo.processId);
+    }
     
-    Logger::LogF(L"[ProcessScanner] Sequential scan completed: %d processes scanned", 
-                 scannedCount);
+    // 2. 기존 프로세스 후순위 스캔
+    for (const auto& processInfo : existingProcesses)
+    {
+        if (ScanProcess(processInfo))
+        {
+            scannedCount++;
+            existingProcessCount++;
+        }
+    }
+    
+    // 더 이상 실행되지 않는 프로세스들을 추적 목록에서 제거
+    std::set<DWORD> currentProcessIds;
+    for (const auto& processInfo : allProcesses)
+    {
+        currentProcessIds.insert(processInfo.processId);
+    }
+    
+    auto it = m_scannedProcesses.begin();
+    while (it != m_scannedProcesses.end())
+    {
+        if (currentProcessIds.find(*it) == currentProcessIds.end())
+        {
+            it = m_scannedProcesses.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+    
+    Logger::LogF(L"[ProcessScanner] Priority scan completed: %d total scanned (New: %d, Existing: %d)", 
+                 scannedCount, newProcessCount, existingProcessCount);
 }
 
 bool ProcessScanner::ScanProcess(const ProcessInfo& processInfo)
@@ -144,7 +179,7 @@ bool ProcessScanner::ScanProcess(const ProcessInfo& processInfo)
     {
         // 프로세스 메모리 스캔 (핸들을 전달)
         result = ScanProcessMemory(processHandle, processInfo);
-        //Logger::LogF(L"[ProcessScanner] Process scan completed: %s", processInfo.processName.c_str());
+        Logger::LogF(L"[ProcessScanner] Process scan completed: %s", processInfo.processName.c_str());
     }
     catch (...)
     {
@@ -234,6 +269,35 @@ bool ProcessScanner::GetProcessInfo(DWORD processId, ProcessInfo& processInfo)
     return true;
 }
 
+bool ProcessScanner::ScanMemoryRegion(HANDLE processHandle, const MEMORY_BASIC_INFORMATION& region, const ProcessInfo& processInfo)
+{
+    std::vector<BYTE> buffer;
+    if (!ReadProcessMemory(processHandle, region.BaseAddress, region.RegionSize, buffer))
+    {
+        return false;
+    }
+    
+    // 실제 YARA 스캔 실행
+    int result = yr_rules_scan_mem(
+        m_yaraRules,
+        buffer.data(),
+        buffer.size(),
+        SCAN_FLAGS_REPORT_RULES_MATCHING,
+        YaraCallback,
+        (void*)&processInfo,
+        0
+    );
+    
+    if (result != ERROR_SUCCESS)
+    {
+        Logger::LogF(L"[ProcessScanner] YARA scan error: %d for process %s", 
+                    result, processInfo.processName.c_str());
+        return false;
+    }
+    
+    return true;
+}
+
 bool ProcessScanner::ScanProcessMemory(HANDLE processHandle, const ProcessInfo& processInfo)
 {
     try
@@ -241,50 +305,73 @@ bool ProcessScanner::ScanProcessMemory(HANDLE processHandle, const ProcessInfo& 
         // 메모리 영역들 가져오기
         std::vector<MEMORY_BASIC_INFORMATION> memoryRegions = GetMemoryRegions(processHandle);
         
-        int scannedRegions = 0;
-        
+        // 스캔 가능한 영역 필터링
+        std::vector<MEMORY_BASIC_INFORMATION> validRegions;
         for (const auto& region : memoryRegions)
         {
-            // 읽기 가능한 메모리 영역만 스캔
             if (region.State == MEM_COMMIT && 
                 (region.Protect & PAGE_READONLY || 
                  region.Protect & PAGE_READWRITE ||
                  region.Protect & PAGE_EXECUTE_READ ||
                  region.Protect & PAGE_EXECUTE_READWRITE))
             {
-                std::vector<BYTE> buffer;
-                if (ReadProcessMemory(processHandle, region.BaseAddress, region.RegionSize, buffer))
+                validRegions.push_back(region);
+            }
+        }
+        
+        if (validRegions.empty())
+        {
+            return true;
+        }
+        
+        // 병렬 처리를 위한 배치 크기 (동시에 실행할 최대 스레드 수)
+        const size_t maxConcurrentThreads = std::min(validRegions.size(), static_cast<size_t>(128));
+        int scannedRegions = 0;
+        
+        // 배치 단위로 병렬 스캔 실행
+        for (size_t i = 0; i < validRegions.size(); i += maxConcurrentThreads)
+        {
+            std::vector<std::future<bool>> futures;
+            size_t batchEnd = std::min(i + maxConcurrentThreads, validRegions.size());
+            
+            // 현재 배치의 모든 영역을 비동기로 스캔 시작
+            for (size_t j = i; j < batchEnd; j++)
+            {
+                futures.push_back(
+                    std::async(std::launch::async, 
+                              &ProcessScanner::ScanMemoryRegion, 
+                              this, 
+                              processHandle, 
+                              validRegions[j], 
+                              processInfo)
+                );
+            }
+            
+            // 현재 배치의 모든 작업 완료 대기
+            for (auto& future : futures)
+            {
+                try
                 {
-                    // 실제 YARA 스캔 실행
-                    int result = yr_rules_scan_mem(
-                        m_yaraRules,
-                        buffer.data(),
-                        buffer.size(),
-                        SCAN_FLAGS_REPORT_RULES_MATCHING,
-                        YaraCallback,
-                        (void*)&processInfo,
-                        0
-                    );
-                    
-                    if (result != ERROR_SUCCESS)
+                    if (future.get())
                     {
-                        Logger::LogF(L"[ProcessScanner] YARA scan error: %d for process %s", 
-                                    result, processInfo.processName.c_str());
+                        scannedRegions++;
                     }
-                    
-                    scannedRegions++;
+                }
+                catch (...)
+                {
+                    Logger::LogError(L"[ProcessScanner] Exception in parallel memory scan");
                 }
             }
         }
         
-        // Logger::LogF(L"[ProcessScanner] Memory scan completed: %s - %d regions scanned", 
+        // Logger::LogF(L"[ProcessScanner] Parallel memory scan completed: %s - %d regions scanned", 
         //             processInfo.processName.c_str(), scannedRegions);
         
         return true;
     }
     catch (...)
     {
-        Logger::LogError(L"[ProcessScanner] Exception occurred during memory scan");
+        Logger::LogError(L"[ProcessScanner] Exception occurred during parallel memory scan");
         return false;
     }
 }
