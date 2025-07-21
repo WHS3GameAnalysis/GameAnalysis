@@ -23,7 +23,7 @@ namespace Anticheat
         {
             ConsoleBootstrap.InitConsole();
             Console.WriteLine("Scanning...");
-            //CheckDLL.Start();
+            CheckDLL.Start();
             PatchDetector.Start();
         }
 
