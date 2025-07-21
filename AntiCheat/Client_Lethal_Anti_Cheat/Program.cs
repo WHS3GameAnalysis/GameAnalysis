@@ -23,6 +23,7 @@
 //}
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 using LethalAntiCheatLauncher.Integrity;
 using LethalAntiCheatLauncher.Util;
 
@@ -54,6 +55,9 @@ namespace LethalAntiCheatLauncher
                 Console.WriteLine("[AntiCheat] 게임 실행이 차단되었습니다.");
                 return;
             }
+
+            // 하트비트 전송 시작
+            HeartbeatManager.Start();
 
             Console.WriteLine("[AntiCheat] 게임 실행 중...\n");
 
