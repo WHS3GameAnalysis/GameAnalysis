@@ -3,6 +3,7 @@ using System.Threading;
 using Lethal_Anti_Cheat.DebugDetector;
 using Lethal_Anti_Cheat.ProcessWatcher;
 
+
 namespace Lethal_Anti_Cheat.Util
 {
     public static class UnifiedScanner
@@ -27,6 +28,12 @@ namespace Lethal_Anti_Cheat.Util
 
                         try { NtProcessScanner.RunOnce(); }
                         catch (Exception ex) { PipeLogger.Log($"[ERROR] NtProcessScanner: {ex.Message}"); }
+
+                        try { DLLDetector.CheckDLL.Start(); }
+                        catch (Exception ex) { PipeLogger.Log($"[ERROR] CheckDLL: {ex.Message}"); }
+
+                        try { HarmonyPatchDetector.HarmonyPatchDetector.Start(); }
+                        catch (Exception ex) { PipeLogger.Log($"[ERROR] HarmonyPatchDetector: {ex.Message}"); }
 
                         PipeLogger.Log($"[ScanCycle] 완료 {DateTime.Now:HH:mm:ss}");
                     }

@@ -3,6 +3,7 @@ using Lethal_Anti_Cheat.Util;
 using Lethal_Anti_Cheat.DebugDetector;
 using Lethal_Anti_Cheat.ProcessWatcher;
 
+
 namespace Lethal_Anti_Cheat
 {
     public class Loader

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QPG2+OeleHM=",
+  "dgSpecHash": "SBX7yFk3zyI=",
   "success": true,
-  "projectFilePath": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Lethal_Anti_Cheat.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Lethal_Anti_Cheat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\lib.harmony\\2.3.6\\lib.harmony.2.3.6.nupkg.sha512"
+  ],
   "logs": []
 }
