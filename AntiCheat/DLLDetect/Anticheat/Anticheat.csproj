@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=2.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.2.3.6\lib\net472\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="AmazingAssets.TerrainToMesh">
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\AmazingAssets.TerrainToMesh.dll</HintPath>
     </Reference>
@@ -444,7 +447,11 @@
     <Compile Include="AllowList.cs" />
     <Compile Include="CheckDLL.cs" />
     <Compile Include="Loader.cs" />
+    <Compile Include="PatchDetector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

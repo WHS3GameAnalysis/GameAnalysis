@@ -8,3 +8,4 @@
 *.db-wal
 /AntiCheat/DLLDetect/.vs
 AntiCheat/DLLDetect/Anticheat/.vs/Anticheat.csproj.dtbcache.json
+/AntiCheat/DLLDetect/Anticheat/obj
