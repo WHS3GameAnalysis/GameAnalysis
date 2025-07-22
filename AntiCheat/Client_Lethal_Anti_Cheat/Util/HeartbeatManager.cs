@@ -18,8 +18,8 @@ namespace LethalAntiCheatLauncher.Util
         private static async Task SendHeartbeatLoop()
         {
             var client = new HttpClient();
+            string clientId = HwidUtil.GetHwid();
             const string serverUrl = "https://ghb.r-e.kr/heartbeat";
-            const string clientId = "test123";
             const string version = "1.0.0";
 
             while (true)
