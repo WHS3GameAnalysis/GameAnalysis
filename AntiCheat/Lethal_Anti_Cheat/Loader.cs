@@ -2,6 +2,7 @@
 using Lethal_Anti_Cheat.Util;
 using Lethal_Anti_Cheat.DebugDetector;
 using Lethal_Anti_Cheat.ProcessWatcher;
+using Lethal_Anti_Debugging;
 
 namespace Lethal_Anti_Cheat
 {
@@ -12,9 +13,12 @@ namespace Lethal_Anti_Cheat
             //ConsoleManager.Initialize();
             //Console.Clear();
             //Console.WriteLine("[AntiCheat] Module Init 완료.");
+            AntiDebugTimer.StartCheckpoint();
 
             DebugDetector.DebugDetector.Init(); // 체크 리스트 초기화
             UnifiedScanner.Start(); // 모든 감지 루프 시작
+
+            AntiDebugTimer.ValidateCheckpoint("UnifiedScanner Init");
         }
     }
 }

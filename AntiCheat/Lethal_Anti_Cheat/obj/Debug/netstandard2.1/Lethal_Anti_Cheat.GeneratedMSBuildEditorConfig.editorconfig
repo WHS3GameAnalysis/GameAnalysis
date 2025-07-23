@@ -1,8 +1,3 @@
 is_global = true
 build_property.RootNamespace = Lethal_Anti_Cheat
-build_property.ProjectDir = D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Lethal_Anti_Cheat\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 
+build_property.ProjectDir = C:\Users\user\GameAnalysis_DLLDetect\AntiCheat\Lethal_Anti_Cheat\

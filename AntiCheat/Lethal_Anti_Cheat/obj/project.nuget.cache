@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "/8RyWm2j+UQ=",
-  "success": true,
-  "projectFilePath": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Lethal_Anti_Cheat.csproj",
+  "dgSpecHash": "vk39gyxqtLCkhRbuMVIBzP9qu6497/ASdDZenytdLlkunofE67+YnRXbE9+h3vsybbt3AB7QjPKrcufXRdrWUg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\user\\GameAnalysis_DLLDetect\\AntiCheat\\Lethal_Anti_Cheat\\Lethal_Anti_Cheat.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "'C:\\Users\\user\\GameAnalysis_DLLDetect\\AntiCheat\\Lethal_Anti_Debugging\\Lethal_Anti_Debugging.csproj'의 프로젝트 정보를 찾을 수 없습니다. Visual Studio를 사용 중인 경우 프로젝트가 언로드되었거나 현재 솔루션에 속하지 않기 때문일 수 있으므로 명령줄에서 복원을 실행하세요. 그러지 않으면 프로젝트 파일이 잘못되었거나 복원에 필요한 대상이 없을 수 있습니다.",
+      "libraryId": "C:\\Users\\user\\GameAnalysis_DLLDetect\\AntiCheat\\Lethal_Anti_Debugging\\Lethal_Anti_Debugging.csproj",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    }
+  ]
 }
