@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\bin\Release\netstandard2.1\ReflectionTest.deps.json
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\bin\Release\netstandard2.1\ReflectionTest.dll
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\bin\Release\netstandard2.1\ReflectionTest.pdb
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.AssemblyInfo.cs
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.dll
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.pdb
+C:\Users\User\Desktop\WHS_Project\Anti_Cheat\ReflectionTest\ReflectionTest\obj\Release\netstandard2.1\ReflectionTest.csproj.AssemblyReference.cache
