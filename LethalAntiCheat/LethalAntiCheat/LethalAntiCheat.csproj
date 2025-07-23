@@ -437,6 +437,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntiCheats\HarmonyPatchDetect.cs" />
     <Compile Include="AntiManager.cs" />
     <Compile Include="AntiCheats\GrabObject.cs" />
     <Compile Include="AntiCheats\GodMode.cs" />
@@ -445,12 +446,11 @@
     <Compile Include="AntiCheats\SuperJump.cs" />
     <Compile Include="Core\AntiCheatUtils.cs" />
     <Compile Include="Core\MessageUtils.cs" />
+    <Compile Include="Core\PatchDetector.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Libs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Libs\0Harmony.dll" />
   </ItemGroup>

@@ -67,28 +67,27 @@ namespace LethalAntiCheat
         {
             if (localPlayer.IsHost)
             {
-                Debug.Log("[Initialize] 호스트 감지, 하모니패치 실행");
                 Core.MessageUtils.ShowMessage("[LethalAntiCheat] LethalAntiCheat Loading...");
-                Core.MessageUtils.ShowHostOnlyMessage("[LethalAntiCheat] Host Detected");
                 HarmonyPatching();
+                Core.PatchDetector.Start(); // PatchDetector 작동
+                AntiCheats.HarmonyPatchDetect.ReceivingIllegalPatch(harmony); // HarmonyPatchDetect에 Harmony 인스턴스를 전달
             }
             else
             {
                 Core.MessageUtils.ShowMessage("[LethalAntiCheat] Host Undetected, Shutting down...");
-                Debug.Log("[Initialize] 호스트 미감지, gameObject Destroy");
                 Destroy(gameObject);
             }
         }
 
         private bool IsHost()
         {
-            //return StartOfRound.Instance != null && StartOfRound.Instance.isHostPlayerObject; 임시로 주석처리. 수정하지 말 것.
-            return true;
+            return StartOfRound.Instance != null && StartOfRound.Instance.IsHost;
+            //return true;
         }
 
         private void HarmonyPatching()
         {
-            Core.MessageUtils.ShowMessage("[DEBUG] HarmonyPatching Started!");
+            // Core.MessageUtils.ShowMessage("[DEBUG] HarmonyPatching Started!");
             harmony = new Harmony("LethalAntiCheat");
             //harmony.Patch(AccessTools.Method(typeof(NetworkManager), "Awake"),
             //              prefix: new HarmonyMethod(typeof(AntiCheatUtils), nameof(NetworkManagerAwakePrefix)));
@@ -108,7 +107,7 @@ namespace LethalAntiCheat
                     }
                 }
             }
-            Debug.Log("[harmonyPatching] 하모니 패치 완료");
+            // Debug.Log("[harmonyPatching] 하모니 패치 완료");
             Core.MessageUtils.ShowMessage("[LethalAntiCheat] LethalAntiCheat Ready");
         }
 
@@ -133,7 +132,7 @@ namespace LethalAntiCheat
             NetworkManager.Singleton.DisconnectClient(player.playerClientId);
 
             Core.MessageUtils.ShowMessage($"[LethalAntiCheat] Kicking player {player.playerUsername} for: {reason}");
-            Core.MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] Kicking player {player.playerUsername} for: {reason}");
+            //Core.MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] Kicking player {player.playerUsername} for: {reason}");
         }
 
         //public void Update()
