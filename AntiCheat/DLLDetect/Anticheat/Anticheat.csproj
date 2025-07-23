@@ -443,6 +443,7 @@
   <ItemGroup>
     <Compile Include="AllowList.cs" />
     <Compile Include="CheckDLL.cs" />
+    <Compile Include="CheckSignature.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

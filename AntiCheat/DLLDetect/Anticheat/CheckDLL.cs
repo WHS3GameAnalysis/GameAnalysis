@@ -24,12 +24,15 @@ namespace Anticheat
 
                 foreach (ProcessModule module in currentProcess.Modules)
                 {
-                    // AllowList에 포함되지 않은 모듈일 경우에만 출력
+                    // AllowList에 포함되지 않은 모듈일 경우에만 서명 확인
                     if (!AllowList.moduleList.Contains(module.ModuleName))
                     {
-                        // 콘솔창에 출력
-                        Console.WriteLine("\n[!] Detected Module :");
-                        Console.WriteLine("- " + module.ModuleName);
+                        // 서명이 없는 DLL일 경우에만 출력
+                        if (!CheckSignature.IsFileSigned(module.FileName))
+                        {
+                            Console.WriteLine("[!] Detected Unsigned Module:");
+                            Console.WriteLine("- " + module.ModuleName);
+                        }
                     }      
                 }
             }
