@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "x3+SQBpe5oA=",
+  "dgSpecHash": "HQtKgsCu27c=",
   "success": true,
-  "projectFilePath": "D:\\Brand Now Job\\JBU\\2025\\Whitehat\\Project\\Github\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Client_Lethal_Anti_Cheat.csproj",
+  "projectFilePath": "C:\\Users\\SUNGHA\\Desktop\\GameAnalysis\\AntiCheat\\Client_Lethal_Anti_Cheat\\Client_Lethal_Anti_Cheat.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\system.io.pipes.accesscontrol\\5.0.0\\system.io.pipes.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+    "C:\\Users\\SUNGHA\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\SUNGHA\\.nuget\\packages\\system.codedom\\9.0.7\\system.codedom.9.0.7.nupkg.sha512",
+    "C:\\Users\\SUNGHA\\.nuget\\packages\\system.io.pipes.accesscontrol\\5.0.0\\system.io.pipes.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\SUNGHA\\.nuget\\packages\\system.management\\9.0.7\\system.management.9.0.7.nupkg.sha512",
+    "C:\\Users\\SUNGHA\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\SUNGHA\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

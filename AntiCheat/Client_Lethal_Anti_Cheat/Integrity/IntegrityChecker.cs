@@ -36,6 +36,7 @@ namespace LethalAntiCheatLauncher.Integrity
                 @"C:\Program Files (x86)\Steam\steamapps\common\Lethal Company",
                 @"C:\Steam\steamapps\common\Lethal Company",
                 @"D:\Steam\steamapps\common\Lethal Company",
+                @"D:\Games\Steam\steamapps\common\Lethal Company",
                 @"E:\Steam\steamapps\common\Lethal Company",
                 @"C:\SteamLibrary\steamapps\common\Lethal Company"
             };
