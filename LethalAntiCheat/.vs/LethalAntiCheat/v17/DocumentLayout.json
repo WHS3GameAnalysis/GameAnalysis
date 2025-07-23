@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\anticheats\\harmonypatchdetect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|c:\\users\\gicha\\documents\\github\\gameanalysis\\lethalanticheat\\lethalanticheat\\anticheats\\harmonypatchdetect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\anticheats\\harmonypatchdetect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|c:\\users\\gicha\\documents\\github\\gameanalysis\\lethalanticheat\\lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -154,8 +154,7 @@
               "RelativeToolTip": "LethalAntiCheat\\AntiManager.cs",
               "ViewState": "AgIAAGwAAAAAAAAAAAAYwHcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:39:33.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T11:39:33.352Z"
             },
             {
               "$type": "Document",
