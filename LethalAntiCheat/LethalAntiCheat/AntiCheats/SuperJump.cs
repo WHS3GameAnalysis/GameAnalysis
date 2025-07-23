@@ -37,7 +37,7 @@ namespace LethalAntiCheat.AntiCheats
 
                 if (speed > MAX_VERTICAL_SPEED)
                 {
-                    AntiManager.Instance.KickPlayer(player, $"Super Jump / Vertical Speed: {speed:F2} m/s");
+                    AntiManager.Instance.KickPlayer(player, $"Super Jump OR Speed Hack / Vertical Speed: {speed:F2} m/s");
                     lastPlayerYPositions.Remove(player.playerSteamId); // 킥 했으면 추적 중지
                     return false;
                 }

@@ -81,13 +81,13 @@ namespace LethalAntiCheat
 
         private bool IsHost()
         {
-            return StartOfRound.Instance != null && StartOfRound.Instance.IsHost;
-            //return true;
+            //return StartOfRound.Instance != null && StartOfRound.Instance.isHostPlayerObject; 임시로 주석처리. 수정하지 말 것.
+            return true;
         }
 
         private void HarmonyPatching()
         {
-            // Core.MessageUtils.ShowMessage("[DEBUG] HarmonyPatching Started!");
+           // Core.MessageUtils.ShowMessage("[DEBUG] HarmonyPatching Started!");
             harmony = new Harmony("LethalAntiCheat");
             //harmony.Patch(AccessTools.Method(typeof(NetworkManager), "Awake"),
             //              prefix: new HarmonyMethod(typeof(AntiCheatUtils), nameof(NetworkManagerAwakePrefix)));
@@ -107,7 +107,7 @@ namespace LethalAntiCheat
                     }
                 }
             }
-            // Debug.Log("[harmonyPatching] 하모니 패치 완료");
+            Debug.Log("[harmonyPatching] 하모니 패치 완료");
             Core.MessageUtils.ShowMessage("[LethalAntiCheat] LethalAntiCheat Ready");
         }
 

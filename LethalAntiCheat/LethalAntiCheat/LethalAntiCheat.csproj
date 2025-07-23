@@ -438,6 +438,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AntiCheats\HarmonyPatchDetect.cs" />
+    <Compile Include="AntiCheats\TeleportDetector.cs" />
     <Compile Include="AntiManager.cs" />
     <Compile Include="AntiCheats\GrabObject.cs" />
     <Compile Include="AntiCheats\GodMode.cs" />

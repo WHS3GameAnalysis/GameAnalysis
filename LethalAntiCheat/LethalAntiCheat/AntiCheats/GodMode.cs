@@ -9,7 +9,7 @@ namespace LethalAntiCheat.AntiCheats
     {
         public static void CheckForGodMode(PlayerControllerB victim)
         {
-            // 이미 죽엉ㅆ는 경우 넘긴다.
+            // 이미 죽은 경우 넘긴다.
             if (victim == null || victim.isPlayerDead)
             {
                 return;

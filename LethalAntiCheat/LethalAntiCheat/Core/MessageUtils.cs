@@ -13,7 +13,7 @@ namespace LethalAntiCheat.Core
         /// <param name="message">The message to display.</param>
         public static void ShowMessage(string message)
         {
-            // Prevent message spam.
+            // 메시지 반복 방지
             //if (lastMessage == message) return;
             //lastMessage = message;
 
