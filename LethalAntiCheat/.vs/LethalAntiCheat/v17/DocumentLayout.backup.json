@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|c:\\users\\gicha\\documents\\github\\gameanalysis\\lethalanticheat\\lethalanticheat\\anticheats\\harmonypatchdetect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\anticheats\\harmonypatchdetect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\core\\patchdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\core\\patchdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\anticheats\\godmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\anticheats\\godmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|c:\\users\\gicha\\documents\\github\\gameanalysis\\lethalanticheat\\lethalanticheat\\anticheats\\infinitystamina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\anticheats\\infinitystamina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\anticheats\\infinitystamina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB4C7102-F9DE-4978-9909-2A6705200252}|LethalAntiCheat\\LethalAntiCheat.csproj|solutionrelative:lethalanticheat\\antimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|LethalAntiCheat||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -51,24 +59,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Teleporter.cs",
-              "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\Teleporter.cs",
-              "RelativeDocumentMoniker": "LethalAntiCheat\\AntiCheats\\Teleporter.cs",
-              "ToolTip": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\Teleporter.cs",
-              "RelativeToolTip": "LethalAntiCheat\\AntiCheats\\Teleporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "Title": "PatchDetector.cs",
+              "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\Core\\PatchDetector.cs",
+              "RelativeDocumentMoniker": "LethalAntiCheat\\Core\\PatchDetector.cs",
+              "ToolTip": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\Core\\PatchDetector.cs",
+              "RelativeToolTip": "LethalAntiCheat\\Core\\PatchDetector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-20T10:07:32.449Z",
+              "WhenOpened": "2025-07-23T07:29:20.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HarmonyPatchDetect.cs",
+              "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\HarmonyPatchDetect.cs",
+              "RelativeDocumentMoniker": "LethalAntiCheat\\AntiCheats\\HarmonyPatchDetect.cs",
+              "ToolTip": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\HarmonyPatchDetect.cs",
+              "RelativeToolTip": "LethalAntiCheat\\AntiCheats\\HarmonyPatchDetect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T07:28:47.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "InfinityStamina.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\InfinityStamina.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\AntiCheats\\InfinityStamina.cs",
@@ -76,12 +96,11 @@
               "RelativeToolTip": "LethalAntiCheat\\AntiCheats\\InfinityStamina.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAAB4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T08:01:18.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T08:01:18.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\Properties\\AssemblyInfo.cs",
@@ -89,12 +108,11 @@
               "RelativeToolTip": "LethalAntiCheat\\Properties\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T07:59:40.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T07:59:40.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "LethalAntiCheat",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\LethalAntiCheat.csproj",
               "RelativeDocumentMoniker": "LethalAntiCheat\\LethalAntiCheat.csproj",
@@ -105,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GodMode.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\GodMode.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\AntiCheats\\GodMode.cs",
@@ -113,12 +131,11 @@
               "RelativeToolTip": "LethalAntiCheat\\AntiCheats\\GodMode.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwAwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T12:31:12.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-16T12:31:12.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GrabObjectPatch.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Desktop\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\GrabObjectPatch.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\GrabObjectPatch.cs",
@@ -129,19 +146,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "AntiManager.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiManager.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\AntiManager.cs",
               "ToolTip": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiManager.cs",
               "RelativeToolTip": "LethalAntiCheat\\AntiManager.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAmwHgAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwHcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T11:39:33.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "Teleporter.cs",
+              "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\Teleporter.cs",
+              "RelativeDocumentMoniker": "LethalAntiCheat\\AntiCheats\\Teleporter.cs",
+              "ToolTip": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\Teleporter.cs",
+              "RelativeToolTip": "LethalAntiCheat\\AntiCheats\\Teleporter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T10:07:32.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Loader.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\Loader.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\Loader.cs",
@@ -153,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "MessageUtils.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\Core\\MessageUtils.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\Core\\MessageUtils.cs",
@@ -165,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "AntiCheatUtils.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Documents\\GitHub\\GameAnalysis\\LethalAntiCheat\\LethalAntiCheat\\Core\\AntiCheatUtils.cs",
               "RelativeDocumentMoniker": "LethalAntiCheat\\Core\\AntiCheatUtils.cs",
@@ -177,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "NoClip.cs",
               "DocumentMoniker": "C:\\Users\\gicha\\Desktop\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\NoClip.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\LethalAntiCheat\\LethalAntiCheat\\AntiCheats\\NoClip.cs",

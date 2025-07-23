@@ -20,17 +20,27 @@ namespace LethalAntiCheat.AntiCheats
         {
             string ownerList = string.Join(", ", owners);
 
-            if (method.DeclaringType == typeof(PlayerControllerB))
+            if (method.DeclaringType == typeof(PlayerControllerB)) //InfinityStamina, HPDisplay, GodMode, miniMap ... 플레이어 개인 핵 전체
             {
                 MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] suspicious patch on PlayerControllerB.{method.Name} by: {ownerList}");
                 harmonyInstance.Patch(method, prefix: new HarmonyMethod(typeof(PatchInterceptor), nameof(PatchInterceptor.InterceptAndKick)));
             }
-            else if (method.DeclaringType == typeof(EnemyAI))
+            else if (method.DeclaringType == typeof(EnemyAI)) //ESP, EnemyList
             {
-                MessageUtils.ShowHostOnlyMessage($"[!] WARNING: suspicious patch detected on EnemyAI.{method.Name} by: {ownerList}");
-
+                MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] suspicious patch on EnemyAI.{method.Name} by: {ownerList}");
+                //harmonyInstance.Patch(method, prefix: new HarmonyMethod(typeof(PatchInterceptor), nameof(PatchInterceptor.InterceptAndKick)));
             }
-            else
+            else if (method.DeclaringType == typeof(EnemyType)) //EnemySpawn
+            {
+                MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] suspicious patch on EnemyType.{method.Name} by: {ownerList}");
+                //harmonyInstance.Patch(method, prefix: new HarmonyMethod(typeof(PatchInterceptor), nameof(PatchInterceptor.InterceptAndKick)));
+            }
+            else if (method.DeclaringType == typeof(StartOfRound)) //InputSeed
+            {
+                MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] suspicious patch on StartOfRound.{method.Name} by: {ownerList}");
+                //harmonyInstance.Patch(method, prefix: new HarmonyMethod(typeof(HarmonyPatchDetect), nameof(HarmonyPatchDetect.InterceptAndKick)));
+            }
+            else //알 수 없는 경우
             {
                 MessageUtils.ShowHostOnlyMessage($"[!] WARNING: suspicious patch detected on {method.DeclaringType?.FullName}.{method.Name} by: {ownerList}");
             }
@@ -43,9 +53,9 @@ namespace LethalAntiCheat.AntiCheats
                 if (__instance is PlayerControllerB localPlayer && !localPlayer.IsHost)
                 {
                     AntiManager.Instance.KickPlayer(localPlayer, $"Illegal patch used on: {__originalMethod.Name}");
-                    return false; // 원본 메서드 및 악성 패치 실행 차단
+                    return false; 
                 }
-                return true; // 호스트거나 PlayerControllerB가 아니면 원래 로직대로 실행
+                return true; 
             }
         }
     }
