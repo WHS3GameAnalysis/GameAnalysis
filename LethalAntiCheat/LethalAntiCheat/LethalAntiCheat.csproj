@@ -440,10 +440,10 @@
     <Compile Include="AntiCheats\DamageHack.cs" />
     <Compile Include="AntiCheats\SuperJumpAndFastClimb.cs" />
     <Compile Include="AntiCheats\HarmonyPatchDetect.cs" />
+    <Compile Include="AntiCheats\TeleportCheck.cs" />
     <Compile Include="AntiManager.cs" />
     <Compile Include="AntiCheats\GodMode.cs" />
     <Compile Include="AntiCheats\InfinityStamina.cs" />
-    <Compile Include="AntiCheats\Teleporter.cs" />
     <Compile Include="Core\AntiCheatUtils.cs" />
     <Compile Include="Core\MessageUtils.cs" />
     <Compile Include="Core\PatchDetector.cs" />
