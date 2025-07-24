@@ -46,7 +46,7 @@ namespace LethalAntiCheat.AntiCheats
             }
         }
 
-        //패치의 내용을 탈취, 누군지 찾아 킥한다.
+        //패치의 내용을 탈취, 사용하면 킥한다.
         
             public static bool InterceptAndKick(object __instance, MethodBase __originalMethod)
             {

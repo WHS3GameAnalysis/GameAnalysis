@@ -55,4 +55,4 @@ namespace LethalAntiCheat.AntiCheats
     }
 }
 
-*/
+*/ //아예 완전 달리기 시간 초과하도록 수정

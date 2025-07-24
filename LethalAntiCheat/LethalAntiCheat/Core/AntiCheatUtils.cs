@@ -145,5 +145,12 @@ namespace LethalAntiCheat.Core
                 ConnectionIdToSteamIdMap.Remove(connection.Id);
             }
         }
+
+        //[HarmonyPatch(typeof(StartOfRound), "Start")]
+        //[HarmonyPostfix]
+        //public static void ResetPlayersRound()
+        //{
+
+        //}
     }
 }

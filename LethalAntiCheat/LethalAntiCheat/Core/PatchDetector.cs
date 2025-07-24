@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -18,11 +18,24 @@ namespace LethalAntiCheat.Core
         public static void Start()
         {
             MessageUtils.ShowHostOnlyMessage("[LethalAntiCheat] Patch Detector Initializing...");
-            timer = new Timer(30000); // 30초마다 검사
-            timer.Elapsed += (sender, e) => CheckForNewPatches();
-            timer.AutoReset = true;
+            if (timer == null)
+            {
+                timer = new Timer(30000); // 30초마다 검사
+                timer.Elapsed += (sender, e) => CheckForNewPatches();
+                timer.AutoReset = true;
+            }
             timer.Enabled = true;
             CheckForNewPatches(); // 즉시 첫 검사
+        }
+
+        public static void Stop()
+        {
+            if (timer != null)
+            {
+                timer.Enabled = false;
+                timer.Dispose();
+                timer = null;
+            }
         }
 
         private static void CheckForNewPatches()
@@ -36,7 +49,7 @@ namespace LethalAntiCheat.Core
                 {
                     foreach (var method in type.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
                     {
-                        if (method.IsAbstract || method.ContainsGenericParameters || compromisedMethods.Contains(method)) continue;
+                        if (method.IsAbstract || method.ContainsGenericParameters) continue;
 
                         var patchInfo = Harmony.GetPatchInfo(method);
                         if (patchInfo == null || !patchInfo.Owners.Any()) continue;
@@ -57,6 +70,10 @@ namespace LethalAntiCheat.Core
                 MessageUtils.ShowHostOnlyMessage($"[X] PatchDetector Error: {ex.Message}");
             }
         }
+
+        public static void ClearCompromisedMethods()
+        {
+            compromisedMethods.Clear();
+        }
     }
 }
-

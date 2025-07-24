@@ -437,14 +437,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntiCheats\DamageHack.cs" />
+    <Compile Include="AntiCheats\SuperJumpAndFastClimb.cs" />
     <Compile Include="AntiCheats\HarmonyPatchDetect.cs" />
-    <Compile Include="AntiCheats\TeleportDetector.cs" />
     <Compile Include="AntiManager.cs" />
-    <Compile Include="AntiCheats\GrabObject.cs" />
     <Compile Include="AntiCheats\GodMode.cs" />
     <Compile Include="AntiCheats\InfinityStamina.cs" />
     <Compile Include="AntiCheats\Teleporter.cs" />
-    <Compile Include="AntiCheats\SuperJump.cs" />
     <Compile Include="Core\AntiCheatUtils.cs" />
     <Compile Include="Core\MessageUtils.cs" />
     <Compile Include="Core\PatchDetector.cs" />

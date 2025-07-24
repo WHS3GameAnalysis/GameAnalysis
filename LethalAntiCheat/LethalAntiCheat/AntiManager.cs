@@ -135,11 +135,37 @@ namespace LethalAntiCheat
             //Core.MessageUtils.ShowHostOnlyMessage($"[LethalAntiCheat] Kicking player {player.playerUsername} for: {reason}");
         }
 
-        //public void Update()
-        //
-        //    NoClip.Trigger();
+        //[HarmonyPatch(typeof(StartOfRound), "Start")]
+        //public static class RoundStartPatch
+        //{
+        //    [HarmonyPostfix]
+        //    public static void Postfix()
+        //        {
+        //            Instance.ResetState();
+        //        }
         //}
 
-        
+        //public void ResetState()
+        //{
+        //    Debug.Log("[LethalAntiCheat] Resetting Anti-Cheat state for new session...");
+
+        //    // Clear static collections in anti-cheat modules
+        //    AntiCheats.DamageHack.warnedPlayers.Clear();
+        //    AntiCheats.SuperJumpAndFastClimb.climbTracker.Clear();
+        //    AntiCheats.SuperJumpAndFastClimb.jumpTracker.Clear();
+
+        //    // Clear static collections in Core
+        //    Core.AntiCheatUtils.ConnectionIdToSteamIdMap.Clear();
+        //    Core.PatchDetector.ClearCompromisedMethods(); 
+
+        //    // Reset initialization flag
+        //    isInitialized = false;
+
+        //    // Stop and restart PatchDetector timer if it's running
+        //    Core.PatchDetector.Stop();
+        //    Core.PatchDetector.Start();
+
+        //    Core.MessageUtils.ShowMessage("[LethalAntiCheat] Anti-Cheat state reset complete.");
+        //}
     }
 }
