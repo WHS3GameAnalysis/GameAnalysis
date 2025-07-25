@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using Lethal_Anti_Cheat.Util;
-using Lethal_Anti_Cheat.DebugDetector;
-using Lethal_Anti_Cheat.ProcessWatcher;
+using Lethal_Anti_Cheat.Reflection;
+using Lethal_Anti_Cheat.DLLDetector;
+using Lethal_Anti_Cheat.HarmonyPatchDetector;
 
 
 namespace Lethal_Anti_Cheat
@@ -10,12 +11,30 @@ namespace Lethal_Anti_Cheat
     {
         public static void Init()
         {
-            //ConsoleManager.Initialize();
-            //Console.Clear();
-            //Console.WriteLine("[AntiCheat] Module Init 완료.");
+            // ConsoleManager.Initialize(); // 클라이언트에서 콘솔을 관리하므로 주석 처리
 
-            DebugDetector.DebugDetector.Init(); // 체크 리스트 초기화
-            UnifiedScanner.Start(); // 모든 감지 루프 시작
+            PipeLogger.Log("[AntiCheat] Module Init Complete.");
+
+            DebugDetector.DebugDetector.Init();
+            AppDomainModuleScanner.Initialize();
+            ReflectionDetector.StartScheduledHashScan();
+            SandboxAppDomain.InitializeSandbox();
+            CheckDLL.Start();
+            HarmonyPatchDetector.HarmonyPatchDetector.Start();
+
+            UnifiedScanner.Start();
+        }
+
+        public static void Unload()
+        {
+            PipeLogger.Log("[AntiCheat] Unloading modules...");
+
+            UnifiedScanner.Stop();
+            CheckDLL.Stop();
+            HarmonyPatchDetector.HarmonyPatchDetector.Stop();
+            // 추가적인 정리 로직이 필요하다면 여기에 구현
+
+            PipeLogger.Log("[AntiCheat] All modules unloaded.");
         }
     }
 }

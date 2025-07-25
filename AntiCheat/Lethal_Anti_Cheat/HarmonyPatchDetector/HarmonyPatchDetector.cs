@@ -25,6 +25,16 @@ namespace Lethal_Anti_Cheat.HarmonyPatchDetector
             CheckPatches(null, null); // 즉시 첫 검사
         }
 
+        public static void Stop()
+        {
+            if (timer != null)
+            {
+                timer.Stop();
+                timer.Dispose();
+            }
+        }
+
+
         private static void CheckPatches(object sender, ElapsedEventArgs e)
         {
             try

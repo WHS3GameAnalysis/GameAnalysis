@@ -1,45 +1,40 @@
-﻿using System;
+using System;
 using System.Threading;
 using Lethal_Anti_Cheat.DebugDetector;
 using Lethal_Anti_Cheat.ProcessWatcher;
-
+using Lethal_Anti_Cheat.Reflection;
 
 namespace Lethal_Anti_Cheat.Util
 {
     public static class UnifiedScanner
     {
         private static readonly int intervalMs = 5000;
+        private static Thread _scannerThread;
+        private static bool _isRunning = false;
 
         public static void Start()
         {
-            new Thread(() =>
+            if (_isRunning) return;
+            _isRunning = true;
+
+            _scannerThread = new Thread(() =>
             {
-                while (true)
+                while (_isRunning)
                 {
                     try
                     {
-                        PipeLogger.Log($"[ScanCycle] 시작 {DateTime.Now:HH:mm:ss}");
+                        PipeLogger.Log($"[ScanCycle] Starting scan at {DateTime.Now:HH:mm:ss}");
 
-                        try { DebugDetector.DebugDetector.RunOnce(); }
-                        catch (Exception ex) { PipeLogger.Log($"[ERROR] DebugDetector: {ex.Message}"); }
+                        DebugDetector.DebugDetector.RunOnce();
+                        ProcessWatcher.ProcessWatcher.RunOnce();
+                        NtProcessScanner.RunOnce();
+                        AppDomainModuleScanner.Scan();
 
-                        try { ProcessWatcher.ProcessWatcher.RunOnce(); }
-                        catch (Exception ex) { PipeLogger.Log($"[ERROR] ProcessWatcher: {ex.Message}"); }
-
-                        try { NtProcessScanner.RunOnce(); }
-                        catch (Exception ex) { PipeLogger.Log($"[ERROR] NtProcessScanner: {ex.Message}"); }
-
-                        try { DLLDetector.CheckDLL.Start(); }
-                        catch (Exception ex) { PipeLogger.Log($"[ERROR] CheckDLL: {ex.Message}"); }
-
-                        try { HarmonyPatchDetector.HarmonyPatchDetector.Start(); }
-                        catch (Exception ex) { PipeLogger.Log($"[ERROR] HarmonyPatchDetector: {ex.Message}"); }
-
-                        PipeLogger.Log($"[ScanCycle] 완료 {DateTime.Now:HH:mm:ss}");
+                        PipeLogger.Log($"[ScanCycle] Scan finished at {DateTime.Now:HH:mm:ss}");
                     }
                     catch (Exception ex)
                     {
-                        PipeLogger.Log($"[FATAL] UnifiedScanner 루프 오류: {ex.Message}");
+                        PipeLogger.Log($"[FATAL] UnifiedScanner loop error: {ex.Message}");
                     }
 
                     Thread.Sleep(intervalMs);
@@ -47,7 +42,14 @@ namespace Lethal_Anti_Cheat.Util
             })
             {
                 IsBackground = true
-            }.Start();
+            };
+            _scannerThread.Start();
+        }
+
+        public static void Stop()
+        {
+            _isRunning = false;
+            PipeLogger.Log("[UnifiedScanner] Scanner thread stopped.");
         }
     }
 }

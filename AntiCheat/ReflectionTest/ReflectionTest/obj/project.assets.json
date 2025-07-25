@@ -567,23 +567,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\WHS_Project\\Anti_Cheat\\ReflectionTest\\ReflectionTest\\ReflectionTest.csproj",
+      "projectUniqueName": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\ReflectionTest\\ReflectionTest\\ReflectionTest.csproj",
       "projectName": "ReflectionTest",
-      "projectPath": "C:\\Users\\User\\Desktop\\WHS_Project\\Anti_Cheat\\ReflectionTest\\ReflectionTest\\ReflectionTest.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\WHS_Project\\Anti_Cheat\\ReflectionTest\\ReflectionTest\\obj\\",
+      "projectPath": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\ReflectionTest\\ReflectionTest\\ReflectionTest.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\ReflectionTest\\ReflectionTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

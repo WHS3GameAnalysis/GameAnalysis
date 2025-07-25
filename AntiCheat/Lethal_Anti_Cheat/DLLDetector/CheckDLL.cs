@@ -22,6 +22,15 @@ namespace Lethal_Anti_Cheat.DLLDetector
             timer.Start();
         }
 
+        public static void Stop()
+        {
+            if (timer != null)
+            {
+                timer.Stop();
+                timer.Dispose();
+            }
+        }
+
         private static void CheckModules(object sender, ElapsedEventArgs e)
         {
             try
