@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -17,6 +17,8 @@ namespace LethalAntiCheatLauncher
 
         public static bool InjectionCompleted { get; private set; } = false;
         private static readonly object _lock = new();
+        private static Injector _injector;
+        private static IntPtr _assemblyHandle;
 
         public static void InjectWhenGameStarts()
         {
@@ -48,8 +50,10 @@ namespace LethalAntiCheatLauncher
 
                         try
                         {
-                            var injector = new Injector(proc.Id);
-                            injector.Inject(
+                            Console.WriteLine("[*] Waiting for the game to initialize... (5 seconds)");
+                            Thread.Sleep(5000); // 5초 대기
+                            _injector = new Injector(proc.Id);
+                            _assemblyHandle = (IntPtr)_injector.Inject(
                                 File.ReadAllBytes(dllPath),
                                 Namespace,
                                 ClassName,
@@ -81,6 +85,30 @@ namespace LethalAntiCheatLauncher
                 }
             })
             { IsBackground = true }.Start();
+        }
+
+        public static void UnloadAntiCheat()
+        {
+            if (_injector == null || _assemblyHandle == IntPtr.Zero)
+            {
+                Console.WriteLine("[AntiCheat] Lethal_Anti_Cheat.dll not injected or already unloaded.");
+                return;
+            }
+
+            try
+            {
+                // "Unload" 메서드는 Lethal_Anti_Cheat.dll의 Loader 클래스에 구현되어 있어야 합니다.
+                _injector.Eject(_assemblyHandle, Namespace, ClassName, "Unload");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("[AntiCheat] Lethal_Anti_Cheat.dll successfully unloaded.");
+                Console.ResetColor();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[Error] Failed to unload Lethal_Anti_Cheat.dll: {ex.Message}");
+                Console.ResetColor();
+            }
         }
     }
 }

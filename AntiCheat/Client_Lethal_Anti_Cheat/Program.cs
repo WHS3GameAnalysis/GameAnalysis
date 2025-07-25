@@ -85,6 +85,7 @@ namespace LethalAntiCheatLauncher
                 Console.WriteLine("\n[AntiCheat] 종료 중...");
                 Thread.Sleep(1000);
                 SimpleACManager.UnloadSimpleAC();
+                InjectorManager.UnloadAntiCheat();
                 Environment.Exit(0);
             };
 
