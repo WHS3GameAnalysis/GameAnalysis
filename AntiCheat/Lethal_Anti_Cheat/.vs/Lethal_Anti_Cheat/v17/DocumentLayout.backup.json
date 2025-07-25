@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\dlldetector\\checkdll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:dlldetector\\checkdll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\util\\unifiedscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:util\\unifiedscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\harmonypatchdetector\\harmonypatchdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:harmonypatchdetector\\harmonypatchdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\util\\unifiedscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:util\\unifiedscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\reflection\\appdomainmodulescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:reflection\\appdomainmodulescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\dlldetector\\checkdll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:dlldetector\\checkdll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\reflection\\sandboxappdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:reflection\\sandboxappdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\reflection\\appdomainmodulescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|solutionrelative:reflection\\appdomainmodulescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{194E21A9-E3A5-4EE4-BBDA-53C09DD0D146}|Lethal_Anti_Cheat.csproj|c:\\jihoon\\whitehat\\github\\gameanalysis\\anticheat\\lethal_anti_cheat\\reflection\\hashdumper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Loader.cs",
               "DocumentMoniker": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Loader.cs",
               "RelativeDocumentMoniker": "Loader.cs",
-              "ToolTip": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Loader.cs*",
-              "RelativeToolTip": "Loader.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
+              "ToolTip": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Loader.cs",
+              "RelativeToolTip": "Loader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T08:12:44.066Z",
               "IsPinned": true,
@@ -56,13 +56,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UnifiedScanner.cs",
               "DocumentMoniker": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\UnifiedScanner.cs",
               "RelativeDocumentMoniker": "Util\\UnifiedScanner.cs",
               "ToolTip": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Util\\UnifiedScanner.cs",
               "RelativeToolTip": "Util\\UnifiedScanner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwBQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T17:15:36.668Z",
               "IsPinned": true,
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HarmonyPatchDetector.cs",
               "DocumentMoniker": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\HarmonyPatchDetector\\HarmonyPatchDetector.cs",
               "RelativeDocumentMoniker": "HarmonyPatchDetector\\HarmonyPatchDetector.cs",
@@ -83,20 +83,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CheckDLL.cs",
               "DocumentMoniker": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\DLLDetector\\CheckDLL.cs",
               "RelativeDocumentMoniker": "DLLDetector\\CheckDLL.cs",
               "ToolTip": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\DLLDetector\\CheckDLL.cs",
               "RelativeToolTip": "DLLDetector\\CheckDLL.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAQwE4AAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwE4AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T07:37:27.871Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SandboxAppDomain.cs",
               "DocumentMoniker": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Reflection\\SandboxAppDomain.cs",
               "RelativeDocumentMoniker": "Reflection\\SandboxAppDomain.cs",
@@ -109,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AppDomainModuleScanner.cs",
               "DocumentMoniker": "C:\\Jihoon\\WhiteHat\\Github\\GameAnalysis\\AntiCheat\\Lethal_Anti_Cheat\\Reflection\\AppDomainModuleScanner.cs",
               "RelativeDocumentMoniker": "Reflection\\AppDomainModuleScanner.cs",

@@ -45,8 +45,11 @@ namespace Lethal_Anti_Cheat.DLLDetector
                     {
                         //Console.WriteLine("\n[!] Detected Unknown Module:");
                         //Console.WriteLine(" - " + moduleName);
-                        PipeLogger.Log($"[DLLDetector] Detected Unknown Module: ");
-                        PipeLogger.Log($"[DLLDetector] - {moduleName}");
+                        if (!CheckSignature.IsFileSigned(module.FileName))
+                        {
+                            Console.WriteLine("[!] Detected Unsigned Module:");
+                            Console.WriteLine("- " + module.ModuleName);
+                        }
 
                         try
                         {
