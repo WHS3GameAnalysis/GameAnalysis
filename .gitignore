@@ -1,1 +1,14 @@
 /hack/LethalHack/.vs
+*.cache
+*.pdb
+*.Up2Date
+*.vsidx
+*.db
+*.db-shm
+*.db-wal
+/AntiCheat/DLLDetect/.vs
+AntiCheat/DLLDetect/Anticheat/.vs/Anticheat.csproj.dtbcache.json
+/AntiCheat/DLLDetect/Anticheat/.vs
+AntiCheat/DLLDetect/Anticheat/obj/Debug/Anticheat.dll
+AntiCheat/DLLDetect/Anticheat/Anticheat.csproj.user
+AntiCheat/DLLDetect/Anticheat/bin/Debug/Anticheat.dll
