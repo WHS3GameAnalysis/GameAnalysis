@@ -16,3 +16,24 @@ D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Client_
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.pdb
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.genruntimeconfig.cache
 D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\ref\Client_Lethal_Anti_Cheat.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\Client_Lethal_Anti_Cheat.exe
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\Client_Lethal_Anti_Cheat.deps.json
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\Client_Lethal_Anti_Cheat.runtimeconfig.json
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\Client_Lethal_Anti_Cheat.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\Client_Lethal_Anti_Cheat.pdb
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\System.Management.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\bin\Debug\net8.0\SharpMonoInjector.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.csproj.AssemblyReference.cache
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.AssemblyInfoInputs.cache
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.AssemblyInfo.cs
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.csproj.CoreCompileInputs.cache
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.sourcelink.json
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_L.E54654BA.Up2Date
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\refint\Client_Lethal_Anti_Cheat.dll
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.pdb
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\Client_Lethal_Anti_Cheat.genruntimeconfig.cache
+C:\Users\SUNGHA\Desktop\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0\ref\Client_Lethal_Anti_Cheat.dll

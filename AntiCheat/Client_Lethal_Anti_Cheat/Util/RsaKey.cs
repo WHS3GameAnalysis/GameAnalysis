@@ -1,0 +1,50 @@
+using System;
+
+namespace LethalAntiCheatLauncher.Util
+{
+    public static class RsaKey
+    {
+        // 클라이언트의 개인키 (서버 챌린지 복호화용)
+        public static string CHAL_PRIVATE_KEY = @"-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCjdIavSbtXckwe
+uwoq6g2CtYPolwOJt/JykRCsKO3/7hs7cwNRrm3G4rDmSuA5qmaFkOQF/8Vix3HB
+XuDYC31UPAtYEA7AZUw0dYoFbiTB/2OnkbvS3tSbOJTLNIfugr6PqZPzKvaQgKMf
+C0H7F2kxdl43g3mh2gwpdZNOMg1zXxKXwHRi1LAoVoObTI2HOe4Ui4hFjmdhbYxO
+MZ0QPUIWd4p313eDk+vQxGuR+7HVycGVOqi8C4ujdsjCR/FYhX1lk2w7Hu9eWcNS
+TOTwyVVFokyNfYBPKU/V0uPL+6s8wWdliGLYKx9h4M2F0Zq8pG6Mg522zM3SsTrn
+X2gKl15vAgMBAAECggEAP56HHYqxJCQUhJGAL5vRjmJf6RN+CQhTkUvtFVUI7Wgb
+qVPmotAlYhexirDx/P/Zz3rJhZw7k2rVV9I56Vzvdu237JqzYycKNhDZm6t3Gxrw
+CrSqSjT4w0GOiFj131t8GCaEs0yxkyS+WMLk93nxM5NCsJC3sstPmINuxiytF432
+TaLXdfSQHIyYbu7EYfh4PuNoECNMVrAJXfI3r6Oloz9qtBRwdOwX83Ya3OWE+gIC
+pEg8fASmol2iaQhg5JXNp2geum0degT/QrU5Ymzw7ndwLbqIE2G51VF8nZoygKN4
+BBvnSS40/qnZ0pirvfYAqeB2sIKamyx9znUD7aHaQQKBgQDL/pkCR1Sdmslhmwq4
+UxDhNwUixC20f0LM7PZhPXyeWvI7yp31zBF6Vyh/BActIA2HJNj1OPuK+q2Nfq0a
+lJygGsWTdiujZpkvms7+OzT9fnjlX49H1ldYftcXkYmNSMw/ycL9ywW+rTp9GD8j
+Uz3Mxmn5Km4d3i2GWAmk2ChNWQKBgQDNIDAbG1bnYv3EjMUmz0Tto7iBz8kwg91E
+wmJ6eEYlh68T812CvzYzVg+ObR0BUoyHxiQcuj/eObREthvDU2X4vR3+UZ4SSgXu
+97e/iDFvEU3yq0YeUZ8NEUKDNwugrKRB6D8oiwYA1RkKpx0ue7q1NHII5jMjwOXj
+azeM0KopBwKBgQDHAtrDHlOubhOI5XjP2jndfY/FGx57uKuywHqc4x9wXcl0C3eP
+FEb4047uWz+lBmAsOAZxNeYw793g7HR0OgeTKosWEXMBNla72ouV+qz3oSrQmylt
+K+6KpzOwCovnCd45XNyePDKekuE8qSrvi4X/AJLiQkKrYNWI+tptt3OaAQKBgDck
+mgoPdXNKp1G5Th66xZrk0msDQuCp8kfTwcmOn7zjFuvUFqVZZeazEgeFybBbUrAF
+Uhvu7dB9zrpSAnCl8NnHbVK6+jWMdL/jFCCHKlLjYgMEjBsGci1/IFRJ7fRJtPaK
+yr/Jb9m1b7/vYOboGC8yZB2EVOcdqi9S2WIfjj7tAoGBAMnEUiwEraZdSUTy7X7J
+HXXMYVgyj+YDYgl+QWfx0Xt1tAsFMudcEbp4Tmwd8G+Ih+Ar/yAz8zXbm2N/sQ3D
+LRu4qJ2Xc1AehA7pQ8uCk75rXQcP0FGxtO+dYq4xTpXtqyWLGD7/vbClwGHifb7x
+/B1FcVJ/D5/SGaqku5Ag/zGx
+-----END PRIVATE KEY-----";
+
+        // 서버 응답 암호화용 공개키
+        public static string RESP_PUBLIC_KEY = @"-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAySWrWs5eC7uwpMqnvm14
+hs5APV1xDJqDSg7MkHI2Po9RCS5Evr4buyUn2dM+9OQ2TV25bxvR1BGlluz1Vu6T
+KYgoTm7/RMDdJqrPf6Gy9NMihlhm+g1iBmOxPGUK8sCtCeR8qH/pOXiFBwUueJKK
+OqODM5zYDyDKOHQlfOKrs8yzNg1lNV0REsyKwBQ9Cn+VSRCW8UDUkHAHQUF6zb48
+z4+6Kzr2yVxGSYyEwVB1+i2zFtokMFkd9ElQV07lvGQ16wzvW3FQ1D3YdEpgAW6S
+vmSn61Queg53nEqOAbeVXqtt+i1blkk/Eu2KrTg5eQP0zVeK13bAstg4TeemyJY1
+qwIDAQAB
+-----END PUBLIC KEY-----";
+    }
+}
+
+
