@@ -3,24 +3,49 @@ using Lethal_Anti_Cheat.Util;
 using Lethal_Anti_Cheat.Reflection;
 using Lethal_Anti_Cheat.DLLDetector;
 using Lethal_Anti_Cheat.HarmonyPatchDetector;
-
+using Lethal_Anti_Cheat.AntiCheats;
+using Lethal_Anti_Cheat.Core;
+using HarmonyLib;
+using System.Reflection;
 
 namespace Lethal_Anti_Cheat
 {
     public class Loader
     {
+        public static Harmony harmony;
+
         public static void Init()
         {
-            // ConsoleManager.Initialize(); // 클라이언트에서 콘솔을 관리하므로 주석 처리
-
+            ConsoleManager.Initialize();
             PipeLogger.Log("[AntiCheat] Module Init Complete.");
 
+            harmony = new Harmony("Lethal_Anti_Cheat");
+
+            // Original Anti-Cheat Modules
             DebugDetector.DebugDetector.Init();
             AppDomainModuleScanner.Initialize();
             ReflectionDetector.StartScheduledHashScan();
             SandboxAppDomain.InitializeSandbox();
             CheckDLL.Start();
             HarmonyPatchDetector.HarmonyPatchDetector.Start();
+
+            // Merged Anti-Cheat Modules
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                if (type.IsDefined(typeof(HarmonyPatch), false))
+                {
+                    try
+                    {
+                        new PatchClassProcessor(harmony, type).Patch();
+                        Console.WriteLine($"[AntiCheat] Patching {type.Name} completed.");
+                    }
+                    catch
+                    {
+                        // ignore
+                        Console.WriteLine($"[AntiCheat] Patching {type.Name} failed.");
+                    }
+                }
+            }
 
             UnifiedScanner.Start();
         }
@@ -32,7 +57,6 @@ namespace Lethal_Anti_Cheat
             UnifiedScanner.Stop();
             CheckDLL.Stop();
             HarmonyPatchDetector.HarmonyPatchDetector.Stop();
-            // 추가적인 정리 로직이 필요하다면 여기에 구현
 
             PipeLogger.Log("[AntiCheat] All modules unloaded.");
         }

@@ -47,8 +47,8 @@ namespace Lethal_Anti_Cheat.DLLDetector
                         //Console.WriteLine(" - " + moduleName);
                         if (!CheckSignature.IsFileSigned(module.FileName))
                         {
-                            Console.WriteLine("[!] Detected Unsigned Module:");
-                            Console.WriteLine("- " + module.ModuleName);
+                            //Console.WriteLine("[!] Detected Unsigned Module:");
+                            //Console.WriteLine("- " + module.ModuleName);
                         }
 
                         try
