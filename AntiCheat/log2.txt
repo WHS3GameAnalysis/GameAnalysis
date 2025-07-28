@@ -1,0 +1,380 @@
+[AntiCheat] Client started. Running integrity check...
+
+[1/10] Lethal Company.exe - ?
+[2/10] Lethal Company_Data/Managed/Assembly-CSharp.dll - ?
+[3/10] UnityPlayer.dll - ?
+[4/10] Lethal Company_Data/globalgamemanagers - ?
+[5/10] Lethal Company_Data/Managed/UnityEngine.CoreModule.dll - ?
+[6/10] Lethal Company_Data/Managed/Unity.Netcode.Runtime.dll - ?
+[7/10] Lethal Company_Data/Managed/Unity.InputSystem.dll - ?
+[8/10] MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll - ?
+[9/10] Lethal Company_Data/Plugins/x86_64/steam_api64.dll - ?
+[10/10] Lethal Company_Data/Managed/UnityEngine.dll - ?
+
+모든 파일 무결성 확인됨.
+
+[Heartbeat] 하트비트 시작
+[AntiCheat] 게임 실행 중...
+
+[2025-07-28 16:43:41] [INFO] [SimpleAC] DLL Loaded
+[SimpleAC] DLL이 성공적으로 로드되었습니다.
+[2025-07-28 16:43:41] [IN프로그램을 종료하려면 Ctrl+C를 누르세요.
+
+FO] [SimpleAC] Process Scanner Thread Started
+[2025-07-28 16:43:41] [[*] Game process detected: Lethal Company (PID: 4696)
+INFO] [ProcessScanner] Initialization started
+[*] Waiting for the game to initialize... (5 seconds)
+[2025-07-28 16:43:41] [WARNING] [ProcessScanner] Failed to enable debug privilege - some processes may not be accessible
+[2025-07-28 16:43:41] [INFO] [ProcessScanner] YARA rules loaded successfully
+[2025-07-28 16:43:41] [INFO] [ProcessScanner] Initialization completed with real YARA engine
+[2025-07-28 16:43:41] [INFO] [SimpleAC] YARA Engine Initialized Successfully
+[Heartbeat] 암호화된 챌린지 수신 성공
+[Heartbeat] 챌린지 복호화 성공: 3bb8388d9d01d6fe4d138e93d7f2b9b3
+[Heartbeat] 응답 전송 성공: {"status":"success","message":"하트비트 검증 성공"}
+[DLL] [AntiCheat] Module Init Complete.
+[Heartbeat] 암호화된 챌린지 수신 성공
+[Heartbeat] 챌린지 복호화 성공: 61925a5d979291380cfeb78d25c10d84
+[DLL] [Reflection] Collecting allowed DLL hash values...
+[Heartbeat] 응답 전송 성공: {"status":"success","message":"하트비트 검증 성공"}
+[DLL] [Reflection] Warning: Self-assembly path is empty or invalid.
+[DLL] [Reflection] Total allowed assemblies: 153
+[DLL] [Reflection] Initializing hash snapshot...
+[DLL] [Reflection] Baseline hash snapshot created with 34050 entries.
+[DLL] [Reflection] === Current AppDomain Info ===
+[DLL] Name: Unity Root Domain
+[DLL] Base Dir: C:\Program Files (x86)\Steam\steamapps\common\Lethal Company
+[DLL] Loaded Assemblies: 138
+[DLL]   - mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+[DLL]   - UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.AndroidJNIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ContentLoadModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.DSPGraphModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.GIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.NVIDIAModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.PropertiesModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TextCoreFontEngineModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TextCoreTextEngineModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityAnalyticsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityAnalyticsCommonModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityCurlModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.VRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.VirtualTexturingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+[DLL]   - System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+[DLL]   - Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.VisualEffectGraph.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Jobs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.AI.Navigation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.ProBuilder.Stl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Environments.Internal, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - DissonanceVoip, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetworkSolutionInterface, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Networking.Transport, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Networking, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.ProBuilder.Csg, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Netcode.Components, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetStatsMonitor.Configuration, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Scheduler, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Environments, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Relay, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Configuration, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.RenderPipelines.HighDefinition.Config.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetStats, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.RenderPipelines.Core.ShaderLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Netcode.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.ProBuilder.Poly2Tri, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Analytics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Profiling.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Animation.Rigging, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - ClientNetworkTransform, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Internal, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Device, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Threading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Facepunch Transport for Netcode for GameObjects, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.QoS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetworkProfiler.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Telemetry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Timeline, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetStatsMonitor.Implementation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.InputSystem, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.InputSystem.ForUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - EasyTextEffects, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Animation.Rigging.DocCodeExamples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Authentication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.ProBuilder.KdTree, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - com.olegknyazev.softmask, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.MetricTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Services.Core.Registration, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetStatsReporting, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.RenderPipelines.HighDefinition.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Multiplayer.Tools.NetStatsMonitor.Component, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Collections.LowLevel.ILSupport, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Facepunch.Steamworks.Win64, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+[DLL]   - AmazingAssets.TerrainToMesh, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+[DLL]   - Lethal_Anti_Cheat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - 0Harmony, Version=2.3.6.0, Culture=neutral, PublicKeyToken=null
+[DLL]   - System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+[DLL] [Reflection] === Creating Isolated AppDomain ===
+[DLL] [Reflection] Isolated AppDomain created: IsolatedSandbox
+[DLL] [HarmonyPatchDetector] Harmony Patch Detector Started
+[!] Injection successful. Anti-cheat initialized.
+[DLL] [ScanCycle] Starting scan at 16:43:48
+[DLL] [DebugDetector] Debugging Check
+[DLL]  - Mono Debug Port Scan (PID-based: 55000~57000): Debugged? False
+[DLL]  - CheckRemoteDebuggerPresent: Debugged? False
+[DLL]  - Mono Debugger Attach Check: Debugged? False
+[DLL] [ProcessWatcher] Process Scan (GetProcesses)
+[DLL] [NtProcessScanner] NT API Process Scan
+[DLL] [Reflection] Scanning loaded assemblies...
+[DLL] [Reflection] Suspicious assembly detected:
+[DLL]          Name     : 0Harmony, Version=2.3.6.0, Culture=neutral, PublicKeyToken=null
+[DLL]          Location : C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\0Harmony.dll
+[DLL]          SHA256   : 339C3F53F0873B2385638FE15743E1A8E04123D5D93B063D8118C59CF16BBEC8
+[DLL]          PID      : 4696
+[DLL] [Reflection] Suspicious assembly detected:
+[DLL]          Name     : HarmonySharedState, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]          Location :
+[DLL]          SHA256   : (Unknown Hash)
+[DLL]          PID      : 4696
+[DLL] [Reflection] AppDomain Scan complete.
+[DLL] [Reflection] Total suspicious assemblies detected: 2
+[DLL] [ScanCycle] Scan finished at 16:43:49
+[AntiCheat] Console refreshed at 오후 4:43:51
+[2025-07-28 16:43:51] [INFO] [SimpleAC] Process Scan Started...
+[2025-07-28 16:43:51] [INFO] [ProcessScanner] Starting priority process scan...
+[Heartbeat] 암호화된 챌린지 수신 성공
+[Heartbeat] 챌린지 복호화 성공: 51b3b2526cf12868558bc8d1b8c9c117
+[Heartbeat] 응답 전송 성공: {"status":"success","message":"하트비트 검증 성공"}
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - _RDATA
+[DLL] [DLLDetector] - .fptable
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - _RDATA
+[DLL] [DLLDetector] - .fptable
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [X] Failed to parse PE: Could not find file "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\[In Memory] Lethal_Anti_Cheat"
+[DLL] [DLLDetector] [X] Failed to parse PE: Could not find file "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\[In Memory] HarmonySharedState"
+[DLL] [ScanCycle] Starting scan at 16:43:54
+[DLL] [DebugDetector] Debugging Check
+[DLL]  - Mono Debug Port Scan (PID-based: 55000~57000): Debugged? False
+[DLL]  - CheckRemoteDebuggerPresent: Debugged? False
+[DLL]  - Mono Debugger Attach Check: Debugged? False
+[DLL] [ProcessWatcher] Process Scan (GetProcesses)
+[DLL] [NtProcessScanner] NT API Process Scan
+[DLL] [Reflection] Scanning loaded assemblies...
+[DLL] [Reflection] Suspicious assembly detected:
+[DLL]          Name     : 0Harmony, Version=2.3.6.0, Culture=neutral, PublicKeyToken=null
+[DLL]          Location : C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\0Harmony.dll
+[DLL]          SHA256   : 339C3F53F0873B2385638FE15743E1A8E04123D5D93B063D8118C59CF16BBEC8
+[DLL]          PID      : 4696
+[DLL] [Reflection] Suspicious assembly detected:
+[DLL]          Name     : HarmonySharedState, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[DLL]          Location :
+[DLL]          SHA256   : (Unknown Hash)
+[DLL]          PID      : 4696
+[DLL] [Reflection] AppDomain Scan complete.
+[DLL] [Reflection] Total suspicious assemblies detected: 2
+[DLL] [ScanCycle] Scan finished at 16:43:54
+[AntiCheat] Console refreshed at 오후 4:43:56
+[Heartbeat] 암호화된 챌린지 수신 성공
+[Heartbeat] 챌린지 복호화 성공: 85a5594f552d545d4b856f1f4bbd9ec3
+[Heartbeat] 응답 전송 성공: {"status":"success","message":"하트비트 검증 성공"}
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - _RDATA
+[DLL] [DLLDetector] - .fptable
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - _RDATA
+[DLL] [DLLDetector] - .fptable
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .didat
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [+] Sections:
+[DLL] [DLLDetector] - .text
+[DLL] [DLLDetector] - .rdata
+[DLL] [DLLDetector] - .data
+[DLL] [DLLDetector] - .pdata
+[DLL] [DLLDetector] - .rsrc
+[DLL] [DLLDetector] - .reloc
+[DLL] [DLLDetector] [X] Failed to parse PE: Could not find file "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\[In Memory] Lethal_Anti_Cheat"
+[DLL] [DLLDetector] [X] Failed to parse PE: Could not find file "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\[In Memory] HarmonySharedState"
+[DLL] [ScanCycle] Starting scan at 16:43:59
+[

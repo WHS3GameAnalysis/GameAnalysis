@@ -4,7 +4,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text.Json;
+using System.Drawing;
 using System.Text.Json.Serialization;
+using LethalAntiCheatLauncher.Util;
+
 
 namespace LethalAntiCheatLauncher.Util
 {
@@ -21,7 +24,7 @@ namespace LethalAntiCheatLauncher.Util
             if (_started) return;
 
             _started = true;
-            Console.WriteLine("[Heartbeat] 하트비트 시작");
+            LogManager.Log(LogSource.Heartbeat, "Starting heartbeat...", Color.Gray);
             _ = SendHeartbeatLoop();
         }
 
@@ -35,7 +38,7 @@ namespace LethalAntiCheatLauncher.Util
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[Heartbeat] 하트비트 실패: {ex.Message}");
+                    LogManager.Log(LogSource.Heartbeat, $"Heartbeat failed: {ex.Message}", Color.Red);
                 }
                 
                 await Task.Delay(5000);
@@ -44,15 +47,13 @@ namespace LethalAntiCheatLauncher.Util
 
         private static async Task PerformHeartbeat()
         {
-            // 1단계: 서버로부터 암호화된 챌린지 받기
             var encryptedChallenge = await GetEncryptedChallenge();
             if (string.IsNullOrEmpty(encryptedChallenge))
             {
-                Console.WriteLine("[Heartbeat] 챌린지 획득 실패");
+                LogManager.Log(LogSource.Heartbeat, "Failed to get challenge.", Color.Yellow);
                 return;
             }
 
-            // 2단계: 챌린지 복호화 및 연산 후 결과 전송
             await SendChallengeResponse(encryptedChallenge);
         }
 
@@ -69,20 +70,20 @@ namespace LethalAntiCheatLauncher.Util
                     
                     if (challengeData != null && !string.IsNullOrEmpty(challengeData.EncryptedData))
                     {
-                        Console.WriteLine("[Heartbeat] 암호화된 챌린지 수신 성공");
+                        LogManager.Log(LogSource.Heartbeat, "Encrypted challenge received.", Color.Gray);
                         return challengeData.EncryptedData;
                     }
                 }
                 else
                 {
-                    Console.WriteLine($"[Heartbeat] 챌린지 요청 실패: {response.StatusCode}");
+                    LogManager.Log(LogSource.Heartbeat, $"Challenge request failed: {response.StatusCode}", Color.Yellow);
                 }
 
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Heartbeat] 챌린지 요청 중 오류: {ex.Message}");
+                LogManager.Log(LogSource.Heartbeat, $"Error during challenge request: {ex.Message}", Color.Red);
                 return null;
             }
         }
@@ -91,30 +92,26 @@ namespace LethalAntiCheatLauncher.Util
         {
             try
             {
-                // 1. 클라이언트 개인키로 하이브리드 챌린지 복호화
                 var decryptedChallenge = SecurityUtil.DecryptHybridChallenge(encryptedChallenge);
                 var challenge = JsonSerializer.Deserialize<HeartbeatChallenge>(decryptedChallenge);
                 
                 if (challenge == null)
                 {
-                    Console.WriteLine("[Heartbeat] 챌린지 복호화 실패");
+                    LogManager.Log(LogSource.Heartbeat, "Challenge decryption failed.", Color.Red);
                     return;
                 }
 
-                Console.WriteLine($"[Heartbeat] 챌린지 복호화 성공: {challenge.ChallengeId}");
+                LogManager.Log(LogSource.Heartbeat, $"Challenge decrypted: {challenge.ChallengeId}", Color.Gray);
 
-                // 2. 챌린지 유효성 검사
                 var currentTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
                 if (currentTime > challenge.ExpiresAt)
                 {
-                    Console.WriteLine("[Heartbeat] 챌린지가 만료됨");
+                    LogManager.Log(LogSource.Heartbeat, "Challenge expired.", Color.Yellow);
                     return;
                 }
 
-                // 3. SHA512 알고리즘으로 챌린지 응답 계산
                 var responseValue = CalculateChallengeResponse(challenge.ChallengeData);
                 
-                // 4. 응답 데이터 생성
                 var response = new HeartbeatResponse
                 {
                     ChallengeId = challenge.ChallengeId,
@@ -125,7 +122,6 @@ namespace LethalAntiCheatLauncher.Util
                     SystemFingerprint = SecurityUtil.GenerateSystemFingerprint()
                 };
 
-                // 5. 응답을 서버 공개키로 암호화
                 var responseJson = JsonSerializer.Serialize(response);
                 var encryptedResponse = SecurityUtil.EncryptResponse(responseJson);
 
@@ -133,22 +129,21 @@ namespace LethalAntiCheatLauncher.Util
                 var json = JsonSerializer.Serialize(encryptedRequest);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                // 6. 서버에 전송
                 var httpResponse = await _client.PostAsync($"{SERVER_BASE_URL}/heartbeat_send", content);
                 
                 if (httpResponse.IsSuccessStatusCode)
                 {
                     var responseText = await httpResponse.Content.ReadAsStringAsync();
-                    Console.WriteLine($"[Heartbeat] 응답 전송 성공: {responseText}");
+                    LogManager.Log(LogSource.Heartbeat, $"Response sent successfully: {responseText}", Color.Green);
                 }
                 else
                 {
-                    Console.WriteLine($"[Heartbeat] 응답 전송 실패: {httpResponse.StatusCode}");
+                    LogManager.Log(LogSource.Heartbeat, $"Failed to send response: {httpResponse.StatusCode}", Color.Yellow);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Heartbeat] 응답 처리 중 오류: {ex.Message}");
+                LogManager.Log(LogSource.Heartbeat, $"Error processing response: {ex.Message}", Color.Red);
             }
         }
 
@@ -156,7 +151,6 @@ namespace LethalAntiCheatLauncher.Util
         {
             try
             {
-                // 시스템 정보와 결합하여 SHA512 해시 생성 (서버와 동일한 방식)
                 var systemInfo = SecurityUtil.GenerateSystemFingerprint();
                 var combinedData = $"{challengeData}:{systemInfo}:{_clientId}";
                 
@@ -168,13 +162,12 @@ namespace LethalAntiCheatLauncher.Util
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Heartbeat] 챌린지 응답 계산 오류: {ex.Message}");
+                LogManager.Log(LogSource.Heartbeat, $"Error calculating challenge response: {ex.Message}", Color.Red);
                 return string.Empty;
             }
         }
     }
 
-    // 단순화된 데이터 모델들
     public class EncryptedChallenge
     {
         [JsonPropertyName("encrypted_data")]
@@ -185,13 +178,13 @@ namespace LethalAntiCheatLauncher.Util
     {
         [JsonPropertyName("challenge_id")]
         public string ChallengeId { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("challenge_data")]
         public string ChallengeData { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("algorithm")]
         public string Algorithm { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("expires_at")]
         public long ExpiresAt { get; set; }
     }
@@ -200,19 +193,19 @@ namespace LethalAntiCheatLauncher.Util
     {
         [JsonPropertyName("challenge_id")]
         public string ChallengeId { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("client_id")]
         public string ClientId { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("response_value")]
         public string ResponseValue { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("timestamp")]
         public long Timestamp { get; set; }
-        
+
         [JsonPropertyName("version")]
         public string Version { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("system_fingerprint")]
         public string SystemFingerprint { get; set; } = string.Empty;
     }

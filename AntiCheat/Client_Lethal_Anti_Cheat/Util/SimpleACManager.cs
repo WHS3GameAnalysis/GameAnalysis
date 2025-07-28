@@ -1,6 +1,8 @@
 using System;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Drawing;
+using LethalAntiCheatLauncher.Util;
 
 namespace LethalAntiCheatLauncher.Util
 {
@@ -23,7 +25,7 @@ namespace LethalAntiCheatLauncher.Util
         {
             if (dllHandle != IntPtr.Zero)
             {
-                Console.WriteLine("[SimpleAC] DLL이 이미 로드되어 있습니다.");
+                LogManager.Log(LogSource.SimpleAC, "DLL is already loaded.", Color.Yellow);
                 return true;
             }
 
@@ -34,9 +36,7 @@ namespace LethalAntiCheatLauncher.Util
 
                 if (!File.Exists(dllPath))
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"[SimpleAC] DLL을 찾을 수 없습니다: {dllPath}");
-                    Console.ResetColor();
+                    LogManager.Log(LogSource.SimpleAC, $"DLL not found: {dllPath}", Color.Red);
                     return false;
                 }
 
@@ -45,22 +45,16 @@ namespace LethalAntiCheatLauncher.Util
                 if (dllHandle == IntPtr.Zero)
                 {
                     uint error = GetLastError();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"[SimpleAC] DLL 로드 실패. 오류 코드: {error}");
-                    Console.ResetColor();
+                    LogManager.Log(LogSource.SimpleAC, $"DLL load failed. Error code: {error}", Color.Red);
                     return false;
                 }
 
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("[SimpleAC] DLL이 성공적으로 로드되었습니다.");
-                Console.ResetColor();
+                LogManager.Log(LogSource.SimpleAC, "DLL loaded successfully.", Color.Green);
                 return true;
             }
             catch (Exception ex)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"[SimpleAC] DLL 로드 중 예외 발생: {ex.Message}");
-                Console.ResetColor();
+                LogManager.Log(LogSource.SimpleAC, $"Exception while loading DLL: {ex.Message}", Color.Red);
                 return false;
             }
         }
@@ -69,7 +63,7 @@ namespace LethalAntiCheatLauncher.Util
         {
             if (dllHandle == IntPtr.Zero)
             {
-                Console.WriteLine("[SimpleAC] 언로드할 DLL이 없습니다.");
+                LogManager.Log(LogSource.SimpleAC, "No DLL to unload.", Color.Yellow);
                 return true;
             }
 
@@ -79,24 +73,18 @@ namespace LethalAntiCheatLauncher.Util
                 if (result)
                 {
                     dllHandle = IntPtr.Zero;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("[SimpleAC] DLL이 성공적으로 언로드되었습니다.");
-                    Console.ResetColor();
+                    LogManager.Log(LogSource.SimpleAC, "DLL unloaded successfully.", Color.Green);
                 }
                 else
                 {
                     uint error = GetLastError();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"[SimpleAC] DLL 언로드 실패. 오류 코드: {error}");
-                    Console.ResetColor();
+                    LogManager.Log(LogSource.SimpleAC, $"DLL unload failed. Error code: {error}", Color.Red);
                 }
                 return result;
             }
             catch (Exception ex)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"[SimpleAC] DLL 언로드 중 예외 발생: {ex.Message}");
-                Console.ResetColor();
+                LogManager.Log(LogSource.SimpleAC, $"Exception while unloading DLL: {ex.Message}", Color.Red);
                 return false;
             }
         }
@@ -106,4 +94,4 @@ namespace LethalAntiCheatLauncher.Util
             return dllHandle != IntPtr.Zero;
         }
     }
-} 
+}

@@ -1,0 +1,274 @@
+이 대화 상자 대신 JIT(Just-in-time) 디버깅을 호출하는
+방법에 대한 자세한 내용은 이 메시지의 뒷부분을 참조하십시오.
+
+************** 예외 텍스트 **************
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at LethalAntiCheatLauncher.MainForm.RefreshLogView() in C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\MainForm.cs:line 59
+   at LethalAntiCheatLauncher.MainForm.SetFilter(LogSource filter) in C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\MainForm.cs:line 49
+   at LethalAntiCheatLauncher.MainForm.<SetupFilterButtons>b__4_0(Object s, EventArgs e) in C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\MainForm.cs:line 38
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(HWND hWnd, MessageId msg, WPARAM wparam, LPARAM lparam)
+
+
+************** 로드된 어셈블리 **************
+System.Private.CoreLib
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Private.CoreLib.dll
+----------------------------------------
+Client_Lethal_Anti_Cheat
+    어셈블리 버전: 1.0.0.0
+    위치: C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Lethal_Anti_Cheat_Full\Reflection\backup2\Client_Lethal_Anti_Cheat.dll
+----------------------------------------
+System.Runtime
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Runtime.dll
+----------------------------------------
+System.Windows.Forms
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.16\System.Windows.Forms.dll
+----------------------------------------
+System.ComponentModel.Primitives
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.ComponentModel.Primitives.dll
+----------------------------------------
+System.Windows.Forms.Primitives
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.16\System.Windows.Forms.Primitives.dll
+----------------------------------------
+System.Drawing.Primitives
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Drawing.Primitives.dll
+----------------------------------------
+System.Collections.Specialized
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Collections.Specialized.dll
+----------------------------------------
+System.Runtime.InteropServices
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Runtime.InteropServices.dll
+----------------------------------------
+System.Threading
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Threading.dll
+----------------------------------------
+System.Diagnostics.TraceSource
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Diagnostics.TraceSource.dll
+----------------------------------------
+System.Collections
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Collections.dll
+----------------------------------------
+System.Drawing.Common
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.16\System.Drawing.Common.dll
+----------------------------------------
+Microsoft.Win32.Primitives
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\Microsoft.Win32.Primitives.dll
+----------------------------------------
+System.ComponentModel.EventBasedAsync
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.ComponentModel.EventBasedAsync.dll
+----------------------------------------
+System.Threading.Thread
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Threading.Thread.dll
+----------------------------------------
+Accessibility
+    어셈블리 버전: 4.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.16\Accessibility.dll
+----------------------------------------
+System.Memory
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Memory.dll
+----------------------------------------
+System.Diagnostics.FileVersionInfo
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Diagnostics.FileVersionInfo.dll
+----------------------------------------
+System.Numerics.Vectors
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Numerics.Vectors.dll
+----------------------------------------
+Microsoft.Win32.SystemEvents
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.16\Microsoft.Win32.SystemEvents.dll
+----------------------------------------
+System.Collections.Concurrent
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Collections.Concurrent.dll
+----------------------------------------
+System.ComponentModel
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.ComponentModel.dll
+----------------------------------------
+System.ComponentModel.TypeConverter
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.ComponentModel.TypeConverter.dll
+----------------------------------------
+System.Collections.NonGeneric
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Collections.NonGeneric.dll
+----------------------------------------
+System.Linq
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Linq.dll
+----------------------------------------
+System.Security.Cryptography
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Security.Cryptography.dll
+----------------------------------------
+System.Threading.ThreadPool
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Threading.ThreadPool.dll
+----------------------------------------
+System.Net.Http
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Net.Http.dll
+----------------------------------------
+System.Net.Primitives
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Net.Primitives.dll
+----------------------------------------
+System.Diagnostics.Tracing
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Diagnostics.Tracing.dll
+----------------------------------------
+System.Diagnostics.DiagnosticSource
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Diagnostics.DiagnosticSource.dll
+----------------------------------------
+System.Net.Security
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Net.Security.dll
+----------------------------------------
+System.Management
+    어셈블리 버전: 9.0.0.7
+    위치: C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Lethal_Anti_Cheat_Full\Reflection\backup2\runtimes\win\lib\net8.0\System.Management.dll
+----------------------------------------
+Microsoft.Win32.Registry
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\Microsoft.Win32.Registry.dll
+----------------------------------------
+System.Text.Json
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Text.Json.dll
+----------------------------------------
+System.Private.Uri
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Private.Uri.dll
+----------------------------------------
+System.Net.Sockets
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Net.Sockets.dll
+----------------------------------------
+System.Threading.Overlapped
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Threading.Overlapped.dll
+----------------------------------------
+System.Net.NameResolution
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Net.NameResolution.dll
+----------------------------------------
+System.Diagnostics.Process
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Diagnostics.Process.dll
+----------------------------------------
+System.IO.Pipes
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.IO.Pipes.dll
+----------------------------------------
+System.Security.AccessControl
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Security.AccessControl.dll
+----------------------------------------
+System.Security.Principal.Windows
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Security.Principal.Windows.dll
+----------------------------------------
+SharpMonoInjector
+    어셈블리 버전: 1.0.0.0
+    위치: C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Lethal_Anti_Cheat_Full\Reflection\backup2\SharpMonoInjector.dll
+----------------------------------------
+netstandard
+    어셈블리 버전: 2.1.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\netstandard.dll
+----------------------------------------
+System.Runtime.Intrinsics
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Runtime.Intrinsics.dll
+----------------------------------------
+System.Security.Claims
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Security.Claims.dll
+----------------------------------------
+System.Text.Encoding.Extensions
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Text.Encoding.Extensions.dll
+----------------------------------------
+System.Text.Encodings.Web
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Text.Encodings.Web.dll
+----------------------------------------
+System.Reflection.Emit.Lightweight
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Reflection.Emit.Lightweight.dll
+----------------------------------------
+System.Reflection.Primitives
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Reflection.Primitives.dll
+----------------------------------------
+System.Reflection.Emit.ILGeneration
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Reflection.Emit.ILGeneration.dll
+----------------------------------------
+System.Formats.Asn1
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Formats.Asn1.dll
+----------------------------------------
+System.Runtime.Numerics
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Runtime.Numerics.dll
+----------------------------------------
+System.Text.Encoding.CodePages
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Text.Encoding.CodePages.dll
+----------------------------------------
+System.Net.Quic
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Net.Quic.dll
+----------------------------------------
+System.Runtime.Loader
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Runtime.Loader.dll
+----------------------------------------
+System.Windows.Forms.resources
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.16\ko\System.Windows.Forms.resources.dll
+----------------------------------------
+System.Diagnostics.StackTrace
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Diagnostics.StackTrace.dll
+----------------------------------------
+System.Reflection.Metadata
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Reflection.Metadata.dll
+----------------------------------------
+System.Collections.Immutable
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.Collections.Immutable.dll
+----------------------------------------
+System.IO.MemoryMappedFiles
+    어셈블리 버전: 8.0.0.0
+    위치: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.16\System.IO.MemoryMappedFiles.dll
+----------------------------------------
+
+************** JIT 디버깅 **************
+
+
