@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request, HTTPException
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import PlainTextResponse, FileResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
@@ -67,6 +67,19 @@ class Heartbeat(BaseModel):
 
 class EncryptedResponse(BaseModel):
     encrypted_data: str
+
+# 무결성 검사 로깅 함수
+def log_integrity(message: str):
+    """무결성 검사 로그 기록"""
+    try:
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"[{timestamp}] [INTEGRITY] {message}\n"
+        log_file_path = os.path.join(LOGS_BASE_PATH, "integrity.log")
+        
+        with open(log_file_path, "a", encoding="utf-8") as f:
+            f.write(log_entry)
+    except Exception as e:
+        print(f"무결성 로그 작성 실패: {e}")
 
 def load_private_key(key_pem: str):
     """PEM 형식 개인키 로드"""
@@ -264,6 +277,43 @@ def write_log(log_type: str, message: str):
     except Exception as e:
         print(f"로그 작성 실패: {e}")
 
+# 무결성 검사 관련 함수들
+def decrypt_integrity_request(encrypted_data: str) -> str:
+    """무결성 검사 요청 복호화 - 기존 하트비트 복호화 방식 활용"""
+    try:
+        # 응답 개인키로 복호화 (클라이언트가 응답 공개키로 암호화했으므로)
+        response_private_key = load_private_key(RESPONSE_PRIVATE_KEY)
+        if not response_private_key:
+            raise Exception("서버 키 로드 실패")
+        
+        decrypted_data = decrypt_hybrid_response(encrypted_data, response_private_key)
+        if not decrypted_data:
+            raise Exception("요청 복호화 실패")
+        
+        return decrypted_data
+        
+    except Exception as e:
+        print(f"무결성 요청 복호화 실패: {e}")
+        raise
+
+def encrypt_integrity_response(plain_text: str) -> str:
+    """무결성 검사 응답 암호화 - 기존 하트비트 암호화 방식 활용"""
+    try:
+        # 챌린지 공개키로 암호화 (클라이언트가 챌린지 개인키로 복호화)
+        challenge_public_key = load_public_key(CHALLENGE_PUBLIC_KEY)
+        if not challenge_public_key:
+            raise Exception("서버 키 로드 실패")
+        
+        encrypted_response = encrypt_hybrid_challenge(plain_text, challenge_public_key)
+        if not encrypted_response:
+            raise Exception("응답 암호화 실패")
+        
+        return encrypted_response
+        
+    except Exception as e:
+        print(f"무결성 응답 암호화 실패: {e}")
+        raise
+
 @app.get("/heartbeat_init")
 async def heartbeat_init(request: Request):
     """암호화된 챌린지 생성 및 반환"""
@@ -378,6 +428,96 @@ async def heartbeat_send(data: EncryptedResponse, request: Request):
         print(f"하트비트 처리 오류: {e}")
         raise HTTPException(status_code=500, detail="하트비트 처리 실패")
 
+# 무결성 검사 API 엔드포인트
+@app.post("/api/integrity/check")
+async def check_integrity(request: Request):
+    """무결성 검사 API - 기존 하트비트 보안 방식 활용"""
+    try:
+        # 1. 클라이언트 요청 수신 및 복호화
+        encrypted_data = await request.json()
+        encrypted_request = encrypted_data.get("encrypted_data", "")
+        
+        if not encrypted_request:
+            log_integrity("오류: 암호화된 데이터 없음")
+            raise HTTPException(status_code=400, detail="암호화된 데이터 없음")
+        
+        log_integrity(f"암호화된 요청 수신: {len(encrypted_request)} 문자")
+        
+        try:
+            decrypted_data = decrypt_integrity_request(encrypted_request)
+            log_integrity(f"복호화 성공: {len(decrypted_data)} 문자")
+        except Exception as e:
+            log_integrity(f"복호화 실패: {str(e)}")
+            raise HTTPException(status_code=400, detail=f"복호화 실패: {str(e)}")
+        
+        try:
+            client_data = json.loads(decrypted_data)
+            log_integrity(f"JSON 파싱 성공: {len(client_data)} 필드")
+            # 실제 받은 데이터 내용 로그
+            log_integrity(f"받은 데이터 키들: {list(client_data.keys())}")
+            log_integrity(f"받은 데이터 내용: {json.dumps(client_data, ensure_ascii=False)}")
+        except Exception as e:
+            log_integrity(f"JSON 파싱 실패: {str(e)}")
+            raise HTTPException(status_code=400, detail=f"JSON 파싱 실패: {str(e)}")
+        
+        client_id = client_data.get('client_id', 'UNKNOWN')
+        game_version = client_data.get('game_version', 'UNKNOWN')
+        client_hashes = client_data.get('hashes', [])
+        
+        # 2. 로그 기록 시작
+        log_integrity(f"클라이언트 접속: {client_id}")
+        log_integrity(f"버전 확인: {game_version}")
+        log_integrity(f"해시값 검사 시작: {len(client_hashes)}개 파일")
+        
+        # 3. 서버 해시값 로드
+        current_version = "v72"  # 나중에 파일에서 읽기
+        server_hashes_file = f"/home/whitehat/hashes/{current_version}/integrity.json"
+        
+        if not os.path.exists(server_hashes_file):
+            log_integrity(f"서버 해시값 파일 없음: {server_hashes_file}")
+            raise HTTPException(status_code=500, detail="서버 해시값 파일 없음")
+        
+        with open(server_hashes_file, 'r') as f:
+            server_data = json.load(f)
+        
+        # 4. 해시값 비교
+        passed_count = 0
+        failed_files = []
+        
+        for client_file in client_hashes:
+            filename = client_file['filename']
+            client_hash = client_file['hash']
+            
+            # 서버 해시값 찾기
+            server_file = next((f for f in server_data['files'] if f['filename'] == filename), None)
+            
+            if server_file and server_file['hash'] == client_hash:
+                passed_count += 1
+            else:
+                failed_files.append(filename)
+        
+        # 5. 결과 로깅
+        if passed_count == len(client_hashes):
+            log_integrity(f"검사 결과: 성공 ({passed_count}/{len(client_hashes)} 통과)")
+            log_integrity(f"클라이언트 승인: {client_id}")
+            result = {"status": "success", "message": "무결성 검사 통과"}
+        else:
+            log_integrity(f"검사 결과: 실패 ({passed_count}/{len(client_hashes)} 통과, {', '.join(failed_files)} 불일치)")
+            log_integrity(f"클라이언트 거부: {client_id} (무결성 검사 실패)")
+            result = {"status": "failed", "message": f"무결성 검사 실패: {', '.join(failed_files)}"}
+        
+        # 6. 암호화된 응답 반환
+        encrypted_response = encrypt_integrity_response(json.dumps(result))
+        log_integrity(f"응답 암호화 완료: {len(encrypted_response)} 문자")
+        log_integrity(f"응답 내용: {json.dumps(result)}")
+        return {"encrypted_data": encrypted_response}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_integrity(f"무결성 검사 오류: {str(e)}")
+        raise HTTPException(status_code=500, detail="무결성 검사 실패")
+
 @app.post("/heartbeat")
 async def receive_heartbeat(data: Heartbeat, request: Request):
     """기존 하트비트 엔드포인트 (호환성용)"""
@@ -430,5 +570,32 @@ async def get_stats():
         "server_time": int(time.time()),
         "challenge_algorithms": ["sha512"]
     }
+
+@app.get("/admin")
+async def admin_page(request: Request):
+    """관리자 페이지 - 쿠키 기반 인증"""
+    auth_cookie = request.cookies.get("admin_auth")
+    
+    if auth_cookie != "admin1234":
+        return RedirectResponse(url="/", status_code=302)
+    
+    return FileResponse("/var/www/html/admin.html")
+
+@app.post("/login")
+async def login(request: Request):
+    """로그인 API - 쿠키 설정"""
+    try:
+        form_data = await request.form()
+        username = form_data.get("username")
+        password = form_data.get("password")
+        
+        if username == "admin" and password == "1234":
+            response = RedirectResponse(url="/admin", status_code=302)
+            response.set_cookie(key="admin_auth", value="admin1234", max_age=86400, httponly=True, secure=True)
+            return response
+        else:
+            return RedirectResponse(url="/?error=invalid", status_code=302)
+    except Exception as e:
+        return RedirectResponse(url="/?error=server", status_code=302)
 
 # 실행 예시: uvicorn server:app --host 0.0.0.0 --port 8000 

@@ -108,27 +108,29 @@ namespace LethalAntiCheatLauncher
         {
             try
             {
-                LogManager.Log(LogSource.AntiCheat, "Client started. Running integrity check...", Color.White);
-
                 var checker = new IntegrityChecker();
-                var result = await Task.Run(() => checker.CheckIntegrity((cur, total, name, msg) =>
+                
+                // 진행률 표시 시작
+                this.Invoke(new Action(() =>
                 {
-                    this.Invoke(new Action(() =>
-                    {
-                        statusLabel.Text = $"Checking: {name}";
-                        progressBar.Value = cur;
-                        progressBar.Maximum = total;
-                    }));
-                    LogManager.Log(LogSource.Integrity, $"[{cur}/{total}] {name} - {msg}", msg.Contains("✓") ? Color.LightGreen : Color.Yellow);
+                    statusLabel.Text = "서버 무결성 검사 중...";
+                    progressBar.Value = 25;
+                    progressBar.Maximum = 100;
                 }));
 
-                LogManager.Log(LogSource.AntiCheat, result.Message, result.IsValid ? Color.Green : Color.Red);
+                var result = await checker.CheckIntegrityWithServerAsync();
+
+                // 진행률 완료
+                this.Invoke(new Action(() =>
+                {
+                    progressBar.Value = 100;
+                }));
 
                 if (!result.IsValid)
                 {
-                    LogManager.Log(LogSource.AntiCheat, "Game launch blocked.", Color.Red);
-                    statusLabel.Text = "Launch blocked. Integrity failed.";
-                    MessageBox.Show("File integrity check failed. Cannot launch the game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LogManager.Log(LogSource.Integrity, "게임 실행 차단됨", Color.Red);
+                    statusLabel.Text = "무결성 검사 실패";
+                    MessageBox.Show("무결성 검사에 실패했습니다. 게임을 실행할 수 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     launchButton.Enabled = true;
                     return;
                 }
