@@ -90,10 +90,10 @@ namespace Lethal_Anti_Cheat.Reflection
                 {
                     detectedCount++;
                     PipeLogger.Log($"[Reflection] Suspicious assembly detected:");
-                    PipeLogger.Log($"         Name     : {fullName}");
-                    PipeLogger.Log($"         Location : {location}");
-                    PipeLogger.Log($"         SHA256   : {hash}");
-                    PipeLogger.Log($"         PID      : {Process.GetCurrentProcess().Id}");
+                    PipeLogger.Log($"[Reflection]         Name     : {fullName}");
+                    PipeLogger.Log($"[Reflection]         Location : {location}");
+                    PipeLogger.Log($"[Reflection]         SHA256   : {hash}");
+                    PipeLogger.Log($"[Reflection]         PID      : {Process.GetCurrentProcess().Id}");
                 }
             }
 

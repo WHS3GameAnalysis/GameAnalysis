@@ -24,9 +24,9 @@ namespace Lethal_Anti_Cheat.Reflection
         public static void InitializeSandbox()
         {
             PipeLogger.Log("[Reflection] === Current AppDomain Info ===");
-            PipeLogger.Log($"Name: {AppDomain.CurrentDomain.FriendlyName}");
-            PipeLogger.Log($"Base Dir: {AppDomain.CurrentDomain.BaseDirectory}");
-            PipeLogger.Log($"Loaded Assemblies: {AppDomain.CurrentDomain.GetAssemblies().Length}");
+            PipeLogger.Log($"[Reflection] Name: {AppDomain.CurrentDomain.FriendlyName}");
+            PipeLogger.Log($"[Reflection] Base Dir: {AppDomain.CurrentDomain.BaseDirectory}");
+            PipeLogger.Log($"[Reflection] Loaded Assemblies: {AppDomain.CurrentDomain.GetAssemblies().Length}");
 
             foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
             {
@@ -56,7 +56,7 @@ namespace Lethal_Anti_Cheat.Reflection
                 return;
 
             PipeLogger.Log($"[Reflection] New assembly loaded into sandbox: {asmName}");
-            PipeLogger.Log($"        Location: {(string.IsNullOrEmpty(asmPath) ? "(Unknown)" : asmPath)}");
+            PipeLogger.Log($"[Reflection]        Location: {(string.IsNullOrEmpty(asmPath) ? "(Unknown)" : asmPath)}");
 
 
         }

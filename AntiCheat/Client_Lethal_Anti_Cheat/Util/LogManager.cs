@@ -10,7 +10,12 @@ namespace LethalAntiCheatLauncher.Util
         Integrity,
         Heartbeat,
         SimpleAC,
-        DLL
+        DLL,
+        Behavior,
+        Debug,
+        Harmony,
+        Process,
+        Reflection
     }
 
     public class LogEntry

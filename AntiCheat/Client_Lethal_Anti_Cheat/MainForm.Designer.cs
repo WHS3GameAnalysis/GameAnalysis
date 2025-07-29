@@ -15,6 +15,11 @@ namespace LethalAntiCheatLauncher
         private System.Windows.Forms.Button btnFilterDll;
         private System.Windows.Forms.Button btnFilterSimpleAC;
         private System.Windows.Forms.Button btnFilterIntegrity;
+        private System.Windows.Forms.Button btnFilterBehavior;
+        private System.Windows.Forms.Button btnFilterDebug;
+        private System.Windows.Forms.Button btnFilterHarmony;
+        private System.Windows.Forms.Button btnFilterProcess;
+        private System.Windows.Forms.Button btnFilterReflection;
 
 
         protected override void Dispose(bool disposing)
@@ -40,6 +45,11 @@ namespace LethalAntiCheatLauncher
             btnFilterDll = new Button();
             btnFilterSimpleAC = new Button();
             btnFilterIntegrity = new Button();
+            btnFilterBehavior = new Button();
+            btnFilterDebug = new Button();
+            btnFilterHarmony = new Button();
+            btnFilterProcess = new Button();
+            btnFilterReflection = new Button();
             statusStrip.SuspendLayout();
             filterPanel.SuspendLayout();
             SuspendLayout();
@@ -55,7 +65,7 @@ namespace LethalAntiCheatLauncher
             logRichTextBox.Margin = new Padding(3, 4, 3, 4);
             logRichTextBox.Name = "logRichTextBox";
             logRichTextBox.ReadOnly = true;
-            logRichTextBox.Size = new Size(760, 392);
+            logRichTextBox.Size = new Size(860, 392);
             logRichTextBox.TabIndex = 0;
             logRichTextBox.Text = "";
             // 
@@ -69,7 +79,7 @@ namespace LethalAntiCheatLauncher
             launchButton.Location = new Point(12, 496);
             launchButton.Margin = new Padding(3, 4, 3, 4);
             launchButton.Name = "launchButton";
-            launchButton.Size = new Size(760, 51);
+            launchButton.Size = new Size(860, 51);
             launchButton.TabIndex = 1;
             launchButton.Text = "Launch Game";
             launchButton.UseVisualStyleBackColor = false;
@@ -81,7 +91,7 @@ namespace LethalAntiCheatLauncher
             progressBar.Location = new Point(12, 460);
             progressBar.Margin = new Padding(3, 4, 3, 4);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(760, 29);
+            progressBar.Size = new Size(860, 29);
             progressBar.TabIndex = 2;
             // 
             // statusStrip
@@ -89,7 +99,7 @@ namespace LethalAntiCheatLauncher
             statusStrip.Items.AddRange(new ToolStripItem[] { statusLabel });
             statusStrip.Location = new Point(0, 557);
             statusStrip.Name = "statusStrip";
-            statusStrip.Size = new Size(784, 22);
+            statusStrip.Size = new Size(884, 22);
             statusStrip.TabIndex = 3;
             statusStrip.Text = "statusStrip1";
             // 
@@ -109,10 +119,15 @@ namespace LethalAntiCheatLauncher
             filterPanel.Controls.Add(btnFilterDll);
             filterPanel.Controls.Add(btnFilterSimpleAC);
             filterPanel.Controls.Add(btnFilterIntegrity);
+            filterPanel.Controls.Add(btnFilterBehavior);
+            filterPanel.Controls.Add(btnFilterDebug);
+            filterPanel.Controls.Add(btnFilterHarmony);
+            filterPanel.Controls.Add(btnFilterProcess);
+            filterPanel.Controls.Add(btnFilterReflection);
             filterPanel.Location = new Point(12, 15);
             filterPanel.Margin = new Padding(3, 4, 3, 4);
             filterPanel.Name = "filterPanel";
-            filterPanel.Size = new Size(760, 38);
+            filterPanel.Size = new Size(860, 38);
             filterPanel.TabIndex = 4;
             // 
             // btnFilterAll
@@ -181,12 +196,67 @@ namespace LethalAntiCheatLauncher
             btnFilterIntegrity.Text = "Integrity";
             btnFilterIntegrity.UseVisualStyleBackColor = false;
             // 
+            // btnFilterBehavior
+            // 
+            btnFilterBehavior.BackColor = Color.FromArgb(224, 224, 224);
+            btnFilterBehavior.Location = new Point(480, 0);
+            btnFilterBehavior.Margin = new Padding(3, 4, 3, 4);
+            btnFilterBehavior.Name = "btnFilterBehavior";
+            btnFilterBehavior.Size = new Size(75, 29);
+            btnFilterBehavior.TabIndex = 6;
+            btnFilterBehavior.Text = "Behavior";
+            btnFilterBehavior.UseVisualStyleBackColor = false;
+            // 
+            // btnFilterDebug
+            // 
+            btnFilterDebug.BackColor = Color.FromArgb(224, 224, 224);
+            btnFilterDebug.Location = new Point(560, 0);
+            btnFilterDebug.Margin = new Padding(3, 4, 3, 4);
+            btnFilterDebug.Name = "btnFilterDebug";
+            btnFilterDebug.Size = new Size(75, 29);
+            btnFilterDebug.TabIndex = 7;
+            btnFilterDebug.Text = "Debug";
+            btnFilterDebug.UseVisualStyleBackColor = false;
+            // 
+            // btnFilterHarmony
+            // 
+            btnFilterHarmony.BackColor = Color.FromArgb(224, 224, 224);
+            btnFilterHarmony.Location = new Point(640, 0);
+            btnFilterHarmony.Margin = new Padding(3, 4, 3, 4);
+            btnFilterHarmony.Name = "btnFilterHarmony";
+            btnFilterHarmony.Size = new Size(75, 29);
+            btnFilterHarmony.TabIndex = 8;
+            btnFilterHarmony.Text = "Harmony";
+            btnFilterHarmony.UseVisualStyleBackColor = false;
+            // 
+            // btnFilterProcess
+            // 
+            btnFilterProcess.BackColor = Color.FromArgb(224, 224, 224);
+            btnFilterProcess.Location = new Point(720, 0);
+            btnFilterProcess.Margin = new Padding(3, 4, 3, 4);
+            btnFilterProcess.Name = "btnFilterProcess";
+            btnFilterProcess.Size = new Size(75, 29);
+            btnFilterProcess.TabIndex = 9;
+            btnFilterProcess.Text = "Process";
+            btnFilterProcess.UseVisualStyleBackColor = false;
+            // 
+            // btnFilterReflection
+            // 
+            btnFilterReflection.BackColor = Color.FromArgb(224, 224, 224);
+            btnFilterReflection.Location = new Point(800, 0);
+            btnFilterReflection.Margin = new Padding(3, 4, 3, 4);
+            btnFilterReflection.Name = "btnFilterReflection";
+            btnFilterReflection.Size = new Size(75, 29);
+            btnFilterReflection.TabIndex = 10;
+            btnFilterReflection.Text = "Reflection";
+            btnFilterReflection.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(784, 579);
+            ClientSize = new Size(884, 579);
             Controls.Add(filterPanel);
             Controls.Add(statusStrip);
             Controls.Add(progressBar);

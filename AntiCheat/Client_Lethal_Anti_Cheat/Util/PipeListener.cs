@@ -28,8 +28,34 @@ namespace LethalAntiCheatLauncher
                             string line = reader.ReadLine();
                             if (!string.IsNullOrWhiteSpace(line))
                             {
-                                // DLL에서 오는 로그는 모두 LogSource.DLL로 처리
-                                LogManager.Log(LogSource.DLL, line, Color.Yellow);
+                                if (line.Contains("[Behaviour]"))
+                                {
+                                    LogManager.Log(LogSource.Behavior, line, Color.Plum);
+                                }
+                                else if (line.Contains("[DebugDetector]"))
+                                {
+                                    LogManager.Log(LogSource.Debug, line, Color.LightSkyBlue);
+                                }
+                                else if (line.Contains("[HarmonyPatchDetector]"))
+                                {
+                                    LogManager.Log(LogSource.Harmony, line, Color.MediumPurple);
+                                }
+                                else if (line.Contains("[ProcessWatcher]") || line.Contains("[NtProcessScanner]"))
+                                {
+                                    LogManager.Log(LogSource.Process, line, Color.Orange);
+                                }
+                                else if (line.Contains("[Reflection]"))
+                                {
+                                    LogManager.Log(LogSource.Reflection, line, Color.LightCoral);
+                                }
+                                else if (line.Contains("[DLLDetector]"))
+                                {
+                                    LogManager.Log(LogSource.DLL, line, Color.Yellow);
+                                }
+                                else
+                                {
+                                    LogManager.Log(LogSource.AntiCheat, line, Color.Cyan);
+                                }
                             }
                         }
                     }

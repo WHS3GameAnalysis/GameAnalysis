@@ -46,6 +46,11 @@ namespace LethalAntiCheatLauncher
             btnFilterHeartbeat.Click += (s, e) => SetFilter(LogSource.Heartbeat);
             btnFilterSimpleAC.Click += (s, e) => SetFilter(LogSource.SimpleAC);
             btnFilterDll.Click += (s, e) => SetFilter(LogSource.DLL);
+            btnFilterBehavior.Click += (s, e) => SetFilter(LogSource.Behavior);
+            btnFilterDebug.Click += (s, e) => SetFilter(LogSource.Debug);
+            btnFilterHarmony.Click += (s, e) => SetFilter(LogSource.Harmony);
+            btnFilterProcess.Click += (s, e) => SetFilter(LogSource.Process);
+            btnFilterReflection.Click += (s, e) => SetFilter(LogSource.Reflection);
         }
 
         private void SetFilter(LogSource filter)

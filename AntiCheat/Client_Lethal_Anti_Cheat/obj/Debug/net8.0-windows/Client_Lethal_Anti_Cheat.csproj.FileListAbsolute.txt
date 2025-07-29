@@ -42,3 +42,5 @@ C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\De
 C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0-windows\ref\Client_Lethal_Anti_Cheat.dll
 C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0-windows\LethalAntiCheatLauncher.MainForm.resources
 C:\Jihoon\WhiteHat\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0-windows\Client_Lethal_Anti_Cheat.csproj.GenerateResource.cache
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0-windows\LethalAntiCheatLauncher.MainForm.resources
+D:\Brand Now Job\JBU\2025\Whitehat\Project\Github\GameAnalysis\AntiCheat\Client_Lethal_Anti_Cheat\obj\Debug\net8.0-windows\Client_Lethal_Anti_Cheat.csproj.GenerateResource.cache

@@ -16,7 +16,7 @@ namespace Lethal_Anti_Cheat
 
         public static void Init()
         {
-            ConsoleManager.Initialize();
+            //ConsoleManager.Initialize();
             PipeLogger.Log("[AntiCheat] Module Init Complete.");
 
             harmony = new Harmony("Lethal_Anti_Cheat");
@@ -37,12 +37,12 @@ namespace Lethal_Anti_Cheat
                     try
                     {
                         new PatchClassProcessor(harmony, type).Patch();
-                        Console.WriteLine($"[AntiCheat] Patching {type.Name} completed.");
+                        Console.WriteLine($"[Behaviour] Patching {type.Name} completed.");
                     }
                     catch
                     {
                         // ignore
-                        Console.WriteLine($"[AntiCheat] Patching {type.Name} failed.");
+                        Console.WriteLine($"[Behaviour] Patching {type.Name} failed.");
                     }
                 }
             }

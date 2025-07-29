@@ -94,10 +94,10 @@ namespace Lethal_Anti_Cheat.Reflection
                                 {
                                     issues++;
                                     PipeLogger.Log($"[Reflection] Tampering Detected: {key}");
-                                    PipeLogger.Log($" Current:  {currentHash}");
-                                    PipeLogger.Log($" Baseline: {baselineHash}");
-                                    PipeLogger.Log($" Assembly: {asm.FullName}");
-                                    PipeLogger.Log($" PID: {Process.GetCurrentProcess().Id}\n");
+                                    PipeLogger.Log($"[Reflection] Current:  {currentHash}");
+                                    PipeLogger.Log($"[Reflection] Baseline: {baselineHash}");
+                                    PipeLogger.Log($"[Reflection] Assembly: {asm.FullName}");
+                                    PipeLogger.Log($"[Reflection] PID: {Process.GetCurrentProcess().Id}\n");
                                 }
                             }
                         }
