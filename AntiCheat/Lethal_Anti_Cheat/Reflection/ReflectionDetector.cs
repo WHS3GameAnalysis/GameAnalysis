@@ -13,7 +13,7 @@ namespace Lethal_Anti_Cheat.Reflection
 {
     public static class ReflectionDetector
     {
-        private static readonly TimeSpan ScanInterval = TimeSpan.FromSeconds(10);
+        private static readonly TimeSpan ScanInterval = TimeSpan.FromSeconds(60);
         private static Dictionary<string, string> baselineHashes = new();
 
         private static string BytesToHex(byte[] bytes)

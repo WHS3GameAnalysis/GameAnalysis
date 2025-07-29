@@ -16,7 +16,7 @@ namespace Lethal_Anti_Cheat.DLLDetector
 
         public static void Start()
         {
-            timer = new Timer(5000); // 5초마다 체크
+            timer = new Timer(60000); // 1분마다 체크
             timer.Elapsed += CheckModules;
             timer.AutoReset = true;
             timer.Start();

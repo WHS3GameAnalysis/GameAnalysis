@@ -21,7 +21,8 @@ namespace Lethal_Anti_Cheat.Reflection
         private static readonly HashSet<string> AllowedAssemblyHashes = new();
         private static string SelfAssemblyHash = "";
         private static readonly string AllowedRootPath =
-            Path.GetFullPath(@"C:\Program Files (x86)\Steam\steamapps\common\Lethal Company").ToLower();
+            //Path.GetFullPath(@"C:\Program Files (x86)\Steam\steamapps\common\Lethal Company").ToLower();
+            Path.GetFullPath(@"C:\SteamLibrary\steamapps\common\Lethal Company").ToLower(); // 이지훈 환경
 
         public static void Initialize()
         {

@@ -83,7 +83,7 @@ namespace Lethal_Anti_Cheat.ProcessWatcher
                         if (lower.Contains(target))
                         {
                             //Console.WriteLine($"  - Detected Process : {processName} (PID: {pid})");
-                            PipeLogger.Log(message: $" - Detected Process : {processName} (PID: {pid})");
+                            PipeLogger.Log(message: $"[ProcessWatcher] - Detected Process : {processName} (PID: {pid})");
                         }
                     }
                 }

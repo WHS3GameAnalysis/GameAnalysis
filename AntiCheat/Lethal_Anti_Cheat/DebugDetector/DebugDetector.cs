@@ -31,12 +31,12 @@ namespace Lethal_Anti_Cheat.DebugDetector
                 {
                     bool debugged = check.IsDebugged(current);
                     //Console.WriteLine($"  - {check.MethodName}: Debugged? {debugged}");
-                    PipeLogger.Log(message: $" - {check.MethodName}: Debugged? {debugged}");
+                    PipeLogger.Log(message: $"[DebugDetector] - {check.MethodName}: Debugged? {debugged}");
                 }
                 catch (Exception ex)
                 {
                     //Console.WriteLine($"  - [Error] {check.MethodName}: {ex.Message}");
-                    PipeLogger.Log(message: $"[Error] {check.MethodName}: {ex.Message}");
+                    PipeLogger.Log(message: $"[DebugDetector] [Error] {check.MethodName}: {ex.Message}");
                 }
             }
         }

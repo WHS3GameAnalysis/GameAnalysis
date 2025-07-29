@@ -30,7 +30,7 @@ namespace Lethal_Anti_Cheat.Reflection
 
             foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
             {
-                PipeLogger.Log($"  - {asm.FullName}");
+                PipeLogger.Log($"[Reflection]  - {asm.FullName}");
             }
 
             PipeLogger.Log("\n[Reflection] === Creating Isolated AppDomain ===");

@@ -85,7 +85,7 @@ namespace Lethal_Anti_Cheat.AntiCheats
         {
             PipeLogger.Log($"[Behaviour][{hackName}] {player.playerUsername} has abnormal speed: {speed:F2} m/s");
 
-            Console.WriteLine($"[Behaviour][{hackName}] {player.playerUsername} has abnormal speed: {speed:F2} m/s");
+            
 
             AntiManager.KickPlayer(player, $"{hackName} Hack");
             tracker.Remove(player.playerSteamId);

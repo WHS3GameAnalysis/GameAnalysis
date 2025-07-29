@@ -25,14 +25,14 @@ namespace Lethal_Anti_Cheat.ProcessWatcher
                         if (name.Contains(target))
                         {
                             //Console.WriteLine($"  - Detected Process : {name} (PID: {process.Id})");
-                            PipeLogger.Log(message: $" - Detected Process : {name} (PID: {process.Id})");
+                            PipeLogger.Log(message: $"[ProcessWatcher] - Detected Process : {name} (PID: {process.Id})");
                         }
                     }
                 }
                 catch
                 {
                     //Console.WriteLine($"  - Error accessing process {process.ProcessName} (PID: {process.Id})");
-                    PipeLogger.Log(message: $"[Error] accessing process {process.ProcessName} (PID: {process.Id})");
+                    PipeLogger.Log(message: $"[ProcessWatcher] [Error] accessing process {process.ProcessName} (PID: {process.Id})");
                 }
             }
         }

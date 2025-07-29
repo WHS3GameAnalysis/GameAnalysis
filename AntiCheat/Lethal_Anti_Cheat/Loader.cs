@@ -37,12 +37,13 @@ namespace Lethal_Anti_Cheat
                     try
                     {
                         new PatchClassProcessor(harmony, type).Patch();
-                        Console.WriteLine($"[Behaviour] Patching {type.Name} completed.");
+                        //Console.WriteLine($"[Behaviour] Patching {type.Name} completed.");
+                        PipeLogger.Log($"[Behaviour] Patching {type.Name} completed.");
                     }
                     catch
                     {
                         // ignore
-                        Console.WriteLine($"[Behaviour] Patching {type.Name} failed.");
+                        PipeLogger.Log($"[Behaviour] Patching {type.Name} failed.");
                     }
                 }
             }

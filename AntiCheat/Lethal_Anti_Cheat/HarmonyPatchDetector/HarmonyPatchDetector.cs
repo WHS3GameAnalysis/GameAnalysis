@@ -18,7 +18,7 @@ namespace Lethal_Anti_Cheat.HarmonyPatchDetector
         {
             //Console.WriteLine("[HarmonyPatchDetector] Harmony Patch Detector 시작");
             PipeLogger.Log("[HarmonyPatchDetector] Harmony Patch Detector Started");
-            timer = new Timer(30000); // 검사 주기
+            timer = new Timer(60000); // 검사 주기
             timer.Elapsed += CheckPatches;
             timer.AutoReset = true;
             timer.Enabled = true;

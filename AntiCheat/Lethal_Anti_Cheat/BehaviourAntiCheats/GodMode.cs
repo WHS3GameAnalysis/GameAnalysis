@@ -44,7 +44,7 @@ namespace Lethal_Anti_Cheat.AntiCheats
 
         private static void CheckForGodMode(PlayerControllerB victim, int oldHealth, int damageAmount)
         {
-            Console.WriteLine($"[Behaviour] Checking for God Mode: {victim.playerUsername} | Old Health: {oldHealth} | Damage Amount: {damageAmount}");
+            PipeLogger.Log($"[Behaviour] Checking for God Mode: {victim.playerUsername} | Old Health: {oldHealth} | Damage Amount: {damageAmount}");
             if (victim == null || victim.isPlayerDead || damageAmount <= 0) return;
 
             if (oldHealth == victim.health)

@@ -8,7 +8,7 @@ namespace Lethal_Anti_Cheat.Util
 {
     public static class UnifiedScanner
     {
-        private static readonly int intervalMs = 5000;
+        private static readonly int intervalMs = 60000;
         private static Thread _scannerThread;
         private static bool _isRunning = false;
 

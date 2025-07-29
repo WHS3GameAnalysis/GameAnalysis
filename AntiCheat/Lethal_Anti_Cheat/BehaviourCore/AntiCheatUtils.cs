@@ -45,9 +45,9 @@ namespace Lethal_Anti_Cheat.Core
                 if (transportId != 0 && ConnectionIdToSteamIdMap.TryGetValue(transportId, out ulong steamId))
                 {
                     Friend f = new Friend(steamId);
-                    Debug.Log($"LethalAntiCheat: Player {f.Name}({steamId}) has an invalid SteamID and will be kicked.");
+                    //Debug.Log($"LethalAntiCheat: Player {f.Name}({steamId}) has an invalid SteamID and will be kicked.");
                     PipeLogger.Log($"[Behaviour] LethalAntiCheat: Player {f.Name}({steamId}) has an invalid SteamID and will be kicked.");
-                    AntiManager.KickPlayer(player, "Invalid SteamID");
+                    //AntiManager.KickPlayer(player, "Invalid SteamID");
                 }
                 return false;
             }
@@ -83,9 +83,9 @@ namespace Lethal_Anti_Cheat.Core
                 }
                 else
                 {
-                    Debug.LogError("LethalAntiCheat: Failed to find FacepunchTransport.OnConnecting method.");
-                    PipeLogger.Log("LethalAntiCheat: Failed to find FacepunchTransport.OnConnecting method.");
-                    Console.WriteLine("LethalAntiCheat: Failed to find FacepunchTransport.OnConnecting method.");
+                    //Debug.LogError("LethalAntiCheat: Failed to find FacepunchTransport.OnConnecting method.");
+                    PipeLogger.Log("[Behaviour] LethalAntiCheat: Failed to find FacepunchTransport.OnConnecting method.");
+                    //Console.WriteLine("LethalAntiCheat: Failed to find FacepunchTransport.OnConnecting method.");
                 }
 
                 if (onDisconnectedMethod != null)
@@ -94,16 +94,16 @@ namespace Lethal_Anti_Cheat.Core
                 }
                 else
                 {
-                    Debug.LogError("LethalAntiCheat: Failed to find FacepunchTransport.OnDisconnected method.");
-                    PipeLogger.Log("LethalAntiCheat: Failed to find FacepunchTransport.OnDisconnected method.");
-                    Console.WriteLine("LethalAntiCheat: Failed to find FacepunchTransport.OnDisconnected method.");
+                    //Debug.LogError("LethalAntiCheat: Failed to find FacepunchTransport.OnDisconnected method.");
+                    PipeLogger.Log("[Behaviour] LethalAntiCheat: Failed to find FacepunchTransport.OnDisconnected method.");
+                    //Console.WriteLine("LethalAntiCheat: Failed to find FacepunchTransport.OnDisconnected method.");
                 }
             }
             catch (NetworkConfigurationException ex)
             {
-                Debug.LogError($"LethalAntiCheat: Exception while patching transport: {ex}");
+                //Debug.LogError($"LethalAntiCheat: Exception while patching transport: {ex}");
                 PipeLogger.Log($"[Behaviour] LethalAntiCheat: Exception while patching transport: {ex}");
-                Console.WriteLine($"LethalAntiCheat: Exception while patching transport: {ex}");
+                //Console.WriteLine($"LethalAntiCheat: Exception while patching transport: {ex}");
             }
         }
 
@@ -114,9 +114,9 @@ namespace Lethal_Anti_Cheat.Core
 
             if (StartOfRound.Instance.KickedClientIds.Contains(steamId))
             {
-                Debug.Log($"LethalAntiCheat: Refusing connection from kicked player {steamId}.");
+                //Debug.Log($"LethalAntiCheat: Refusing connection from kicked player {steamId}.");
                 PipeLogger.Log($"[Behaviour] LethalAntiCheat: Refusing connection from kicked player {steamId}.");
-                Console.WriteLine($"LethalAntiCheat: Refusing connection from kicked player {steamId}.");
+                //Console.WriteLine($"LethalAntiCheat: Refusing connection from kicked player {steamId}.");
                 return false;
             }
 
@@ -129,9 +129,9 @@ namespace Lethal_Anti_Cheat.Core
                 ConnectionIdToSteamIdMap.Add(connection.Id, steamId);
             }
 
-            Debug.Log($"LethalAntiCheat: Player {new Friend(steamId).Name} is connecting with connection ID {connection.Id}.");
+            //Debug.Log($"LethalAntiCheat: Player {new Friend(steamId).Name} is connecting with connection ID {connection.Id}.");
             PipeLogger.Log($"[Behaviour] LethalAntiCheat: Player {new Friend(steamId).Name} is connecting with connection ID {connection.Id}.");
-            Console.WriteLine($"LethalAntiCheat: Player {new Friend(steamId).Name} is connecting with connection ID {connection.Id}.");
+            //Console.WriteLine($"LethalAntiCheat: Player {new Friend(steamId).Name} is connecting with connection ID {connection.Id}.");
             return true;
         }
 
@@ -140,7 +140,7 @@ namespace Lethal_Anti_Cheat.Core
             if (ConnectionIdToSteamIdMap.ContainsKey(connection.Id))
             {
                 PipeLogger.Log($"[Behaviour] LethalAntiCheat: Player disconnected with connection ID {connection.Id}.");
-                Debug.Log($"LethalAntiCheat: Player disconnected with connection ID {connection.Id}.");
+                //Debug.Log($"LethalAntiCheat: Player disconnected with connection ID {connection.Id}.");
                 ConnectionIdToSteamIdMap.Remove(connection.Id);
             }
         }
