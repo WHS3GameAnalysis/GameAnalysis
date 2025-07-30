@@ -114,7 +114,7 @@ namespace LethalAntiCheatLauncher
             try
             {
                 var checker = new IntegrityChecker();
-                
+
                 // 진행률 표시 시작
                 this.Invoke(new Action(() =>
                 {
@@ -156,8 +156,9 @@ namespace LethalAntiCheatLauncher
 
                 statusLabel.Text = "Game running. Initializing anti-cheat...";
 
-                PipeListener.Start();
-                SimpleACManager.LoadSimpleAC();
+                // 파이프 서버가 완전히 준비될 때까지 기다립니다.
+                await PipeListener.Start(); // <-- 이 부분을 수정했습니다.
+                await Task.Run(() => SimpleACManager.LoadSimpleAC());
                 InjectorManager.InjectWhenGameStarts();
 
                 this.FormClosing += (s, ev) =>

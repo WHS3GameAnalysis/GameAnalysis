@@ -12,7 +12,6 @@ namespace Lethal_Anti_Cheat.ProcessWatcher
 
         public static void RunOnce()
         {
-            //Console.WriteLine("\n[ProcessWatcher] Process Scan (GetProcesses)");
             PipeLogger.Log(message: "\n[ProcessWatcher] Process Scan (GetProcesses)");
 
             foreach (var process in Process.GetProcesses())
@@ -24,15 +23,13 @@ namespace Lethal_Anti_Cheat.ProcessWatcher
                     {
                         if (name.Contains(target))
                         {
-                            //Console.WriteLine($"  - Detected Process : {name} (PID: {process.Id})");
-                            PipeLogger.Log(message: $"[ProcessWatcher] - Detected Process : {name} (PID: {process.Id})");
+                            PipeLogger.Log(message: $"[ProcessWatcher] - Detected Process : {process.ProcessName} (PID: {process.Id}) Path: {process.MainModule.FileName}");
                         }
                     }
                 }
                 catch
                 {
-                    //Console.WriteLine($"  - Error accessing process {process.ProcessName} (PID: {process.Id})");
-                    PipeLogger.Log(message: $"[ProcessWatcher] [Error] accessing process {process.ProcessName} (PID: {process.Id})");
+                    // Ignore processes that have exited or are inaccessible.
                 }
             }
         }

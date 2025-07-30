@@ -120,7 +120,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         Logger::CleanupPipe();
         
         // 콘솔 해제
-        FreeConsole();
+        //FreeConsole();
         
         break;
     }

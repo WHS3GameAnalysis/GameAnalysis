@@ -18,6 +18,9 @@ namespace LethalAntiCheatLauncher.Util
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern uint GetLastError();
 
+        //[DllImport("SimpleAC.dll", EntryPoint = "DllMain")]
+        //private static extern void InitializeSimpleACPipe();
+
         private static IntPtr dllHandle = IntPtr.Zero;
         private const string DLL_NAME = "SimpleAC.dll";
 

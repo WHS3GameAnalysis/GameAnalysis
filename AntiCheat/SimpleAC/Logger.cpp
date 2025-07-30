@@ -69,7 +69,7 @@ void Logger::Log(const std::wstring& message)
     std::lock_guard<std::mutex> lock(s_logMutex);
     
     std::wstring formattedMessage = FormatMessage(L"INFO", message);
-    std::wcout << formattedMessage << std::endl;
+    //std::wcout << formattedMessage << std::endl;
     
     // 디버거 출력
     OutputDebugStringW((formattedMessage + L"\n").c_str());
@@ -115,7 +115,7 @@ void Logger::LogError(const std::wstring& message)
     std::lock_guard<std::mutex> lock(s_logMutex);
     
     std::wstring formattedMessage = FormatMessage(L"ERROR", message);
-    std::wcout << formattedMessage << std::endl;
+    //std::wcout << formattedMessage << std::endl;
     
     // 디버거 출력
     OutputDebugStringW((formattedMessage + L"\n").c_str());
@@ -135,7 +135,7 @@ void Logger::LogWarning(const std::wstring& message)
     std::lock_guard<std::mutex> lock(s_logMutex);
     
     std::wstring formattedMessage = FormatMessage(L"WARNING", message);
-    std::wcout << formattedMessage << std::endl;
+    //std::wcout << formattedMessage << std::endl;
     
     // 디버거 출력
     OutputDebugStringW((formattedMessage + L"\n").c_str());
