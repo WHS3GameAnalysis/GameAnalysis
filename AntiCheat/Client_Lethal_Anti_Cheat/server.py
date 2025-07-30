@@ -68,6 +68,9 @@ class Heartbeat(BaseModel):
 class EncryptedResponse(BaseModel):
     encrypted_data: str
 
+class BehaviorLog(BaseModel):
+    message: str
+
 # 무결성 검사 로깅 함수
 def log_integrity(message: str):
     """무결성 검사 로그 기록"""
@@ -80,6 +83,21 @@ def log_integrity(message: str):
             f.write(log_entry)
     except Exception as e:
         print(f"무결성 로그 작성 실패: {e}")
+
+def log_behavior(message: str):
+    """행위기반 로그 기록"""
+    try:
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"[{timestamp}] [BEHAVIOR] {message}\n"
+        log_file_path = os.path.join(LOGS_BASE_PATH, "behavior.log")
+        
+        os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+        
+        with open(log_file_path, "a", encoding="utf-8") as f:
+            f.write(log_entry)
+        print(f"행위 로그 기록: {message}")
+    except Exception as e:
+        print(f"행위 로그 작성 실패: {e}")
 
 def load_private_key(key_pem: str):
     """PEM 형식 개인키 로드"""
@@ -517,6 +535,18 @@ async def check_integrity(request: Request):
     except Exception as e:
         log_integrity(f"무결성 검사 오류: {str(e)}")
         raise HTTPException(status_code=500, detail="무결성 검사 실패")
+
+@app.post("/api/behavior/log")
+async def receive_behavior_log(data: BehaviorLog, request: Request):
+    """행위기반 로그 수신 API"""
+    try:
+        client_ip = request.client.host
+        log_behavior(data.message)
+        print(f"행위 로그 수신: IP={client_ip}, Message={data.message}")
+        return {"status": "success"}
+    except Exception as e:
+        print(f"행위 로그 처리 오류: {e}")
+        raise HTTPException(status_code=500, detail="행위 로그 처리 실패")
 
 @app.post("/heartbeat")
 async def receive_heartbeat(data: Heartbeat, request: Request):

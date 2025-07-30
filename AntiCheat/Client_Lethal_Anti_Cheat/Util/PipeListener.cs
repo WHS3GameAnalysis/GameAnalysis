@@ -31,6 +31,8 @@ namespace LethalAntiCheatLauncher
                                 if (line.Contains("[Behaviour]"))
                                 {
                                     LogManager.Log(LogSource.Behavior, line, Color.Plum);
+                                    // 서버로 행위 로그 전송
+                                    BehaviorLogManager.SendLog(line);
                                 }
                                 else if (line.Contains("[DebugDetector]"))
                                 {
