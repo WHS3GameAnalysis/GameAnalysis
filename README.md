@@ -7,6 +7,7 @@
 
 ### 🎯 분석 대상 게임
 **Lethal Company** - Unity 기반 멀티플레이어 서바이벌 호러 게임
+<img width="600" height="256" alt="image" src="https://github.com/user-attachments/assets/4d488c9a-0f81-4b98-b459-3b90ca921a10" />
 
 
 ### 📅 프로젝트 기간
