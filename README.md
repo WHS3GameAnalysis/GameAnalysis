@@ -4,30 +4,38 @@
 
 **게임해체분석기**는 화이트햇 스쿨 3기 팀 프로젝트에서 게임보안을 주제로 결성된 팀입니다.
 
+
 ### 🎯 분석 대상 게임
 **Lethal Company** - Unity 기반 멀티플레이어 서바이벌 호러 게임
 
+
 ### 📅 프로젝트 기간
 **2024년 5월 1일(목) ~ 8월 2일(토)**
+
 
 ### 🎯 프로젝트 목표
 - **리버스엔지니어링**을 통한 게임 구조 및 메모리 분석
 - 게임 핵의 작동 원리 파악 및 실제 핵 제작을 통한 학습
 - 분석 결과를 바탕으로 한 **안티치트 시스템** 개발 및 검증
+- 
 
 ### 🌐 Live Dashboard
 **[대시보드 바로가기](https://ghb.r-e.kr)**
 
+
 *관리자 계정: admin / 1234*
+
 
 ## 👥 팀 구성
 
-**8명의 팀원으로 구성된 게임보안 전문 팀**
+**8명의 팀원으로 구성된 게임보안 팀**
+
 
 ### 🤝 협업 방식
 - **GitHub**: 코드 버전 관리 및 협업
 - **Discord**: 실시간 커뮤니케이션
 - **Offline/Online**: 하이브리드 미팅
+
 
 ### 👨‍💻 팀원
 | Name | Role |
@@ -40,6 +48,10 @@
 | **남기찬** | Behavior-based Detection |
 | **이서준** | DLL Injection Detection, Harmony Patch Detection |
 | **황성하** | YARA-based Process Watcher, Heartbeat Monitoring |
+
+
+
+
 
 ## 🏗️ 프로젝트 구조
 
