@@ -221,7 +221,7 @@ GameAnalysis/
 
 ### 🙏 Support
 - **PM, PL**: 프로젝트 지도 및 멘토링
-- **MAXMINY**
+- **MAXMINYEON**
 
 ---
 
