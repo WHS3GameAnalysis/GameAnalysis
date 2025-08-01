@@ -219,8 +219,14 @@ GameAnalysis/
 
 ---
 
+<div align="center">
+
 ### 🙏 Support
 - **PM, PL**: 프로젝트 지도 및 멘토링
-- **MAXMINYEON**
+- **MAXMINY**
+
+---
 
 **화이트햇 스쿨 3기 (WHS3) 팀프로젝트**
+
+</div>
