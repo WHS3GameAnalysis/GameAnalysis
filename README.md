@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🎮 GameAnalysis</h1>
+  <h1>GameAnalysis</h1>
   <p1>게임과 핵을 분석하여 안티치트를 제작하는 TEAM 게임해체분석기</p1>
 </div>
 
