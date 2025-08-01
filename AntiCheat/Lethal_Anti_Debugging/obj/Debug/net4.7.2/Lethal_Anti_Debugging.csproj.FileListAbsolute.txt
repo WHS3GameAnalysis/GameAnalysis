@@ -1,5 +1,0 @@
-C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net4.7.2\Lethal_Anti_Debugging.csproj.AssemblyReference.cache
-C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net4.7.2\Lethal_Anti_Debugging.GeneratedMSBuildEditorConfig.editorconfig
-C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net4.7.2\Lethal_Anti_Debugging.AssemblyInfoInputs.cache
-C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net4.7.2\Lethal_Anti_Debugging.AssemblyInfo.cs
-C:\Jihoon\WhiteHat\Code\Lethal_Anti_Debugging\obj\Debug\net4.7.2\Lethal_Anti_Debugging.csproj.CoreCompileInputs.cache
