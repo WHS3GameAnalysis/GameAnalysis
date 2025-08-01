@@ -15,7 +15,7 @@
 
 ## 📌 프로젝트 개요
 
-- **프로젝트명**: GameAnalysis (게임해체분석기)
+- **프로젝트 팀명**: GameAnalysis (게임해체분석기)
 - **프로젝트 기간**: 2025.05.01 ~ 2025.08.02
 - **프로젝트 형태**: 화이트햇 스쿨 3기 팀 프로젝트
 - **주요 타겟**: <img src="https://img.shields.io/badge/Unity-000000?style=flat&logo=unity&logoColor=white" height="14"/> Lethal Company - 1인칭 4인 협동 공포 서바이벌 게임
