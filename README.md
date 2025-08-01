@@ -1,4 +1,8 @@
-# 🎮 GameAnalysis
+<div align="center">
+  <h1>🎮 GameAnalysis</h1>
+</div>
+
+# 
 
 ## 📋 프로젝트 개요
 <img width="120" height="120" alt="겜해분 로고3" src="https://github.com/user-attachments/assets/cdbeb9f6-5c94-4a98-8567-d611797f1ef9" />
