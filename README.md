@@ -1,10 +1,7 @@
 
 
 
-<div align="center">
-  <h1>GameAnalysis</h1>
-  <p1>게임과 핵을 분석하여 안티치트를 제작하는 TEAM 게임해체분석기</p1>
-</div>
+
 
 
 ## 데모(좌/우)
@@ -23,6 +20,10 @@
 </table>
 
 
+<div align="center">
+  <h1>GameAnalysis</h1>
+  <p1>게임과 핵을 분석하여 안티치트를 제작하는 TEAM 게임해체분석기</p1>
+</div><img width="754" height="688" alt="ANTI CHEAT logo" src="https://github.com/user-attachments/assets/f21ce75b-8d8c-44a0-b6dc-353ec6805ab2" />
 
 
 
