@@ -88,7 +88,7 @@
 ## 📁 프로젝트 구조
 
 ### ⚙️ 안티치트 시스템 아키텍처
-<img width="1811" height="716" alt="image" src="https://github.com/user-attachments/assets/f6735d5a-a779-43ea-b9e5-80496ea12444" />
+<img width="1293" height="610" alt="구조도" src="https://github.com/user-attachments/assets/43df9e59-c347-4e19-bfa6-051f4cd12d0f" />
 
 ### 📁 폴더 구조
 ```
