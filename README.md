@@ -20,11 +20,16 @@
 </table>
 
 ## 안티치트 작동 시연 영상
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/d6036542-8fe7-410a-8ad1-acb35553f85a" width="640" controls muted playsinline></video>
-  <br/>
-  <em>안티치트: 무결성 검사/프로세스 보호 데모</em>
-</p>
+<div align="center">
+  <h1>GameAnalysis</h1>
+  <p>게임과 핵을 분석하여 안티치트를 제작하는 TEAM 게임해체분석기</p>
+  <img width="754" height="688" alt="ANTI CHEAT logo" 
+       src="https://github.com/user-attachments/assets/3be24012-7b87-41d4-8131-265279323765" />
+</div>
+
+
+
+
 
 
 
