@@ -22,8 +22,7 @@
 ## 안티치트 작동 시연 영상
 <p align="center">
   <video src="https://github.com/user-attachments/assets/16409b0b-a3d8-4eb4-92ba-0892c295e0b7" width="640" controls muted playsinline></video>
-  <br/>
-   <em>상용 핵과 직접 제작한 핵을 방어하기 위해 안티 치트 시스템을 개발</em>
+  <br/><em>상용 핵과 직접 제작한 핵을 방어하기 위해 안티 치트 시스템을 개발</em>
 </p>
 
 
