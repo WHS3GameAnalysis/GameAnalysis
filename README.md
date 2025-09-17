@@ -1,19 +1,30 @@
+
+
+
 <div align="center">
   <h1>GameAnalysis</h1>
   <p1>게임과 핵을 분석하여 안티치트를 제작하는 TEAM 게임해체분석기</p1>
 </div>
 
 
-https://github.com/user-attachments/assets/da1a2e01-7d80-4538-80f4-cb3d8beb742c
+## 데모(좌/우)
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>핵 제작 시연</strong><br>
+      <video src="https://github.com/user-attachments/assets/088ac2ab-a38d-48de-a5aa-f96cef14b356" width="100%" controls muted playsinline></video>
+    </td>
+    <td width="50%" align="center">
+      <strong>안티치트 작동</strong><br>
+      <video src="https://github.com/user-attachments/assets/ff5b76af-2c8c-4489-a15f-e4447f41aca6" width="100%" controls muted playsinline></video>
+    </td>
+  </tr>
+</table>
+
+<sub><em>연구/교육 목적의 PoC입니다. 실제 서비스 악용 금지.</em></sub>
 
 
-<br/>
-
-<div align="center">
-  <img width="500" height="456" alt="logo4" src="https://github.com/user-attachments/assets/ff5b76af-2c8c-4489-a15f-e4447f41aca6" />
-</div>
-
-<br/>
 
 
 
