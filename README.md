@@ -17,12 +17,12 @@
     </td>
     <td width="50%" align="center">
       <strong>안티치트 작동</strong><br>
-      <video src="https://github.com/user-attachments/assets/ff5b76af-2c8c-4489-a15f-e4447f41aca6" width="100%" controls muted playsinline></video>
+      <video src="https://github.com/user-attachments/assets/afe6e244-7ed9-4a1b-9702-b422ccf40707" width="100%" controls muted playsinline></video>
     </td>
   </tr>
 </table>
 
-<sub><em>연구/교육 목적의 PoC입니다. 실제 서비스 악용 금지.</em></sub>
+
 
 
 
